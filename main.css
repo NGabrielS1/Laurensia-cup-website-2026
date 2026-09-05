@@ -3,6 +3,26 @@
     font-family: Maragsa;
     src: url("assets/Maragsa-Display__V2.5.otf");
 }
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    src: url("assets/Roboto-VariableFont_wdth\,wght.ttf");
+}
+@font-face {
+    font-family: Roboto;
+    font-style: italic;
+    src: url("assets/Roboto-Italic-VariableFont_wdth\,wght.ttf");
+}
+@font-face {
+    font-family: PlayfairDisplay;
+    font-style: normal;
+    src: url("assets/PlayfairDisplay-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: PlayfairDisplay;
+    font-style: italic;
+    src: url("assets/PlayfairDisplay-Italic-VariableFont_wght.ttf");
+}
  
 /* add boxsizing */
 body, html {
