@@ -1,0 +1,45 @@
+/* fonts */
+@font-face {
+    font-family: Maragsa;
+    src: url("assets/Maragsa-Display__V2.5.otf");
+}
+ 
+/* add boxsizing */
+body, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* navbar css */
+header.navbar {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+    background-color: #91cdff;
+    font-size: 20px;
+    font-family: Maragsa;
+    letter-spacing: 0.25em;
+    color: #080088;
+}
+header.navbar section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+header.navbar img {
+    max-height: 50px;
+}
+header.navbar h1 {
+    font-size: 20px;
+}
+header.navbar a {
+    text-decoration: none;
+    color: #080088;
+}
+header.navbar nav{
+    display: flex;
+    gap: 5px;
+}
