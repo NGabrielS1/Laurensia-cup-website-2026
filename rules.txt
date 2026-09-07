@@ -1,0 +1,5 @@
+1. No chatgpt for code, I can tell
+2. Use variable sizes like em/rem instead of px when possible
+3. Add a lot of comments for readability
+4. Use main/mobile css when possible to reduce amount of code5. 
+5. Use CSS flex and grid instead of depending on margin
