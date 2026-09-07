@@ -90,7 +90,7 @@ footer {
 }
 footer h1 {
     font-family: Maragsa;
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 0;
     color: #1e2966;
     display: block;
@@ -125,3 +125,13 @@ footer ul p {
 }
 
 /* add new css down here vvv */
+
+/* some example code delete later */
+article {
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    width: 100vw;
+    height: 90vh;
+    display: block;
+    background-position: center;
+}
