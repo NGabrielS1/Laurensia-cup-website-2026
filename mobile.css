@@ -138,7 +138,6 @@ footer ul li {
 footer ul img {
     text-align: left;
     margin-right: 0.5rem;
-    margin-left: 2rem;
     vertical-align: middle;
     height: 100%;
     width: auto;
@@ -150,4 +149,14 @@ footer ul p {
     font-size: 1rem;
     margin: 0;
     text-align: left;
+}
+
+/* some example code delete later */
+article {
+    background-repeat: repeat-y;
+    background-size: cover;
+    width: 100vw;
+    height: 90vh;
+    display: block;
+    background-position: center;
 }
