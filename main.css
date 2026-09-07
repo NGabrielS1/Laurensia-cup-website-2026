@@ -128,10 +128,11 @@ footer ul p {
 
 /* some example code delete later */
 article {
+    padding: 3rem;
     background-repeat: repeat-y;
     background-size: 100% auto;
-    width: 100vw;
-    height: 90vh;
+    max-width: 100vw;
+    height: 70vh;
     display: block;
     background-position: center;
     color: #ffffef;
