@@ -153,10 +153,11 @@ footer ul p {
 
 /* some example code delete later */
 article {
+    padding: 3rem;
     background-repeat: repeat-y;
     background-size: cover;
     width: 100vw;
-    height: 90vh;
+    height: 70vh;
     display: block;
     background-position: center;
     color: #ffffef;
