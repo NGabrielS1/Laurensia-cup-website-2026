@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to Laurensia Cup 2026">
+  <meta name="keywords" content="laurensia, sports, highschool, laurencup, lorencup, laurensiacup">
+  <link rel="stylesheet" href="main.css" media="screen and (min-width: 769px)">
+  <link href="mobile.css" rel="stylesheet" media="screen and (max-width: 768px)">
+  <title>Laurensia Cup 2026 | Home</title>
+  <style>
+    article .wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 100%;
+        box-sizing: border-box;
+        flex-grow: 1;
+        min-height: 0;
+    }
+
+    .wrapper .sixty {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 50%;
+        overflow: hidden;
+        padding: 0 1rem;
+    }
+
+    .sixty img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .sixty .title-info {
+        margin-top: 3rem;
+        color: white;
+        font-size: 1.2rem;
+        line-height: 1.4;
+        text-align: left;
+        font-family: 'Times New Roman';
+        padding: 0;
+    }
+
+    .sixty a {
+        display: inline-block;
+        background-color: #91cdff;
+        color: #0151ca;
+        font-size: 1.2rem;
+        font-family: Roboto;
+        font-weight: 500;
+        border-radius: 50px;
+        padding: 0.6rem 1.4rem;
+        margin: 0;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .wrapper .thirty {
+        margin-top: 3rem;
+        position: relative;
+        width: 25%;
+        max-height: 80%;
+        background-color: #5685c8;
+        border-radius: 25px;
+        color: white;
+        overflow: hidden;
+        padding: 3rem 1.5rem 2rem 1.5rem;
+    }
+    .thirty h2 {
+        font-family: Caveat;
+        color: #080088;
+        font-weight: bold;
+        font-size: 3.5rem;
+        z-index: 3;
+        top: -2.5rem;
+        left: 1rem;
+        position: absolute;
+    }
+    .thirty img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .thirty p {
+        margin-bottom: 4rem;
+        color: white;
+        font-size: 1.2rem;
+        line-height: 1.4;
+        text-align: left;
+        font-family: 'Times New Roman';
+    }
+    .thirty a {
+        color: #080088;
+        font-size: 1.3rem;
+        font-family: Roboto;
+        line-height: 1.4;
+        font-weight: 500;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .wrapper .fifty {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        padding: 0 1rem;
+    }
+    .fifty h2 {
+        font-family: Maragsa;
+        color: #FEF188;
+        font-size: 3.5rem;
+    }
+    .fifty section {
+        display: flex;
+        flex-direction: row;
+        height: 30%;
+        width: 95%;
+        overflow: hidden;
+        background-color: #91CDFF;
+        margin-bottom: 2rem;
+    }
+    .fifty section img {
+        min-height: 100%;
+        width: 50%;
+        object-fit: cover;
+    }
+    .fifty section span {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        max-height: 100%;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    span h3 {
+        margin: 0;
+        font-family: PlayFairDisplay;
+        font-weight: 600;
+        color: #0151CA;
+        font-size: 2rem;
+    }
+    span p {
+        line-height: 1.4;
+        font-family: 'Times New Roman';
+        font-size: 1rem;
+    }
+    span a {
+        display: inline-block;
+        background-color: #0D0790;
+        color: #FFFFEF;
+        font-size: 0.6rem;
+        font-family: Roboto;
+        font-weight: 500;
+        border-radius: 50px;
+        padding: 0.4rem 2rem;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .fifty .time-container {
+        padding: 20% 10% 0 5%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        height: 100%;
+        column-gap: 2%;
+        row-gap: 2%;
+    }
+    .time-box {
+        background-color: #5685c8;
+        border-radius: 35px;
+        gap: 0;
+        width: 80%;
+        height: 80%;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .time-box h3 {
+        margin: 0;
+        font-size: 8rem;
+        font-family: Maragsa;
+        color: #FFFFEF;
+        line-height: 0.8;
+        font-variant-numeric: tabular-nums;
+        font-feature-settings: "tnum";
+    }
+    .time-box p {
+        color: #FEF188;
+        font-family: Maragsa;
+        margin: 0;
+        font-size: 3rem;
+        line-height: 1;
+    }
+    .wrapper .hundred {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        height: 85vh;
+        overflow: hidden;
+        padding: 1rem 3rem;
+    }
+    .hundred h1 {
+        font-family: Maragsa;
+        color: #FEF188;
+        font-size: 4rem;
+        margin: 0 0 2rem 0;
+    }
+    .hundred .container {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        width: 100%;
+        height: 100%;
+        column-gap: 2%;
+        row-gap: 4%;
+    }
+    .container div {
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        background-color: #91CDFF;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+    }
+    .container div img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    .container div p {
+        z-index: 2;
+        position: absolute;
+        bottom: -20%;
+        background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.9));
+        color: #FFFFEF;
+        font-family: Maragsa;
+        font-size: 3rem;
+        width: 100%;
+        height: 30%;
+        padding: 40% 0 0 0 ;
+    }
+    @media (max-width: 768px) {
+        .wrapper .sixty {
+            align-items: flex-end;
+            width: 100%;
+            padding: 0 3rem;
+        }
+        .sixty .title-info {
+            font-size: 1rem;
+            margin-bottom: 3rem;
+            margin-top: 2rem;
+        }
+        .sixty a {
+            margin-bottom: 1rem;
+        }
+        .wrapper .thirty {
+            display: none;
+        }
+        .wrapper:has(.fifty) {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+        }
+        .wrapper .fifty {
+            width: 100%;
+            height: auto;
+            padding: 0;
+            margin: 0;
+        }
+        .fifty .time-container {
+            margin: 2% 0;
+            padding: 0 2% 0 2%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            max-width: 100%;
+            height: 100%;
+            column-gap: 1%;
+        }
+        .time-box {
+            background-color: #5685c8;
+            border-radius: 15px;
+            gap: 0;
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .time-box h3{
+            font-size: 4rem;
+        }
+        .time-box p{
+            font-size: 1.5rem;
+        }
+        .fifty h2 {
+            margin-left: 1rem;
+            font-size: 3rem;
+        }
+        .fifty section {
+            text-align: center;
+            margin: 0 auto 1rem auto;
+            line-height: 0.9;
+            text-align: left;
+            overflow: hidden;
+
+        }
+        .wrapper .hundred {
+            padding: 0 0 0 4%;
+            width: 100%;
+            align-items: flex-start;
+        }
+        .hundred h1 {
+            margin-top: 10%;
+            margin-bottom: 15%;
+        }
+        .container {
+            grid-template-columns: auto auto auto;
+            column-gap: 5%;
+        }
+        .dissapear {
+            display: none;
+        }
+        .container div {
+            height: 80%;
+        }
+        .container div p {
+            font-size: 2.5rem;
+        }
+    }
+  </style>
+
+</head>
+<body>
+    <!-- navigation bar -->
+    <header class="navbar">
+        <section>
+            <img src="assets/logo.png" alt="">
+            <h1>LAURENSIA CUP 2026</h1>
+        </section>
+        <nav>
+            <img class="nav-button" src="assets/arrow-left.png" onclick="movenav()">
+            <a class="nav1" href="">HOME</a><span class="nav1" style="user-select: none;">.</span>
+            <a class="nav1" href="">ABOUT</a><span class="nav1" style="user-select: none;">.</span>
+            <a class="nav1" href="">VIDEOS</a><span class="nav3" style="user-select: none;">.</span>
+            <a class="nav2" href="">OUR MERCH</a><span class="nav2" style="user-select: none;">.</span>
+            <a class="nav2" href="">INFO & SCHEDULES</a>
+            <img class="nav-button" src="assets/arrow-right.png" onclick="movenav()">
+        </nav>
+     </header>
+     
+     <!--content-->
+     <main>
+        <article style="background-image: url(assets/bg2.jpeg)">
+            <img class="seperator" src="assets/linedecor.png"/>
+            <div class="wrapper">
+                <div class="sixty">
+                    <img src="assets/title.png"/>
+                    <p class="title-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus, sem ac elementum pharetra, leo diam condimentum libero</p>
+                    <a>Read More</a>
+                </div>
+                <div class="thirty">
+                    <h2>Featured</h2>
+                    <img src="assets/basketball.jpeg"/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a>LEARN MORE ></a>
+                </div>
+            </div>
+        </article>
+        <article style="background-image: url(assets/bg3.jpeg)">
+            <img class="seperator" src="assets/linedecor.png"/>
+            <div class="wrapper">
+                <div class="fifty">
+                    <div class="time-container">
+                        <div class="time-box"><h3 id="day">20</h3><p>Hari</p></div>
+                        <div class="time-box"><h3 id="hour">20</h3><p>Jam</p></div>
+                        <div class="time-box"><h3 id="minute">20</h3><p>Menit</p></div>
+                        <div class="time-box"><h3 id="second">20</h3><p>Detik</p></div>
+                    </div>
+                </div>
+                <div class="fifty">
+                    <h2>Latest News</h2>
+                    <section>
+                        <img src="assets/placeholder.jpeg"/>
+                        <span>
+                            <h3>JUDUL BERITA</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <a>READ MORE</a>
+                        </span>
+                    </section>
+                    <section>
+                        <img src="assets/placeholder.jpeg"/>
+                        <span>
+                            <h3>JUDUL BERITA</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <a>READ MORE</a>
+                        </span>
+                    </section>
+                </div>
+            </div>
+        </article>
+        <article style="background-image: url(assets/bg4.jpeg)">
+            <div class="wrapper">
+                <div class="hundred">
+                    <h1>Our Competitions</h1>
+                    <div class="container">
+                        <div><img src="assets/basketball.jpeg"/><p>Basketball</p></div>
+                        <div><img src="assets/basketball.jpeg"/><p>Basketball</p></div>
+                        <div><img src="assets/basketball.jpeg"/><p>Basketball</p></div>
+                        <div class="dissapear"><img src="assets/basketball.jpeg"/><p>Basketball</p></div>
+                        <div class="dissapear"><img src="assets/basketball.jpeg"/><p>Basketball</p></div>
+                        <div class="dissapear"><img src="assets/basketball.jpeg"/><p>Basketball</p></div>
+                        <div class="dissapear"><img src="assets/basketball.jpeg"/><p>Basketball</p></div>
+                        <div class="dissapear"><img src="assets/basketball.jpeg"/><p>Basketball</p></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+     </main>
+
+     <!-- footer -->
+      <footer>
+        <h1>CONTACT US</h1>
+        <ul>
+            <li><img src="assets/cameraicon.png"><p>@lorencup2026</p></li>
+            <li><img src="assets/phoneicon.png"><p>+62 818-230-809</p></li>
+            <li><img src="assets/mailicon.png"><p>laurensia.cup@santa-laurensia.sch.id</p></li>
+        </ul>
+      </footer>
+     <script src="main.js"></script>
+     <script>
+        const secondElement = document.getElementById("second");
+        const minuteElement = document.getElementById("minute");
+        const hourElement = document.getElementById("hour");
+        const dayElement = document.getElementById("day");
+
+        const lorencupDate = new Date("Oct 10, 2026 07:15:00");
+
+        const timer = setInterval(function() {
+            const now = new Date();
+            const distance = lorencupDate.getTime() - now.getTime();
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / (1000));
+
+            dayElement.textContent = String(days).padStart(2, '0');
+            hourElement.textContent = String(hours).padStart(2, '0');
+            minuteElement.textContent = String(minutes).padStart(2, '0');
+            secondElement.textContent = String(seconds).padStart(2, '0');
+        }, 1000);
+     </script>
+</body>
+</html
