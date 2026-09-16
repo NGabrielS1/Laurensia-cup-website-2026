@@ -57,6 +57,7 @@
         border-radius: 50px;
         padding: 0.6rem 1.4rem;
         margin: 0;
+        margin-bottom: 1rem;
         text-decoration: none;
         cursor: pointer;
     }
@@ -71,6 +72,7 @@
         color: white;
         overflow: hidden;
         padding: 3rem 1.5rem 2rem 1.5rem;
+        box-shadow: 10px 15px 10px 10px rgba(0, 0, 0, 0.3);
     }
     .thirty h2 {
         font-family: Caveat;
@@ -111,7 +113,7 @@
         align-items: flex-start;
         width: 50%;
         height: 100%;
-        overflow: hidden;
+        box-sizing: border-box;
         padding: 0 1rem;
     }
     .fifty h2 {
@@ -166,25 +168,29 @@
         cursor: pointer;
     }
     .fifty .time-container {
-        padding: 20% 10% 0 5%;
+        padding: 10% 5% 0 10%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         width: 100%;
-        height: 100%;
-        column-gap: 2%;
-        row-gap: 2%;
+        height: auto;
+        box-sizing: border-box;
+        column-gap: 5%;
+        row-gap: 5%;
     }
     .time-box {
+        box-sizing: border-box;
         background-color: #5685c8;
+        aspect-ratio: 1/1;
         border-radius: 35px;
         gap: 0;
-        width: 80%;
-        height: 80%;
+        width: 100%;
+        height: auto;
         display: flex;
         text-align: center;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        box-shadow: 10px 15px 10px 10px rgba(0, 0, 0, 0.3);
     }
     .time-box h3 {
         margin: 0;
@@ -233,6 +239,7 @@
         text-align: center;
         height: 100%;
         width: 100%;
+        padding: 0;
         background-color: #91CDFF;
         border-radius: 15px;
         overflow: hidden;
@@ -246,7 +253,8 @@
     .container div p {
         z-index: 2;
         position: absolute;
-        bottom: -20%;
+        margin: 0;
+        bottom: 0%;
         background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.9));
         color: #FFFFEF;
         font-family: Maragsa;
@@ -290,15 +298,16 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             max-width: 100%;
-            height: 100%;
-            column-gap: 1%;
+            column-gap: 3%;
+            box-sizing: border-box;
         }
         .time-box {
             background-color: #5685c8;
             border-radius: 15px;
             gap: 0;
-            width: 80%;
-            height: 100%;
+            aspect-ratio: 1/1;
+            width: 100%;
+            height: auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -362,7 +371,8 @@
             <a class="nav1" href="">ABOUT</a><span class="nav1" style="user-select: none;">.</span>
             <a class="nav1" href="">VIDEOS</a><span class="nav3" style="user-select: none;">.</span>
             <a class="nav2" href="">OUR MERCH</a><span class="nav2" style="user-select: none;">.</span>
-            <a class="nav2" href="">INFO & SCHEDULES</a>
+            <a class="nav2" href="">INFO & SCHEDULES</a><span class="nav2" style="user-select: none;">.</span>
+            <a class="nav2" href="">ARCHIVE</a>
             <img class="nav-button" src="assets/arrow-right.png" onclick="movenav()">
         </nav>
      </header>
@@ -390,10 +400,10 @@
             <div class="wrapper">
                 <div class="fifty">
                     <div class="time-container">
-                        <div class="time-box"><h3 id="day">20</h3><p>Hari</p></div>
-                        <div class="time-box"><h3 id="hour">20</h3><p>Jam</p></div>
-                        <div class="time-box"><h3 id="minute">20</h3><p>Menit</p></div>
-                        <div class="time-box"><h3 id="second">20</h3><p>Detik</p></div>
+                        <div class="time-box"><h3 id="day">20</h3><p>Day</p></div>
+                        <div class="time-box"><h3 id="hour">20</h3><p>Hour</p></div>
+                        <div class="time-box"><h3 id="minute">20</h3><p>Minute</p></div>
+                        <div class="time-box"><h3 id="second">20</h3><p>Second</p></div>
                     </div>
                 </div>
                 <div class="fifty">
@@ -440,9 +450,11 @@
       <footer>
         <h1>CONTACT US</h1>
         <ul>
-            <li><img src="assets/cameraicon.png"><p>@lorencup2026</p></li>
-            <li><img src="assets/phoneicon.png"><p>+62 818-230-809</p></li>
-            <li><img src="assets/mailicon.png"><p>laurensia.cup@santa-laurensia.sch.id</p></li>
+            <li><p>Maira +62 818-230-809</p></li>
+            <li><p>Jericho +62 813-1933-3302</p></li>
+            <li><p>Ms Reni  +62 877-8065-4548</p></li>
+            <li><p>⁠Sir Danang +62 852-8238-1823</p></li>
+            <li><p>Dina⁠ +62 812-9821-3188</p></li>
         </ul>
       </footer>
      <script src="main.js"></script>
