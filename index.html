@@ -143,14 +143,14 @@
     span h3 {
         margin: 0;
         font-family: PlayFairDisplay;
-        font-weight: 600;
+        font-weight: 700;
         color: #0151CA;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     span p {
         line-height: 1.4;
         font-family: 'Times New Roman';
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     span a {
         display: inline-block;
@@ -210,6 +210,7 @@
         height: 85vh;
         overflow: hidden;
         padding: 1rem 3rem;
+        box-sizing: border-box;
     }
     .hundred h1 {
         font-family: Maragsa;
@@ -219,9 +220,11 @@
     }
     .hundred .container {
         display: grid;
-        grid-template-columns: auto auto auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         width: 100%;
         height: 100%;
+        flex: 1;
+        min-height: 0;
         column-gap: 2%;
         row-gap: 4%;
     }
@@ -319,7 +322,7 @@
 
         }
         .wrapper .hundred {
-            padding: 0 0 0 4%;
+            padding: 0 4% 0 4%;
             width: 100%;
             align-items: flex-start;
         }
@@ -327,8 +330,8 @@
             margin-top: 10%;
             margin-bottom: 15%;
         }
-        .container {
-            grid-template-columns: auto auto auto;
+        .hundred .container {
+            grid-template-columns: 1fr 1fr 1fr;
             column-gap: 5%;
         }
         .dissapear {
@@ -336,9 +339,10 @@
         }
         .container div {
             height: 80%;
+            width: 100%;
         }
         .container div p {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
         }
     }
   </style>
@@ -369,13 +373,13 @@
             <div class="wrapper">
                 <div class="sixty">
                     <img src="assets/title.png"/>
-                    <p class="title-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus, sem ac elementum pharetra, leo diam condimentum libero</p>
+                    <p class="title-info">The Laurensia Cup is a competition organized by Santa Laurensia every two years. Meracharis is a combination of two Greek words: "meraki" and "charis." In Modern Greek, "meraki" signifies doing something with one's whole soul, creativity, and love...</p>
                     <a>Read More</a>
                 </div>
                 <div class="thirty">
                     <h2>Featured</h2>
-                    <img src="assets/basketball.jpeg"/>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <img src="assets/music.png"/>
+                    <p>The Sound of Laurensia Cup 2026: The wait is over! Our official song has officially dropped and is ready to blast for you all!</p>
                     <a>LEARN MORE ></a>
                 </div>
             </div>
@@ -394,18 +398,18 @@
                 <div class="fifty">
                     <h2>Latest News</h2>
                     <section>
-                        <img src="assets/placeholder.jpeg"/>
+                        <img src="assets/mural.jpeg"/>
                         <span>
-                            <h3>JUDUL BERITA</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <h3>Mural Laurensia Cup 2026 : The Walls Come Alive</h3>
+                            <p>Introducing the massive blast of color thanks to the students who came together to paint this year’s mural. Stop by the corridor to see these incredible mural paintings.</p>
                             <a>READ MORE</a>
                         </span>
                     </section>
                     <section>
-                        <img src="assets/placeholder.jpeg"/>
+                        <img src="assets/fundraising.jpeg"/>
                         <span>
-                            <h3>JUDUL BERITA</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <h3>Meet the Fundraising Team</h3>
+                            <p>A massive shoutout to our incredible fundraising team for keeping everyone energized with delicious and tasty sweets and foods.</p>
                             <a>READ MORE</a>
                         </span>
                     </section>
@@ -417,14 +421,14 @@
                 <div class="hundred">
                     <h1>Our Competitions</h1>
                     <div class="container">
+                        <div><img src="assets/soccer.JPG"/><p>Football</p></div>
                         <div><img src="assets/basketball.jpeg"/><p>Basketball</p></div>
-                        <div><img src="assets/basketball.jpeg"/><p>Basketball</p></div>
-                        <div><img src="assets/basketball.jpeg"/><p>Basketball</p></div>
-                        <div class="dissapear"><img src="assets/basketball.jpeg"/><p>Basketball</p></div>
-                        <div class="dissapear"><img src="assets/basketball.jpeg"/><p>Basketball</p></div>
-                        <div class="dissapear"><img src="assets/basketball.jpeg"/><p>Basketball</p></div>
-                        <div class="dissapear"><img src="assets/basketball.jpeg"/><p>Basketball</p></div>
-                        <div class="dissapear"><img src="assets/basketball.jpeg"/><p>Basketball</p></div>
+                        <div><img src="assets/volley.jpg"/><p>Volleyball</p></div>
+                        <div class="dissapear"><img src="assets/badmin.JPG"/><p>Badminton</p></div>
+                        <div class="dissapear"><img src="assets/tabletennis.PNG"/><p>TableTennis</p></div>
+                        <div class="dissapear"><img src="assets/md.JPG"/><p>Dance</p></div>
+                        <div class="dissapear"><img src="assets/chess.JPG"/><p>Chess</p></div>
+                        <div class="dissapear"><img src="assets/MUN.webp"/><p>MUN</p></div>
                     </div>
                 </div>
             </div>
