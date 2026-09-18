@@ -85,7 +85,7 @@
         left: 1rem;
         position: absolute;
     }
-    .thirty img {
+    .thirty video {
         width: 100%;
         height: auto;
         object-fit: cover;
@@ -244,7 +244,15 @@
         background-color: #91CDFF;
         border-radius: 15px;
         overflow: hidden;
+        cursor: pointer;
         position: relative;
+        box-sizing: border-box;
+        box-shadow: 10px 15px 10px 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, border 0.3s ease;
+    }
+    .container div:hover {
+        transform: scale(1.1);
+        border: 1.5px solid rgba(255, 255, 255, 0.9);
     }
     .container div img {
         object-fit: cover;
@@ -373,7 +381,7 @@
             <a class="nav1" href="">VIDEOS</a><span class="nav3" style="user-select: none;">.</span>
             <a class="nav2" href="">OUR MERCH</a><span class="nav2" style="user-select: none;">.</span>
             <a class="nav2" href="">INFO & SCHEDULES</a><span class="nav2" style="user-select: none;">.</span>
-            <a class="nav2" href="">ARCHIVE</a>
+            <a class="nav2" href="https://2024.laurensiacup.id/">ARCHIVE</a>
             <img class="nav-button" src="assets/arrow-right.png" onclick="movenav()" alt="navigation-arrow-right">
         </nav>
      </header>
@@ -390,7 +398,9 @@
                 </div>
                 <div class="thirty">
                     <h2>Featured</h2>
-                    <img src="assets/music.png" alt="music-image"/>
+                    <video controls autoplay loop playsinline>
+                        <source src="assets/video-song.mp4" type="video/mp4">
+                    </video>
                     <p>The Sound of Laurensia Cup 2026: The wait is over! Our official song has officially dropped and is ready to blast for you all!</p>
                     <a>LEARN MORE ></a>
                 </div>
