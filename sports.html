@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laurensia Cup 2026 | About Us</title>
+    <link rel="stylesheet" href="code/css/main.css" media=" (min-width: 769px) ">
+    <link rel="stylesheet" href="code/css/mobile.css" media=" (max-width: 768px) ">
+    <link rel="icon" href="assets/logo/favicon.ico">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        footer {
+            box-sizing: content-box;
+        }
+
+        main {
+            background-color: black;
+            background-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%), url("assets/backgrounds/bg1.jpeg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            transition: background-image 0.3s ease-in-out;
+        }
+
+        .page {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .navbox {
+            width: 150px;
+            flex-shrink: 0;
+            background-color: black;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 0 40px 60px 73px;
+            min-width: 0;
+        }
+
+        .main-text {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 24px;
+        }
+
+        .title {
+            color: white;
+            text-align: left;
+            font-size: 46px;
+            margin: 0;
+            font-family: maragsa;
+        }
+
+        .tagline {
+            color: #fef188;
+            text-align: left;
+            font-family: Maragsa;
+            font-size: 28px;
+            margin: -4px 0 0px;
+        }
+
+        .description {
+            font-family: 'Times New Roman', Times, serif; 
+            color: white;
+            max-width: 600px;
+            margin: 0;
+        }
+
+        .register {
+            font-weight: bold;
+            font-family: Roboto;
+            height: 40px;
+            width: 200px;
+            background-color: #8ac7f5;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact {
+            font-weight: bold;
+            font-family: Roboto;
+            height: 40px;
+            width: 200px;
+            background-color: #8ac7f5;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .seemore {
+            height: 40px;
+            width: 200px;
+            background-color: #8ac7f5;
+            border-radius: 20px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .seemore.show {
+            display: flex;
+        }
+
+        .arrow-up, .arrow-down {
+            background-image: url(assets/images/icons/arrow-up.png);
+            width: 35px;
+            height: 35px;
+            background-color: transparent;
+            border: none;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            padding: 0;
+            z-index: 10;
+            
+        }
+
+        .arrow-down {
+            background-image: url(assets/images/icons/arrow-down.png);
+            width: 35px;
+            height: 35px;
+            background-color: transparent;
+            border: none;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            padding: 0;
+            z-index: 10;
+        }
+
+        .arrow-up:hover, .arrow-down:hover {
+            transform: scale(1.1);
+        }
+
+        .circles-wrapper {
+            flex: 1;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .circles-track {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: absolute;
+            top: 10px;
+            align-items: center;
+        }
+
+
+        .action-button {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+            font-family: Roboto;
+        }
+
+        .circle {
+            width: 90px;
+            height: 90px;
+            background-color: white;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+            font-size: 13px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            text-align: center;
+            user-select: none;
+            border: 2px solid rgba(255, 255, 255, 0.35);
+            transition: border-color 0.15s, transform 0.15s;
+        }
+
+        .circle:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <section>
+            <img src="assets/logo/logo.png" alt="Meracharis-logo">
+            <h1>LAURENSIA CUP 2026</h1>
+        </section>
+        <nav>
+            <img class="nav-button" src="assets/images/icons/arrow-left.png" onclick="movenav()" alt="navigation-arrow-left">
+            <a class="nav1" href="index.html">HOME</a><span class="nav1" style="user-select: none;">.</span>
+            <a class="nav1" href="aboutus.html">ABOUT</a><span class="nav1" style="user-select: none;">.</span>
+            <a class="nav1" href="">VIDEOS</a><span class="nav3" style="user-select: none;">.</span>
+            <a class="nav2" href="">OUR MERCH</a><span class="nav2" style="user-select: none;">.</span>
+            <a class="nav2" href="sports.html">INFO & SCHEDULES</a><span class="nav2" style="user-select: none;">.</span>
+            <a class="nav2" href="https://2024.laurensiacup.id/">ARCHIVE</a>
+            <img class="nav-button" src="assets/images/icons/arrow-right.png" onclick="movenav()" alt="navigation-arrow-right">
+        </nav>
+    </header>
+
+    <main>
+        <div class="page">
+            <div class="navbox">
+                <button class="arrow-up"></button>
+
+                <div class="circles-wrapper">
+                    <div class="circles-track" id="circles-track">
+                        <div class="circle" data-sport="Basketball" data-bg="assets/images/sports/basketball.jpeg" data-url="basketball.html"></div>
+                        <div class="circle" data-sport="Tennis" data-bg="assets/images/sports/tabletennis.PNG" data-url="tennis.html"></div>
+                        <div class="circle" data-sport="Photography" data-bg="assets/images/sports/placeholder.jpeg" data-url="photography.html"></div>
+                        <div class="circle" data-sport="Soccer" data-bg="assets/images/sports/soccer.JPG" data-url="soccer.html"></div>
+                        <div class="circle" data-sport="Badminton" data-bg="assets/images/sports/badmin.jpg" data-url="badminton.html"></div>
+                        <div class="circle" data-sport="Volley" data-bg="assets/images/sports/volley.jpg" data-url="volley.html"></div>
+                        <div class="circle" data-sport="MUN" data-bg="assets/images/sports/MUN.webp" data-url="MUN.html"></div>
+                    </div>
+                </div>
+
+                <button class="arrow-down"></button>
+            </div>
+
+            <div class="content">
+                <div class="main-text">
+                    <h1 class="title" id="sport-title">Laurensia Cup competition</h1>
+                    <h2 class="tagline">Tagline</h2>
+                </div>
+
+                <div class="action-button">
+                    <div class="register">Register</div>
+                    <div class="contact">Contact</div>
+                    <a class="seemore" id="see-more-btn" href="#">See More</a>
+                </div>
+
+                <p class="description" id="desc-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, eaque id corporis voluptate quibusdam deleniti odit velit! Voluptate a quis corrupti quaerat ipsum sed perferendis ad nemo, neque doloremque temporibus?</p>
+            </div>
+        </div>
+    </main>
+
+     <!-- footer -->
+    <footer>
+        <h1>CONTACT US</h1>
+        <ul>
+            <li><p>Maira +62 818-230-809</p></li>
+            <li><p>Jericho +62 813-1933-3302</p></li>
+            <li><p>Ms Reni  +62 877-8065-4548</p></li>
+            <li><p>⁠Sir Danang +62 852-8238-1823</p></li>
+            <li><p>Dina⁠ +62 812-9821-3188</p></li>
+        </ul>
+      </footer>
+    <script src="code/javascript/main.js"></script>
+
+    <script>
+        const main = document.querySelector('main');
+        const track = document.getElementById('circles-track');
+        const upbutton = document.querySelector('.arrow-up');
+        const downbutton = document.querySelector('.arrow-down');
+
+        const itemHeight = 110; 
+        const originalCircles = Array.from(track.children);
+        const totalItems = originalCircles.length;
+
+        originalCircles.forEach(function (circle) {
+            var bg = circle.getAttribute('data-bg');
+            circle.style.backgroundImage = 'url("' + bg + '")';
+            circle.setAttribute('title', circle.getAttribute('data-sport'));
+            circle.textContent = '';
+        });
+
+        originalCircles.forEach(function (c) {
+            track.appendChild(c.cloneNode(true));
+        });
+        originalCircles.slice().reverse().forEach(function (c) {
+            track.insertBefore(c.cloneNode(true), track.firstChild);
+        });
+
+        let currentIndex = totalItems; 
+
+        function moveTrack(withTransition) {
+            track.style.transition = withTransition ? 'transform 0.10s ease-in-out' : 'none';
+            track.style.transform = 'translateY(-' + (currentIndex * itemHeight) + 'px)';
+        }
+        moveTrack(false);
+
+        downbutton.addEventListener('click', function () {
+            currentIndex++;
+            moveTrack(true);
+        });
+
+        upbutton.addEventListener('click', function () {
+            currentIndex--;
+            moveTrack(true);
+        });
+
+        track.addEventListener('transitionend', function () {
+            if (currentIndex >= totalItems * 2) {
+                currentIndex -= totalItems;
+                moveTrack(false);
+            } else if (currentIndex < totalItems) {
+                currentIndex += totalItems;
+                moveTrack(false);
+            }
+        });
+
+        var sportTitle = document.getElementById('sport-title');
+        var descText = document.getElementById('desc-text');
+        var seeMore = document.getElementById('see-more-btn');
+
+        function selectCircle() {
+            track.querySelectorAll('.circle').forEach(function (c) {
+                c.classList.remove('selected');
+            });
+
+            this.classList.add('selected');
+
+            var name = this.getAttribute('data-sport');
+            var bg = this.getAttribute('data-bg');
+            var page = this.getAttribute('data-url');
+
+            sportTitle.innerHTML = name + " competition";
+
+            main.style.backgroundImage =
+                'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%), url("' + bg + '")';
+
+            seeMore.setAttribute('href', page);
+            seeMore.classList.add('show');
+
+            sportTitle.style.color = "white";
+            descText.style.color = "white";
+        }
+
+        track.querySelectorAll('.circle').forEach(function (circle) {
+            circle.addEventListener('click', selectCircle);
+        });
+        const basketball = track.querySelector('[data-sport="Basketball"]');
+        basketball.click();
+    </script>
+</body>
+</html>
