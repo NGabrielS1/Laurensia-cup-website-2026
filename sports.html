@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laurensia Cup 2026 | About Us</title>
+    <title>Laurensia Cup 2026 |  Info</title>
     <link rel="stylesheet" href="code/css/main.css" media=" (min-width: 769px) ">
     <link rel="stylesheet" href="code/css/mobile.css" media=" (max-width: 768px) ">
     <link rel="icon" href="assets/logo/favicon.ico">
@@ -17,6 +17,7 @@
         }
 
         main {
+            max-width: 100vw;
             background-color: black;
             background-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%), url("assets/backgrounds/bg1.jpeg");
             background-position: center;
@@ -206,6 +207,124 @@
         .circle:hover {
             transform: scale(1.1);
         }
+        @media (max-width: 768px) {
+
+            main {
+                margin: 0 auto;
+                background-image: none;
+            }
+
+
+            .page {
+                height: auto;
+                flex-direction: column;
+            }
+
+            .content {
+                padding: 0;
+                justify-content: flex-start;
+                flex: none;
+                order: 1;
+            }
+            .main-text {
+                justify-content: flex-end;
+                height: 400px;
+                background-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.05) 55%, transparent 65%), url("basketball.jpeg");
+                padding: 0 20px 6px 20px;
+                background-position: center;
+                background-repeat: no-repeat;
+                transition: background-image 0.2s ease-in-out;
+                margin-bottom: 0;
+                background-size: cover;
+            }
+            .navbar {
+                border-bottom: none !important;
+            }
+            .title, .register, .contact, .seemore {
+                text-transform: capitalize;
+            }
+
+            .title {
+                line-height: 1.05;
+            font-size: 34px;
+            }
+
+            .tagline {
+            margin: -2px 0 0;
+            font-size: 20px;
+            }
+
+            .action-button {
+            padding: 18px 20px 0 20px;
+            margin-bottom: 0;
+            gap: 10px;
+            }
+
+            .register, .contact, .seemore {
+                height: 42px;
+            padding: 0 6px;
+                font-family: Roboto;
+                text-align: center;
+                flex: 1;
+                font-size: 13px;
+                color: #163a7a;
+                width: auto;
+                border-radius: 24px;
+            }
+
+            .seemore {
+                display: flex;
+            }
+            .description {
+            font-size: 14px;
+            line-height: 1.55;
+            padding: 16px 20px 22px 20px;
+            max-width: none;
+            }
+            .navbox {
+                order: 2;
+                gap: 6px;
+                height: auto;
+                padding: 4px 8px 26px 8px;
+                flex-direction: row;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .arrow-up, .arrow-down {
+                width: 30px;
+                transform: rotate(-90deg);
+                flex-shrink: 0;
+                height: 30px;
+            }
+
+            .arrow-up:hover, .arrow-down:hover {
+            transform: rotate(-90deg) scale(1.1);
+            }
+
+            .circles-wrapper {
+                display: block;
+                width: auto;
+                flex: 1;
+                min-width: 0;
+            }
+
+            .circles-track {
+            flex-direction: row;
+            position: static;
+            gap: 14px;
+            }
+
+            .circle {
+                height: 72px;
+                width: 72px;
+            }
+
+            .circle:hover {
+                transform: scale(1.07);
+            }
+
+        }
     </style>
 </head>
 <body>
@@ -233,13 +352,15 @@
 
                 <div class="circles-wrapper">
                     <div class="circles-track" id="circles-track">
-                        <div class="circle" data-sport="Basketball" data-bg="assets/images/sports/basketball.jpeg" data-url="basketball.html"></div>
-                        <div class="circle" data-sport="Tennis" data-bg="assets/images/sports/tabletennis.PNG" data-url="tennis.html"></div>
-                        <div class="circle" data-sport="Photography" data-bg="assets/images/sports/placeholder.jpeg" data-url="photography.html"></div>
-                        <div class="circle" data-sport="Soccer" data-bg="assets/images/sports/soccer.JPG" data-url="soccer.html"></div>
-                        <div class="circle" data-sport="Badminton" data-bg="assets/images/sports/badmin.jpg" data-url="badminton.html"></div>
-                        <div class="circle" data-sport="Volley" data-bg="assets/images/sports/volley.jpg" data-url="volley.html"></div>
-                        <div class="circle" data-sport="MUN" data-bg="assets/images/sports/MUN.webp" data-url="MUN.html"></div>
+                        <div class="circle" data-sport="Basketball" data-bg="assets/images/sports/basketball.jpeg" data-url="basketball.html" data-desc="In this fierce basketball competition, there will be 12 teams divided into 3 pools. Each pool will have 3 teams competing against one another. Each team must wear the same bright or dark colored jerseys and have a minimum of  5 players for the competition"></div>
+                        <div class="circle" data-sport="Table Tennis" data-bg="assets/images/sports/tabletennis.PNG" data-url="tennis.html" data-desc="In the table tennis competition, each school may register a maximum of 5 players, consisting of 2 doubles pairs and 1 singles player. A total of 12 teams will compete in the tournament and will be divided into four pools, with 3 teams in each pool. Every team in each pool will compete against one another in the preliminary round, and the winner of each pool will advance to the semifinals. "></div>
+                        <div class="circle" data-sport="Photography" data-bg="assets/images/sports/placeholder.jpeg" data-url="photography.html" data-desc="The photos will be taken on … (insert date) and must be submitted by … (insert date and time). Photos are only allowed to be taken inside Santa Laurensia Alam Sutera School, when Laurensia Cup is taking place. The theme for the competition and place of submission will be announced beforehand at the technical meeting. "></div>
+                        <div class="circle" data-sport="Soccer" data-bg="assets/images/sports/soccer.JPG" data-url="soccer.html" data-desc="In soccer, one team will consist of 11 players with 7 substitutes, who have the chance to substitute a maximum of about 5 times. For each team, the players must wear the same bright or dark colored jersey, except for the goalkeeper. All players are required to wear long socks and soccer cleats, and are recommended to wear shin guards. For the goalkeeper, it is mandatory to wear keeper gloves."></div>
+                        <div class="circle" data-sport="Badminton" data-bg="assets/images/sports/badmin.jpg" data-url="badminton.html" data-desc="In this exciting badminton competition, there will be five categories: men’s singles, women’s singles, men’s doubles, women’s doubles, and mixed doubles. Each category will consist of 16 players or pairs competing in a knockout system, where the winner advances to the next round."></div>
+                        <div class="circle" data-sport="Volley" data-bg="assets/images/sports/volley.jpg" data-url="volley.html" data-desc="In this game that requires strength and endurance, one team will work together in the game of volleyball. One team consists of 6 to 12 players, who must wear the same bright or dark colored jerseys. Every team must bring their own ball for warm-up, and they may use the libero system."></div>
+                        <div class="circle" data-sport="MD" data-bg="assets/images/sports/md.jpg" data-url="MD.html" data-desc="The modern dance competition requires each participating team to have 4-8 dancers, with a performance duration of 3-5 minutes. The theme is … (insert theme). " data-pos="center 20%"></div>
+                        <div class="circle" data-sport="Chess" data-bg="assets/images/sports/Chess.jpg" data-url="Chess.html" data-desc="The chess competition is played with a duration of 5 minutes for each participant, whereas a coin flip will be done during the 10-minute break between matches to determine which color of pawn (black or white) will be used."></div>
+                        <div class="circle" data-sport="MUN" data-bg="assets/images/sports/MUN.webp" data-url="MUN.html" data-desc="Participants in the MUN competition will register through the 2 phases conducted (i.e. Early Bird and regular Phase Registration). Participants must state thor first and second choice of councils, as well as topics & identity. Delegates are required to write a Position Paper containing their background issue, country/figure stance, and proposing resolutions beforehand, due at … (insert date)."></div>
                     </div>
                 </div>
 
@@ -258,7 +379,7 @@
                     <a class="seemore" id="see-more-btn" href="#">See More</a>
                 </div>
 
-                <p class="description" id="desc-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, eaque id corporis voluptate quibusdam deleniti odit velit! Voluptate a quis corrupti quaerat ipsum sed perferendis ad nemo, neque doloremque temporibus?</p>
+                <p class="description" id="desc-text">Click competition to see its details</p>
             </div>
         </div>
     </main>
@@ -278,54 +399,60 @@
 
     <script>
         const main = document.querySelector('main');
+       
         const track = document.getElementById('circles-track');
         const upbutton = document.querySelector('.arrow-up');
         const downbutton = document.querySelector('.arrow-down');
 
         const itemHeight = 110; 
+        const itemWidth = 86;
         const originalCircles = Array.from(track.children);
         const totalItems = originalCircles.length;
 
         originalCircles.forEach(function (circle) {
-            var bg = circle.getAttribute('data-bg');
-            circle.style.backgroundImage = 'url("' + bg + '")';
-            circle.setAttribute('title', circle.getAttribute('data-sport'));
-            circle.textContent = '';
+        var bg = circle.getAttribute('data-bg');
+        circle.style.backgroundImage = 'url("' + bg + '")';
+        circle.setAttribute('title', circle.getAttribute('data-sport'));
+        circle.textContent = '';
         });
 
         originalCircles.forEach(function (c) {
-            track.appendChild(c.cloneNode(true));
+        track.appendChild(c.cloneNode(true));
         });
         originalCircles.slice().reverse().forEach(function (c) {
-            track.insertBefore(c.cloneNode(true), track.firstChild);
+        track.insertBefore(c.cloneNode(true), track.firstChild);
         });
 
         let currentIndex = totalItems; 
 
         function moveTrack(withTransition) {
-            track.style.transition = withTransition ? 'transform 0.10s ease-in-out' : 'none';
-            track.style.transform = 'translateY(-' + (currentIndex * itemHeight) + 'px)';
+        track.style.transition = withTransition ? 'transform 0.10s ease-in-out' : 'none';
+        if (window.matchMedia("(max-width: 768px)").matches) {
+        track.style.transform = 'translateX(-' + (currentIndex * itemWidth) + 'px)';
+        } else {
+        track.style.transform = 'translateY(-' + (currentIndex * itemHeight) + 'px)';
+        }
         }
         moveTrack(false);
 
         downbutton.addEventListener('click', function () {
-            currentIndex++;
-            moveTrack(true);
+        currentIndex++;
+        moveTrack(true);
         });
 
         upbutton.addEventListener('click', function () {
-            currentIndex--;
-            moveTrack(true);
+        currentIndex--;
+        moveTrack(true);
         });
 
         track.addEventListener('transitionend', function () {
-            if (currentIndex >= totalItems * 2) {
-                currentIndex -= totalItems;
-                moveTrack(false);
-            } else if (currentIndex < totalItems) {
-                currentIndex += totalItems;
-                moveTrack(false);
-            }
+        if (currentIndex >= totalItems * 2) {
+        currentIndex -= totalItems;
+        moveTrack(false);
+        } else if (currentIndex < totalItems) {
+        currentIndex += totalItems;
+        moveTrack(false);
+        }
         });
 
         var sportTitle = document.getElementById('sport-title');
@@ -333,33 +460,58 @@
         var seeMore = document.getElementById('see-more-btn');
 
         function selectCircle() {
-            track.querySelectorAll('.circle').forEach(function (c) {
-                c.classList.remove('selected');
-            });
+        track.querySelectorAll('.circle').forEach(function (c) {
+        c.classList.remove('selected');
+        });
+        this.classList.add('selected');
 
-            this.classList.add('selected');
+        var name = this.getAttribute('data-sport');
+        var bg = this.getAttribute('data-bg');
+        var page = this.getAttribute('data-url');
+        var desc = this.getAttribute('data-desc');
+        var size = this.getAttribute('data-size') || 'cover';
+        var pos = this.getAttribute('data-pos') || 'center';
 
-            var name = this.getAttribute('data-sport');
-            var bg = this.getAttribute('data-bg');
-            var page = this.getAttribute('data-url');
+        sportTitle.innerHTML = name + " competition";
+        descText.textContent = desc;
+        if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.main-text').style.backgroundImage = 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.05) 55%, transparent 65%), url("' + bg + '")';
+        document.querySelector('.main-text').style.backgroundSize = 'cover, ' + size;
+        document.querySelector('.main-text').style.backgroundPosition = 'center, ' + pos;
+        } 
+        
+        else {
+        main.style.backgroundImage = 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%), url("' + bg + '")';
+        main.style.backgroundSize = 'cover, ' + size;
+        main.style.backgroundPosition = 'center, ' + pos;
+        }
 
-            sportTitle.innerHTML = name + " competition";
+        seeMore.setAttribute('href', page);
+        seeMore.classList.add('show');
 
-            main.style.backgroundImage =
-                'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%), url("' + bg + '")';
-
-            seeMore.setAttribute('href', page);
-            seeMore.classList.add('show');
-
-            sportTitle.style.color = "white";
-            descText.style.color = "white";
+        sportTitle.style.color = "white";
+        descText.style.color = "white";
         }
 
         track.querySelectorAll('.circle').forEach(function (circle) {
-            circle.addEventListener('click', selectCircle);
+        circle.addEventListener('click', selectCircle);
         });
-        const basketball = track.querySelector('[data-sport="Basketball"]');
-        basketball.click();
+
+        if (window.matchMedia("(max-width: 768px)").matches) {
+        originalCircles[0].click();
+        }
+
+        window.addEventListener('resize', function () {
+            originalCircles[0].click();
+            moveTrack(false);
+
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                main.style.backgroundImage = 'none';
+            } else {
+                document.querySelector('.main-text').style.backgroundImage = 'none';
+            }
+        });
+        originalCircles[0].click();
     </script>
 </body>
 </html>
