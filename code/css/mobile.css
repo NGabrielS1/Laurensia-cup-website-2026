@@ -1,31 +1,31 @@
 /* fonts */
 @font-face {
     font-family: Maragsa;
-    src: url("assets/Maragsa-Display__V2.5.otf");
+    src: url("../../assets/fonts/Maragsa-Display__V2.5.otf");
 }
 @font-face {
     font-family: Caveat;
-    src: url("assets/Caveat-VariableFont_wght.ttf");
+    src: url("../../assets/fonts/Caveat-VariableFont_wght.ttf");
 }
 @font-face {
     font-family: Roboto;
     font-style: normal;
-    src: url("assets/Roboto-VariableFont_wdth\,wght.ttf");
+    src: url("../../assets/fonts/Roboto-VariableFont_wdth\,wght.ttf");
 }
 @font-face {
     font-family: Roboto;
     font-style: italic;
-    src: url("assets/Roboto-Italic-VariableFont_wdth\,wght.ttf");
+    src: url("../../assets/fonts/Roboto-Italic-VariableFont_wdth\,wght.ttf");
 }
 @font-face {
     font-family: PlayfairDisplay;
     font-style: normal;
-    src: url("assets/PlayfairDisplay-VariableFont_wght.ttf");
+    src: url("../../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf");
 }
 @font-face {
     font-family: PlayfairDisplay;
     font-style: italic;
-    src: url("assets/PlayfairDisplay-Italic-VariableFont_wght.ttf");
+    src: url("../../assets/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf");
 }
 
 /* variable */
