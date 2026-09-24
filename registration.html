@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration &#124; Laurensia Cup 2026</title>
+    <link rel="icon" href="Assets/Logo/favicon.ico">
+
+    <!-- REFS -->
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Main.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Main_Mobile.css">
+
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Regis.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Regis_Mobile.css">
+</head>
+<body>
+    <header>
+        <section>
+            <img src="Assets/Logo/Logo.png" alt="Laurensia Cup Logo">
+            <h1>LAURENSIA CUP <span>2026</span></h1>
+        </section>
+
+        <nav>
+            <button class="navbutton disabled" id="arrowL" onclick="navBack()"><img src="Assets/Images/Icons/ArrowL.png" alt="Navigate Left"></button>
+            <ul class="nav-link" id="pageOne">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT</a></li>
+                <li><a href="videos.html">VIDEOS</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageTwo">
+                <li><a href="">OUR MERCH</a></li>
+                <li><a href="">INFO & SCHEDULES</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageThree">
+                <li><a href="#" class="active">REGISTRATION</a></li>
+                <li><a href="sponsor.html">SPONSORS</a></li>
+            </ul>
+            <button class="navbutton" id="arrowR" onclick="navForw()"><img src="Assets/Images/Icons/ArrowR.png" alt="Navigate Right"></button>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <article class=articleTop>
+            <img class="divider" src="Assets/Backgrounds/Divider.png" alt="">
+            <section>
+                <h2 class="registrationHeader">REGISTRATION</h2>
+                <div class="qrCode">
+                    <img src="Assets/Images/QRCode.png" alt="QR Code">
+                    <h3>SCAN HERE</h3>
+                </div>
+                <div class="contact">
+                    <h3>Contact Person</h3>
+                    <section>
+                        <p>Humas (Dina)</p>
+                        <p>+62-812-9821-3188</p>
+                    </section>
+                </div>
+                <div class="procedures">
+                    <ol>
+                        <li>Open the attached proposal PDF to access the required forms and documents.</li>
+                        <li>Fill out all the registration documents completely as stated in the proposal.</li>
+                        <li>Submit all required files via email to: <span style="color: var(--white); font-style: italic;">laurensia.cup@santa-laurensia.sch.id</span></li>
+                    </ol>
+                    <p>Subject format: Pendaftaran Lomba [Nama Lomba] [Nama Sekolah] (e.g., Pendaftaran Lomba Basket SMA Santa Laurensia)</p>
+                </div>
+                <div class="deadline">
+                    <img src="Assets/Images/Mascot/Bird.png" alt="Mascot">
+                    <h3>SIGN UP BEFORE...</h3>
+                    <h2><span style="font-size: 1.2em;">30</span> SEPTEMBER</h2>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class=flex-col>
+            <h2>CONTACT US</h2>
+            <ul>
+                <li>Maira (<a href="https://wa.me/62818230809">+62 818-230-809</a>)</li>
+                <li>Jericho (<a href="https://wa.me/6281319333302">+62 813-1933-3302</a>)</li>
+                <li>Ms Reni (<a href="https://wa.me/6287780654548">+62 877-8065-4548</a>)</li>
+                <li>Mr Danang (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
+                <li>Dina (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
+                <!-- cHJvZ3JhbW1lcjogc29tZXRoaWdu -->
+            </ul>
+        </div>
+        <a href="https://2024.laurensiacup.id/">Looking for the Old Website? &rarr;</a>
+    </footer>
+</body>
+<script src="Code/JS/Main.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => setPage(3));
+</script>
+</html>
