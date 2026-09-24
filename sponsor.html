@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsors &#124; Laurensia Cup 2026</title>
+    <link rel="icon" href="Assets/Logo/favicon.ico">
+
+    <!-- REFS -->
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Main.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Main_Mobile.css">
+
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Sponsor.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Sponsor_Mobile.css">
+</head>
+<body>
+    <header>
+        <section>
+            <img src="Assets/Logo/Logo.png" alt="Laurensia Cup Logo">
+            <h1>LAURENSIA CUP <span>2026</span></h1>
+        </section>
+
+        <nav>
+            <button class="navbutton disabled" id="arrowL" onclick="navBack()"><img src="Assets/Images/Icons/ArrowL.png" alt="Navigate Left"></button>
+            <ul class="nav-link" id="pageOne">
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT</a></li>
+                <li><a href="videos.html">VIDEOS</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageTwo">
+                <li><a href="">OUR MERCH</a></li>
+                <li><a href="">INFO & SCHEDULES</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageThree">
+                <li><a href="registration.html">REGISTRATION</a></li>
+                <li><a href="sponsor.html">SPONSORS</a></li>
+            </ul>
+            <button class="navbutton" id="arrowR" onclick="navForw()"><img src="Assets/Images/Icons/ArrowR.png" alt="Navigate Right"></button>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <article class="sponsorspart">
+            <h1>OUR SPONSORS</h1>
+            <section>
+                <div class="sponsors-grid">
+                    <p class="sponsor"></p>
+                    <img src="Assets/Images/Sponsors/pathlab.jpg" class="sponsor" id="one"/>
+                    <img src="Assets/Images/Sponsors/alamsutera.webp" class="sponsor" id="two"/>
+                    <img src="Assets/Images/Sponsors/shinewing.png" class="sponsor" id="three"/>
+                    <img src="Assets/Images/Sponsors/tpm.jpg" class="sponsor" id="four"/>
+                </div>
+            </section>
+
+        </article>
+        <article class="buttonpart">
+            <a href="index.html">Back</a>
+        </article>
+    </main>
+
+    <footer>
+        <div class=flex-col>
+            <h2>CONTACT US</h2>
+            <ul>
+                <li>Maira (<a href="https://wa.me/62818230809">+62 818-230-809</a>)</li>
+                <li>Jericho (<a href="https://wa.me/6281319333302">+62 813-1933-3302</a>)</li>
+                <li>Ms Reni (<a href="https://wa.me/6287780654548">+62 877-8065-4548</a>)</li>
+                <li>Mr Danang (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
+                <li>Dina (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
+            </ul>
+        </div>
+        <a href="https://2024.laurensiacup.id/">Looking for the Old Website? &rarr;</a>
+    </footer>
+    <style>
+        #one {
+            grid-area: 1/2/1/span 3;
+        }
+        #two {
+            grid-area: 1/6/1/span 3;
+        }
+        #three {
+            grid-area: 2/4/2/span 3;
+        }
+        #four {
+            grid-area: 3/5/3/span 1;
+        }
+        @media only screen and (max-width: 768px) {
+            #one {
+                grid-area: 1/1/1/span 3;
+            }
+            #two {
+                grid-area: 2/1/2/span 3;
+            }
+            #three {
+                grid-area: 3/1/3/span 3;
+            }
+            #four {
+                grid-area: 4/2/4/span 1;
+            }
+        }
+    </style>
+</body>
+<script src="Code/JS/Main.js" defer></script>
+<script>
+</script>
+</html>

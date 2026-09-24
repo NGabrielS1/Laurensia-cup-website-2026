@@ -1,508 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Welcome to Laurensia Cup 2026">
-  <meta name="keywords" content="laurensia, sports, highschool, laurencup, lorencup, laurensiacup">
-  <link rel="stylesheet" href="code/css/main.css" media="screen and (min-width: 769px)">
-  <link href="code/css/mobile.css" rel="stylesheet" media="screen and (max-width: 768px)">
-  <link rel="icon" href="assets/logo/favicon.ico">
-  <title>Laurensia Cup 2026 | Home</title>
-  <style>
-    article .wrapper {
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        width: 100%;
-        box-sizing: border-box;
-        flex-grow: 1;
-        min-height: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home &#124; Laurensia Cup 2026</title>
+    <link rel="icon" href="Assets/Logo/favicon.ico">
 
-    .wrapper .sixty {
-        margin-top: 3rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 50%;
-        overflow: hidden;
-        padding: 0 1rem;
-    }
+    <!-- REFS -->
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Main.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Main_Mobile.css">
 
-    .sixty img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    .sixty .title-info {
-        margin-top: 3rem;
-        color: white;
-        font-size: 1.2rem;
-        line-height: 1.4;
-        text-align: left;
-        font-family: 'Times New Roman';
-        padding: 0;
-    }
-
-    .sixty a {
-        display: inline-block;
-        background-color: #91cdff;
-        color: #0151ca;
-        font-size: 1.2rem;
-        font-family: Roboto;
-        font-weight: 500;
-        border-radius: 50px;
-        padding: 0.6rem 1.4rem;
-        margin: 0;
-        margin-bottom: 1rem;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    .wrapper .thirty {
-        margin-top: 3rem;
-        position: relative;
-        width: 25%;
-        max-height: 80%;
-        background-color: #5685c8;
-        border-radius: 25px;
-        color: white;
-        overflow: hidden;
-        padding: 3rem 1.5rem 2rem 1.5rem;
-        box-shadow: 10px 15px 10px 10px rgba(0, 0, 0, 0.3);
-    }
-    .thirty h2 {
-        font-family: Caveat;
-        text-shadow: 3px 2px 5px rgb(255, 255, 255, 0.55);
-        color: #080088;
-        font-weight: bold;
-        font-size: 3.5rem;
-        z-index: 3;
-        top: -2.5rem;
-        left: 1rem;
-        position: absolute;
-    }
-    .thirty video {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-    .thirty p {
-        margin-bottom: 4rem;
-        color: white;
-        font-size: 1.2rem;
-        line-height: 1.4;
-        text-align: left;
-        font-family: 'Times New Roman';
-    }
-    .thirty a {
-        color: #080088;
-        font-size: 1.3rem;
-        font-family: Roboto;
-        line-height: 1.4;
-        font-weight: 500;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    .wrapper .fifty {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 50%;
-        height: 100%;
-        box-sizing: border-box;
-        padding: 0 1rem;
-    }
-    .fifty h2 {
-        font-family: Maragsa;
-        color: #FEF188;
-        font-size: 3.5rem;
-    }
-    .fifty section {
-        display: flex;
-        flex-direction: row;
-        height: 30%;
-        width: 95%;
-        overflow: hidden;
-        background-color: #91CDFF;
-        margin-bottom: 2rem;
-    }
-    .fifty section img {
-        min-height: 100%;
-        width: 50%;
-        object-fit: cover;
-    }
-    .fifty section span {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        max-height: 100%;
-        align-items: flex-start;
-        padding: 1rem;
-    }
-    span h3 {
-        margin: 0;
-        font-family: PlayFairDisplay;
-        font-weight: 700;
-        color: #0151CA;
-        font-size: 1.5rem;
-    }
-    span p {
-        line-height: 1.4;
-        font-family: 'Times New Roman';
-        font-size: 0.8rem;
-    }
-    span a {
-        display: inline-block;
-        background-color: #0D0790;
-        color: #FFFFEF;
-        font-size: 0.6rem;
-        font-family: Roboto;
-        font-weight: 500;
-        border-radius: 50px;
-        padding: 0.4rem 2rem;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    .fifty .time-container {
-        padding: 10% 5% 0 10%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-        height: auto;
-        box-sizing: border-box;
-        column-gap: 5%;
-        row-gap: 5%;
-    }
-    .time-box {
-        box-sizing: border-box;
-        background-color: #5685c8;
-        aspect-ratio: 1/1;
-        border-radius: 35px;
-        gap: 0;
-        width: 100%;
-        height: auto;
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 10px 15px 10px 10px rgba(0, 0, 0, 0.3);
-    }
-    .time-box h3 {
-        margin: 0;
-        font-size: 8rem;
-        font-family: Maragsa;
-        color: #FFFFEF;
-        line-height: 0.8;
-        font-variant-numeric: tabular-nums;
-        font-feature-settings: "tnum";
-    }
-    .time-box p {
-        color: #FEF188;
-        font-family: Maragsa;
-        margin: 0;
-        font-size: 3rem;
-        line-height: 1;
-    }
-    .wrapper .hundred {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 100%;
-        height: 85vh;
-        overflow: hidden;
-        padding: 1rem 3rem;
-        box-sizing: border-box;
-    }
-    .hundred h1 {
-        font-family: Maragsa;
-        color: #FEF188;
-        font-size: 4rem;
-        margin: 0 0 2rem 0;
-    }
-    .hundred .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        width: 100%;
-        height: 100%;
-        flex: 1;
-        min-height: 0;
-        column-gap: 2%;
-        row-gap: 4%;
-    }
-    .container a {
-        text-align: center;
-        height: 100%;
-        width: 100%;
-        padding: 0;
-        background-color: #91CDFF;
-        border-radius: 15px;
-        overflow: hidden;
-        cursor: pointer;
-        position: relative;
-        box-sizing: border-box;
-        box-shadow: 10px 15px 10px 10px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease, border 0.3s ease;
-    }
-    .container a:hover {
-        transform: scale(1.1);
-        border: 1.5px solid rgba(255, 255, 255, 0.9);
-    }
-    .container a img {
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-    }
-    .container a p {
-        z-index: 2;
-        position: absolute;
-        margin: 0;
-        bottom: 0%;
-        background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.9));
-        color: #FFFFEF;
-        font-family: Maragsa;
-        font-size: 3rem;
-        width: 100%;
-        height: 30%;
-        padding: 40% 0 0 0 ;
-    }
-    @media (max-width: 768px) {
-        .wrapper .sixty {
-            align-items: flex-end;
-            width: 100%;
-            padding: 0 3rem;
-        }
-        .sixty .title-info {
-            font-size: 1rem;
-            margin-bottom: 3rem;
-            margin-top: 2rem;
-        }
-        .sixty a {
-            margin-bottom: 1rem;
-        }
-        .wrapper .thirty {
-            display: none;
-        }
-        .wrapper:has(.fifty) {
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            width: 100%;
-        }
-        .wrapper .fifty {
-            width: 100%;
-            height: auto;
-            padding: 0;
-            margin: 0;
-        }
-        .fifty .time-container {
-            margin: 2% 0;
-            padding: 0 2% 0 2%;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            max-width: 100%;
-            column-gap: 3%;
-            box-sizing: border-box;
-        }
-        .time-box {
-            background-color: #5685c8;
-            border-radius: 15px;
-            gap: 0;
-            aspect-ratio: 1/1;
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .time-box h3{
-            font-size: 4rem;
-        }
-        .time-box p{
-            font-size: 1.5rem;
-        }
-        .fifty h2 {
-            margin-left: 1rem;
-            font-size: 3rem;
-        }
-        .fifty section {
-            text-align: center;
-            margin: 0 auto 1rem auto;
-            line-height: 0.9;
-            text-align: left;
-            overflow: hidden;
-
-        }
-        .wrapper .hundred {
-            padding: 0 4% 0 4%;
-            width: 100%;
-            align-items: flex-start;
-        }
-        .hundred h1 {
-            margin-top: 10%;
-            margin-bottom: 15%;
-        }
-        .hundred .container {
-            grid-template-columns: 1fr 1fr 1fr;
-            column-gap: 5%;
-        }
-        .dissapear {
-            display: none;
-        }
-        .container div {
-            height: 80%;
-            width: 100%;
-        }
-        .container div p {
-            font-size: 1.5rem;
-        }
-    }
-  </style>
-
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Home.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Home_Mobile.css">
 </head>
 <body>
-    <!-- navigation bar -->
-    <header class="navbar">
+    <header>
         <section>
-            <img src="assets/logo/logo.png" alt="Meracharis-logo">
-            <h1>LAURENSIA CUP 2026</h1>
+            <img src="Assets/Logo/Logo.png" alt="Laurensia Cup Logo">
+            <h1>LAURENSIA CUP <span>2026</span></h1>
         </section>
+
         <nav>
-            <img class="nav-button" src="assets/images/icons/arrow-left.png" onclick="movenav()" alt="navigation-arrow-left">
-            <a class="nav1" href="index.html">HOME</a><span class="nav1" style="user-select: none;">.</span>
-            <a class="nav1" href="aboutus.html">ABOUT</a><span class="nav1" style="user-select: none;">.</span>
-            <a class="nav1" href="">VIDEOS</a><span class="nav3" style="user-select: none;">.</span>
-            <a class="nav2" href="">OUR MERCH</a><span class="nav2" style="user-select: none;">.</span>
-            <a class="nav2" href="sports.html">INFO & SCHEDULES</a><span class="nav2" style="user-select: none;">.</span>
-            <a class="nav2" href="https://2024.laurensiacup.id/">ARCHIVE</a>
-            <img class="nav-button" src="assets/images/icons/arrow-right.png" onclick="movenav()" alt="navigation-arrow-right">
+            <button class="navbutton disabled" id="arrowL" onclick="navBack()"><img src="Assets/Images/Icons/ArrowL.png" alt="Navigate Left"></button>
+            <ul class="nav-link" id="pageOne">
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT</a></li>
+                <li><a href="videos.html">VIDEOS</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageTwo">
+                <li><a href="">OUR MERCH</a></li>
+                <li><a href="">INFO & SCHEDULES</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageThree">
+                <li><a href="registration.html">REGISTRATION</a></li>
+                <li><a href="sponsor.html">SPONSORS</a></li>
+            </ul>
+            <button class="navbutton" id="arrowR" onclick="navForw()"><img src="Assets/Images/Icons/ArrowR.png" alt="Navigate Right"></button>
         </nav>
-     </header>
-     
-     <!--content-->
-     <main>
-        <article style="background-image: url(assets/backgrounds/bg2.jpeg)">
-            <img class="seperator" src="assets/backgrounds/linedecor.png" alt="line-seperator"/>
-            <div class="wrapper">
-                <div class="sixty">
-                    <img src="assets/logo/title.png" alt="Meracharis"/>
-                    <p class="title-info">The Laurensia Cup is a competition organized by Santa Laurensia every two years. Meracharis is a combination of two Greek words: "meraki" and "charis." In Modern Greek, "meraki" signifies doing something with one's whole soul, creativity, and love...</p>
-                    <a href="aboutus.html">Read More</a>
-                </div>
-                <div class="thirty">
-                    <h2>Featured</h2>
-                    <video autoplay loop playsinline muted>
-                        <source src="assets/video-song.mp4" type="video/mp4">
-                    </video>
-                    <p>The Sound of Laurensia Cup 2026: The wait is over! Our official song has officially dropped and is ready to blast for you all!</p>
-                    <a>LEARN MORE ></a>
-                </div>
-            </div>
+    </header>
+
+    <main id="mainContent">
+        <article class="articleTop">
+            <img class="dividerTop" src="Assets/Backgrounds/DividerTop.png" alt="">
+            <section class="mainArea">
+                <img src="Assets/Logo/Title.png" alt="Meragharis Logo">
+                <p id="readMoreText">The Laurensia Cup is a competition organized by Santa Laurensia every two years. Meracharis is a combination of two Greek words: "meraki" and "charis." In Modern Greek, "meraki" signifies doing something with one's whole soul, creativity, and love...</p>
+                <button onclick="readMore()">Read More</button>
+            </section>
+            <section class="articleHighlight">
+                <h2>Featured</h2>
+                <video controls>
+                    <source src="Assets/Videos/video-song.mp4" type="video/mp4"/>
+                </video>
+                <p>The Sound of Laurensia Cup 2026: The wait is over! Our official song has officially dropped and is ready to blast for you all!</p>
+                <a href="">Learn More &gt;&gt;</a>
+            </section>
+            <img class="dividerBot" src="Assets/Backgrounds/Divider.png" alt="">
         </article>
-        <article style="background-image: url(assets/backgrounds/bg3.jpeg)">
-            <img class="seperator" src="assets/backgrounds/linedecor.png" alt="line-seperator"/>
-            <div class="wrapper">
-                <div class="fifty">
-                    <div class="time-container">
-                        <div class="time-box"><h3 id="day">20</h3><p>Day</p></div>
-                        <div class="time-box"><h3 id="hour">20</h3><p>Hour</p></div>
-                        <div class="time-box"><h3 id="minute">20</h3><p>Minute</p></div>
-                        <div class="time-box"><h3 id="second">20</h3><p>Second</p></div>
+        <article class="articleMid">
+            <section class="counter">
+                <div class="timerRow">
+                    <div>
+                        <h2 id="dayCounter">00</h2>
+                        <p>Days</p>
+                    </div>
+                    <div>
+                        <h2 id="hourCounter">00</h2>
+                        <p>Hours</p>
                     </div>
                 </div>
-                <div class="fifty">
-                    <h2>Latest News</h2>
-                    <section>
-                        <img src="assets/images/sports/mural.jpeg" alt="mural-image"/>
-                        <span>
-                            <h3>Mural Laurensia Cup 2026 : The Walls Come Alive</h3>
-                            <p>Introducing the massive blast of color thanks to the students who came together to paint this year’s mural. Stop by the corridor to see these incredible mural paintings.</p>
-                            <a>READ MORE</a>
-                        </span>
-                    </section>
-                    <section>
-                        <img src="assets/images/sports/fundraising.jpeg" alt="fundraising-image"/>
-                        <span>
-                            <h3>Meet the Fundraising Team</h3>
-                            <p>A massive shoutout to our incredible fundraising team for keeping everyone energized with delicious and tasty sweets and foods.</p>
-                            <a>READ MORE</a>
-                        </span>
-                    </section>
-                </div>
-            </div>
-        </article>
-        <article style="background-image: url(assets/backgrounds/bg4.jpeg)">
-            <div class="wrapper">
-                <div class="hundred">
-                    <h1>Our Competitions</h1>
-                    <div class="container">
-                        <a href="sports.html"><img src="assets/images/sports/soccer.JPG" alt="soccer"/><p>Football</p></a>
-                        <a href="sports.html"><img src="assets/images/sports/basketball.jpeg" alt="basketball"/><p>Basketball</p></a>
-                        <a href="sports.html"><img src="assets/images/sports/volley.jpg" alt="volleyball"/><p>Volleyball</p></a>
-                        <a href="sports.html" class="dissapear"><img src="assets/images/sports/badmin.JPG" alt="badminton"/><p>Badminton</p></a>
-                        <a href="sports.html" class="dissapear"><img src="assets/images/sports/tabletennis.PNG" alt="table-tennis"/><p>TableTennis</p></a>
-                        <a href="sports.html" class="dissapear"><img src="assets/images/sports/md.JPG" alt="modern-dance"/><p>Dance</p></a>
-                        <a href="sports.html" class="dissapear"><img src="assets/images/sports/chess.JPG" alt="chess"/><p>Chess</p></a>
-                        <a href="sports.html" class="dissapear"><img src="assets/images/sports/MUN.webp" alt="model-united-nations"/><p>MUN</p></a>
+                <div class="timerRow">
+                    <div>
+                        <h2 id="minuteCounter">00</h2>
+                        <p>Minutes</p>
+                    </div>
+                    <div>
+                        <h2 id="secondCounter">00</h2>
+                        <p>Seconds</p>
                     </div>
                 </div>
+            </section>
+            <section class="latestNews">
+                <h2>Latest News</h2>
+                <div>
+                    <img src="Assets/Images/Sports/mural.jpeg" alt="">
+                    <section class="flex-col">
+                        <h3>Mural Laurensia Cup 2026 : The Walls Come Alive</h3>
+                        <p>Introducing the massive blast of color thanks to the students who came together to paint this year&#8217;s mural. Stop by the corridor to see these incredible mural paintings.</p>
+                        <button>Read More</button>
+                    </section>
+                </div>
+                <div>
+                    <img src="Assets/Images/Sports/fundraising.jpeg" alt="">
+                    <section class="flex-col">
+                        <h3>Meet the Fundraising Team</h3>
+                        <p>A massive shoutout to our incredible fundraising team for keeping everyone energized with delicious and tasty sweets and foods.</p>
+                        <button>Read More</button>
+                    </section>
+                </div>
+            </section>
+        </article>
+        <article class="articleBot">
+            <h2>Our Competitions</h2>
+            <div class="competitions">
+                <section>
+                    <div>
+                        <img src="Assets/Images/Sports/Basketball.jpeg" alt="">
+                        <h3>Basketball</h3>
+                    </div>
+                    <div>
+                        <img src="Assets/Images/Sports/soccer.JPG" alt="">
+                        <h3>Soccer</h3>
+                    </div>
+                    <div>
+                        <img src="Assets/Images/Sports/volley.jpg" alt="">
+                        <h3>Volleyball</h3>
+                    </div>
+                    <div>
+                        <img src="Assets/Images/Sports/badmin.JPG" alt="">
+                        <h3>Badminton</h3>
+                    </div>
+                    <div>
+                        <img src="Assets/Images/Sports/tabletennis.PNG" alt="">
+                        <h3>Table Tennis</h3>
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <img src="Assets/Images/Sports/photography.webp" alt="">
+                        <h3>Photography</h3>
+                    </div>
+                    <div>
+                        <img src="Assets/Images/Sports/science.png" alt="">
+                        <h3>Science</h3>
+                    </div>
+                    <div>
+                        <img src="Assets/Images/Sports/MUN.webp" alt="">
+                        <h3>MUN</h3>
+                    </div>
+                    <div>
+                        <img src="Assets/Images/Sports/debate.jpg" alt="">
+                        <h3>Debate</h3>
+                    </div>
+                    <!-- Disabled for Spacing -->
+                    <div style="visibility: hidden;">
+                        <img src="Assets/Images/Placeholder.jpeg" alt="">
+                        <h3>Debate</h3>
+                    </div>
+                </section>
             </div>
         </article>
-     </main>
+    </main>
 
-     <!-- footer -->
-      <footer>
-        <h1>CONTACT US</h1>
-        <ul>
-            <li><p>Maira +62 818-230-809</p></li>
-            <li><p>Jericho +62 813-1933-3302</p></li>
-            <li><p>Ms Reni  +62 877-8065-4548</p></li>
-            <li><p>⁠Sir Danang +62 852-8238-1823</p></li>
-            <li><p>Dina⁠ +62 812-9821-3188</p></li>
-        </ul>
-      </footer>
-      <audio id="audio" style="display: none;width: 0;margin: 0;padding: 0;">
-        <source src="assets/song.mp3" type="audio/mp3">
-      </audio>
-     <script src="code/javascript/main.js"></script>
-     <script>
-        const secondElement = document.getElementById("second");
-        const minuteElement = document.getElementById("minute");
-        const hourElement = document.getElementById("hour");
-        const dayElement = document.getElementById("day");
-
-        const lorencupDate = new Date("Oct 10, 2026 07:15:00");
-
-        const timer = setInterval(function() {
-            const now = new Date();
-            const distance = lorencupDate.getTime() - now.getTime();
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / (1000));
-
-            dayElement.textContent = String(days).padStart(2, '0');
-            hourElement.textContent = String(hours).padStart(2, '0');
-            minuteElement.textContent = String(minutes).padStart(2, '0');
-            secondElement.textContent = String(seconds).padStart(2, '0');
-        }, 1000);
-
-        document.addEventListener("click", playsong);
-        document.addEventListener("scroll", playsong);
-
-        function playsong() {
-            const audio = document.getElementById("audio");
-            audio.loop = true;
-            audio.play();
-        }
-     </script>
+    <footer>
+        <div class=flex-col>
+            <h2>CONTACT US</h2>
+            <ul>
+                <li>Maira (<a href="https://wa.me/62818230809">+62 818-230-809</a>)</li>
+                <li>Jericho (<a href="https://wa.me/6281319333302">+62 813-1933-3302</a>)</li>
+                <li>Ms Reni (<a href="https://wa.me/6287780654548">+62 877-8065-4548</a>)</li>
+                <li>Mr Danang (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
+                <li>Dina (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
+            </ul>
+        </div>
+        <a href="https://2024.laurensiacup.id/">Looking for the Old Website? &rarr;</a>
+    </footer>
 </body>
+<script src="Code/JS/Main.js" defer></script>
+<script>
+    const lorencupDate = new Date("Oct 10, 2026 07:15:00");
+
+    const days = document.getElementById("dayCounter");
+    const hours = document.getElementById("hourCounter");
+    const minutes = document.getElementById("minuteCounter");
+    const seconds = document.getElementById("secondCounter");
+
+    const timer = setInterval(function() {
+        const now = new Date();
+        const timeBetween = lorencupDate.getTime() - now.getTime();
+
+        const daysTime = Math.floor(timeBetween / (86400 * 1000));
+        const hoursTime = Math.floor((timeBetween % (86400 * 1000)) / (3600 * 1000));
+        const minutesTime = Math.floor((timeBetween % (3600 * 1000)) / (60 * 1000));
+        const secondsTime = Math.floor((timeBetween % (60 * 1000)) / 1000);
+
+        days.textContent = String(daysTime).padStart(2, '0');
+        hours.textContent = String(hoursTime).padStart(2, '0');
+        minutes.textContent = String(minutesTime).padStart(2, '0');
+        seconds.textContent = String(secondsTime).padStart(2, '0');
+    }, 900);
+
+    var readExtra = false;
+
+    function readMore(){
+        const infoText = document.getElementById("readMoreText");
+        if (readExtra == false) {
+            infoText.style.opacity = 0;
+
+            infoText.addEventListener("transitionend", () => {
+                infoText.innerHTML = "The Laurensia Cup is a competition organized by Santa Laurensia every two years. Meracharis is a combination of two Greek words: &quot;meraki&quot; and &quot;charis.&quot; In Modern Greek, &quot;meraki&quot; signifies doing something with one&apos;s whole soul, creativity, and love, while &quot;charis&quot;—from Ancient Greek—denotes grace, a gift, and kindness. Thus, &quot;Meracharis&quot; embodies the spirit of undertaking every activity wholeheartedly and with total dedication, while infusing the process with values ​​of love, kindness, and sincerity. By embracing the &quot;Meracharis&quot; theme for this year&apos;s Laurensia Cup, students are encouraged to commit to honing, showcasing, and offering the talents God has bestowed upon them with wholehearted sincerity.";
+                requestAnimationFrame(() => {
+                    infoText.style.opacity = 1;
+                })
+            })  
+        } else {
+            infoText.style.opacity = 0;
+
+            infoText.addEventListener("transitionend", () => {
+                infoText.innerHTML = "The Laurensia Cup is a competition organized by Santa Laurensia every two years. Meracharis is a combination of two Greek words: &quot;meraki&quot; and &quot;charis.&quot; In Modern Greek, &quot;meraki&quot; signifies doing something with one&apos;s whole soul, creativity, and love...";
+                requestAnimationFrame(() => {
+                    infoText.style.opacity = 1;
+                })
+            })  
+        }
+
+        readExtra = !readExtra;
+    }
+</script>
 </html>

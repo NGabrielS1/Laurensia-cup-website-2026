@@ -1,254 +1,280 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laurensia Cup 2026 | About Us</title>
-    <link rel="stylesheet" href="code/css/main.css" media=" (min-width: 769px) ">
-    <link rel="stylesheet" href="code/css/mobile.css" media=" (max-width: 768px) ">
-    <link rel="icon" href="assets/logo/favicon.ico">
-    <style>
-        article:has(.top) {
-            justify-content: flex-end;
-            min-height: 80vh
-        }
-        article .wrapper {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-            height: auto;
-            box-sizing: border-box;
-            min-height: 0;
-        }
-        article .top {
-            padding: none;
-            align-items: flex-end;
-            flex-direction: column;
-            overflow: hidden;
-            padding: 0 4rem;
-        }
-        .wrapper .topper {
-            box-sizing: border-box;
-            width: 100%;
-            overflow: hidden;
-            justify-content: flex-start;
-            display: flex;
-            font-family: Maragsa;
-        }
-        .topper h1 {
-            margin: 0;
-            color: #ffffef;
-            font-size: 5rem;
-        }
-        .topper h2 {
-            color: #fef188;
-            margin: 0;
-            font-size: 3rem;
-        }
-        .topper img {
-            width: auto;
-            height: 200px;
-        }
-        .bottom {
-            font-size: 1.4rem;
-            width: 100%;
-            text-align: left;
-            font-family: "Times New Roman";
-            color: #fef188;
-            text-align: justify;
-        }
-        article .bot {
-            width: 100%;
-            height: 100%;
-            align-items: center;
-            justify-content: center;
-            padding: 6rem 2rem;
-            flex-direction: row;
-            gap: 2%;
-        }
-        .bot img {
-            aspect-ratio: 1/1;
-            border-radius: 100%;
-            width: 30%;
-            object-fit: contain;
-            background-color: #ffffef;
-        }
-        .bot div {
-            display: flex;
-            flex-direction: column;
-            width: 60%;
-            height: 100%;
-        }
-        .bot div section {
-            width: 80%;
-            min-height: 50px;
-            height: 20%;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 2%;
-        }
-        .bot div section button{
-            box-sizing: border-box;
-            color: #0151ca;
-            font-family: PlayfairDisplay;
-            background-color: transparent;
-            height: 100%;
-            width: 100%;
-            border: 3px solid #91cdff;
-            border-radius: 25px;
-            font-weight: 700;
-            font-size: 2rem;
-        }
-        .bot div section button.active {
-            background-color: #91cdff;
-        }
-        .bot div p {
-            line-height: 1.5;
-            text-align: justify;
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 1rem;
-        }
-        @media (max-width: 768px) {
-            article:has(.top) {
-                min-height: auto;
-            }
-            article .top { 
-                padding: 4rem 2rem;
-            }
-            .topper h1 {
-                font-size: 3rem;
-            }
-            .topper h2 {
-                font-size: 1.5rem;
-            }
-            .topper img {
-                height: 200px;
-            }
-            .bottom {
-                font-size: 1rem;
-                text-align: justify;
-            }
-            article .bot {
-                flex-direction: column;
-                gap: 3rem
-            }
-            .bot img {
-                width: 100%;
-                height: auto;
-            }
-            .bot div {
-                height: auto;
-                width: 100%;
-            }
-            .bot div section {
-                width: 100%;
-            }
-            .bot div section button {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <title>About Us &#124; Laurensia Cup 2026</title>
+    <link rel="icon" href="Assets/Logo/favicon.ico">
+
+    <!-- REFS -->
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Main.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Main_Mobile.css">
+
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/About.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/About_Mobile.css">
 </head>
 <body>
-    <header class="navbar">
+    <header>
         <section>
-            <img src="assets/logo/logo.png" alt="Meracharis-logo">
-            <h1>LAURENSIA CUP 2026</h1>
+            <img src="Assets/Logo/Logo.png" alt="Laurensia Cup Logo">
+            <h1>LAURENSIA CUP <span>2026</span></h1>
         </section>
+
         <nav>
-            <img class="nav-button" src="assets/images/icons/arrow-left.png" onclick="movenav()" alt="navigation-arrow-left">
-            <a class="nav1" href="index.html">HOME</a><span class="nav1" style="user-select: none;">.</span>
-            <a class="nav1" href="aboutus.html">ABOUT</a><span class="nav1" style="user-select: none;">.</span>
-            <a class="nav1" href="">VIDEOS</a><span class="nav3" style="user-select: none;">.</span>
-            <a class="nav2" href="">OUR MERCH</a><span class="nav2" style="user-select: none;">.</span>
-            <a class="nav2" href="sports.html">INFO & SCHEDULES</a><span class="nav2" style="user-select: none;">.</span>
-            <a class="nav2" href="https://2024.laurensiacup.id/">ARCHIVE</a>
-            <img class="nav-button" src="assets/images/icons/arrow-right.png" onclick="movenav()" alt="navigation-arrow-right">
+            <button class="navbutton disabled" id="arrowL" onclick="navBack()"><img src="Assets/Images/Icons/ArrowL.png" alt="Navigate Left"></button>
+            <ul class="nav-link" id="pageOne">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#" class="active">ABOUT</a></li>
+                <li><a href="videos.html">VIDEOS</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageTwo">
+                <li><a href="">OUR MERCH</a></li>
+                <li><a href="">INFO & SCHEDULES</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageThree">
+                <li><a href="registration.html">REGISTRATION</a></li>
+                <li><a href="sponsor.html">SPONSORS</a></li>
+            </ul>
+            <button class="navbutton" id="arrowR" onclick="navForw()"><img src="Assets/Images/Icons/ArrowR.png" alt="Navigate Right"></button>
         </nav>
     </header>
 
-    <main>
-        <article style="background-image: url(assets/backgrounds/bg5.jpeg)">
-            <div class="wrapper top">
-                <div class="topper">
-                    <section>
-                        <h1>About Us</h1>
-                        <h2>What is Meracharis?</h2>
-                    </section>
-                    <img src="assets/images/mascot/bird1.png" alt="">
+    <main id="mainContent">
+        <article class="articleTop">
+            <section>
+                <div class="pageHeaders">
+                    <h2>About Us</h2>
+                    <h3>What is Meracharis?</h3>
                 </div>
-                <p class="bottom">
-Meracharis originates from the Greek language, a combination of “meraki” which means pouring one’s heart, creativity, and effort into everything they do, and “charis” which represents God’s blessings, grace, and gratitude. By embracing Meracharis as this year's Laurensia Cup theme, students are encouraged to recognize the unique gift God has bestowed upon them, and continuously nurture their passion and talents with dedication and wholeheartedness.             </div>
+                <img src="Assets/Images/Mascot/Bird.png" alt="Bird Mascot">
+            </section>
+            <p>Meracharis originates from the Greek language, a combination of &#8220;meraki&#8221; which means pouring one&#8217;s heart, creativity, and effort into everything they do, and &#8220;charis&#8221; which represents God&#8217;s blessings, grace, and gratitude. By embracing Meracharis as this year&#39;s Laurensia Cup theme, students are encouraged to recognize the unique gift God has bestowed upon them, and continuously nurture their passion and talents with dedication and wholeheartedness.</p>
         </article>
-
-        <article style="background-color: black;">
-            <div class="wrapper bot">
-                <img src="assets/logo/logo.png" alt="">
-                <div>
-                    <section>
-                        <button class="active">Logo</button>
-                        <button>Mascot</button>
-                        <button>TBA</button>
-                    </section>
-                    <p>
-Our logo represents a peacock with a plumage that serves as its signature identity, which symbolises the natural gift, talents, and inner beauty each student carries from birth.  Its feathers are depicted in their folded form to represent how this gift, while already present, still has room to be developed. They continue to unfold through dedication and experience. Through Laurensia Cup, students are given the opportunity to further develop these abilities, express their uniqueness, and allow their potential to shine.
-
-The crystals and diamonds element resembles preciousness and resilience. Just like diamonds, every one of our talents are valuable, no talent is less valuable than another. As something precious, these talents are worth nurturing and developing. Furthermore, just as crystals and diamonds take time and undergo various processes to form, developing our talents also requires time, perseverance, and the willingness to encounter challenges.
-
-The colour palette reinforces the meaning of meracharis further. Blue represents the openness and youthful spirit of the participants, encouraging them to explore their interests and discover their potential. On the other hand, gold represents achievement of every effort, reminding us that achievements are not defined solely with winning, but the courage to grow and determination to give their best of themselves. 
-                    </p>
+        <article class="infoArticle">
+            <img src="Assets/Logo/Logo.png" alt="" id="image">
+            <section>
+                <div class="buttonHolder">
+                    <button class="selected" onclick="swapText(this)">Logo</button>
+                    <button onclick="swapText(this)">Mascot</button>
+                    <button onclick="swapText(this)">Song</button>
                 </div>
-            </div>
+                <section id="descriptionArea">
+                    <p>Our logo represents a peacock with a plumage that serves as its signature identity, which symbolises the natural gift, talents, and inner beauty each student carries from birth.  Its feathers are depicted in their folded form to represent how this gift, while already present, still has room to be developed. They continue to unfold through dedication and experience. Through Laurensia Cup, students are given the opportunity to further develop these abilities, express their uniqueness, and allow their potential to shine.</p>
+                    <p>The crystals and diamonds element resembles preciousness and resilience. Just like diamonds, every one of our talents are valuable, no talent is less valuable than another. As something precious, these talents are worth nurturing and developing. Furthermore, just as crystals and diamonds take time and undergo various processes to form, developing our talents also requires time, perseverance, and the willingness to encounter challenges.</p>
+                    <p>The colour palette reinforces the meaning of meracharis further. Blue represents the openness and youthful spirit of the participants, encouraging them to explore their interests and discover their potential. On the other hand, gold represents achievement of every effort, reminding us that achievements are not defined solely with winning, but the courage to grow and determination to give their best of themselves.</p>
+                </section>
+            </section>
         </article>
     </main>
 
-     <!-- footer -->
     <footer>
-        <h1>CONTACT US</h1>
-        <ul>
-            <li><p>Maira +62 818-230-809</p></li>
-            <li><p>Jericho +62 813-1933-3302</p></li>
-            <li><p>Ms Reni  +62 877-8065-4548</p></li>
-            <li><p>⁠Sir Danang +62 852-8238-1823</p></li>
-            <li><p>Dina⁠ +62 812-9821-3188</p></li>
-        </ul>
-      </footer>
-    <script src="code/javascript/main.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const buttons = document.querySelectorAll(".bot div section button");
-            const infoText = document.querySelector(".bot div p");
-            const infoImage = document.querySelector(".bot img"); 
-
-            const sectionContent = {
-                "Logo": {
-                    text: "Our logo represents a peacock with a plumage that serves as its signature identity, which symbolises the natural gift, talents, and inner beauty each student carries from birth.  Its feathers are depicted in their folded form to represent how this gift, while already present, still has room to be developed. They continue to unfold through dedication and experience. Through Laurensia Cup, students are given the opportunity to further develop these abilities, express their uniqueness, and allow their potential to shine.The crystals and diamonds element resembles preciousness and resilience. Just like diamonds, every one of our talents are valuable, no talent is less valuable than another. As something precious, these talents are worth nurturing and developing. Furthermore, just as crystals and diamonds take time and undergo various processes to form, developing our talents also requires time, perseverance, and the willingness to encounter challenges.The colour palette reinforces the meaning of meracharis further. Blue represents the openness and youthful spirit of the participants, encouraging them to explore their interests and discover their potential. On the other hand, gold represents achievement of every effort, reminding us that achievements are not defined solely with winning, but the courage to grow and determination to give their best of themselves. ",
-                    img: "assets/logo/logo.png"
-                },
-                "Mascot": {
-                    text: "Meet Kairos, our adorable blue peacock mascot! As the mascot of today’s Laurensia Cup 2026, Kairos embodies the spirit of meracharis. His/her/its name is taken from the Greek language, which means “the right moment” or “right opportunity”. This represents every Laurensia Cup participant who dares to seize their opportunity, give their best, embrace healthy competition, and create their own moments to shine. Through his/her/its presence throughout Laurensia Cup 2026, Khairos reminds us that Laurensia Cup is not only about showcasing what we can do, but also taking our opportunity to grow, step beyond our comfort zone, and let our own colours bloom. ",
-                    img: "assets/images/mascot/bird1.png"
-                },
-                "TBA": {
-                    text: "More information coming soon. Stay tuned for updates on Laurensia Cup 2026!",
-                    img: "assets/images/sports/badmin.png"
-                }
-            };
-
-            buttons.forEach(button => {
-                button.addEventListener("click", () => {
-                    buttons.forEach(btn => btn.classList.remove("active"));
-                    button.classList.add("active");
-                    
-                    const buttonLabel = button.textContent.trim();
-                    if (sectionContent[buttonLabel]) {
-                        infoText.textContent = sectionContent[buttonLabel].text;
-                        infoImage.src = sectionContent[buttonLabel].img;
-                    }
-                });
-            });
-        });
-    </script>
+        <div class=flex-col>
+            <h2>CONTACT US</h2>
+            <ul>
+                <li>Maira (<a href="https://wa.me/62818230809">+62 818-230-809</a>)</li>
+                <li>Jericho (<a href="https://wa.me/6281319333302">+62 813-1933-3302</a>)</li>
+                <li>Ms Reni (<a href="https://wa.me/6287780654548">+62 877-8065-4548</a>)</li>
+                <li>Mr Danang (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
+                <li>Dina (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
+                <!-- cHJvZ3JhbW1lcjogc29tZXRoaWdu -->
+            </ul>
+        </div>
+        <a href="https://2024.laurensiacup.id/">Looking for the Old Website? &rarr;</a>
+    </footer>
 </body>
+<script src="Code/JS/Main.js" defer></script>
+<script>
+    const images = {logo:"Assets/Logo/Logo.png", mascot:"Assets/Images/Mascot/Bird.png", song:"Assets/Images/Sports/sing.png"}
+    const textList = {
+        logo: ["Our logo represents a peacock with a plumage that serves as its signature identity, which symbolises the natural gift, talents, and inner beauty each student carries from birth.  Its feathers are depicted in their folded form to represent how this gift, while already present, still has room to be developed. They continue to unfold through dedication and experience. Through Laurensia Cup, students are given the opportunity to further develop these abilities, express their uniqueness, and allow their potential to shine.", "The crystals and diamonds element resembles preciousness and resilience. Just like diamonds, every one of our talents are valuable, no talent is less valuable than another. As something precious, these talents are worth nurturing and developing. Furthermore, just as crystals and diamonds take time and undergo various processes to form, developing our talents also requires time, perseverance, and the willingness to encounter challenges.", "The colour palette reinforces the meaning of meracharis further. Blue represents the openness and youthful spirit of the participants, encouraging them to explore their interests and discover their potential. On the other hand, gold represents achievement of every effort, reminding us that achievements are not defined solely with winning, but the courage to grow and determination to give their best of themselves."],
+        mascot: ["Meet Kairos, our adorable blue peacock mascot!", "As the mascot of today&#8217;s Laurensia Cup 2026, Kairos embodies the spirit of meracharis. His/her/its name is taken from the Greek language, which means &#8220;the right moment&#8221; or &#8220;right opportunity&#8221;. This represents every Laurensia Cup participant who dares to seize their opportunity, give their best, embrace healthy competition, and create their own moments to shine.", "Through his/her/its presence throughout Laurensia Cup 2026, Khairos reminds us that Laurensia Cup is not only about showcasing what we can do, but also taking our opportunity to grow, step beyond our comfort zone, and let our own colours bloom."],
+    }
+
+    function swapText(button){
+        var image = document.getElementById("image");
+        var text = button.innerHTML;
+
+        document.querySelectorAll(".buttonHolder button")
+            .forEach(b => b.classList.remove("selected"));
+        button.classList.add("selected");
+
+        const desc = document.getElementById("descriptionArea");
+
+        desc.style.opacity = 0;
+
+        desc.addEventListener("transitionend", () => {
+            text = text.toLowerCase();
+
+            image.src = images[text];
+
+        if (textList[text]){
+            desc.innerHTML = "";
+            for (let i = 0; i < textList[text].length; i++) {
+                desc.innerHTML += `<p>${textList[text][i]}</p>`
+            }
+        } else if(text == "song"){
+            desc.innerHTML = 
+                `
+                    <div class="audioPlayer">
+                        <audio src="Assets/placeholder.mpeg" id="audio"></audio>
+
+                        <div class="firstRow">
+                            <div>
+                                <button id="audioControls" onclick="toggleAudio()">&#9654;</button>
+                                <p id="timeID">0:00 / 0:00</p>
+                            </div>
+                            <input class="slider" type="range" id="seek" value="0" min="0" step="0.1">
+                        </div>
+                        <div class="secondRow">
+                            <img src="Assets/Images/Icons/Volume.svg">
+                            <input class="slider" type="range" id="volume" value="1" max="1" step="0.05">
+                        </div>
+                    </div>
+                    <section id="descriptionArea">
+                        <p>
+                            <strong>Intro</strong>
+                        </p>
+
+                        <p>
+                            <strong>Verse</strong><br>
+                            Laut tak terselami<br>
+                            Takkan buatku gentar<br>
+                            Labirin gelap hutan<br>
+                            Jiwaku takkan pudar<br><br>
+
+                            Tinggi mahameru<br>
+                            Tak hilangkan asaku<br>
+                            Tajam belati sakti<br>
+                            Tak menembus kulitku
+                        </p>
+
+                        <p>
+                            <strong>Pre-Chorus</strong><br>
+                            Ohh woah oh<br>
+                            Tebarkan berkat<br>
+                            Ohh woah oh<br>
+                            Tuangkan seluruh jiwa
+                        </p>
+
+                        <p>
+                            <strong>Chorus</strong><br>
+                            S’gala yang tanganmu jumpai<br>
+                            Kerjakanlah dengan kekuatanmu.<br>
+                            Meski bumi terus menjatuhkan<br>
+                            Biar luka dan ragu menghadang<br>
+                            Mustahil mengalahkan<br>
+                            Kan kujalani sepenuh jiwaku
+                        </p>
+
+                        <p>
+                            <strong>Intro</strong>
+                        </p>
+
+                        <p>
+                            <strong>Verse cz</strong><br>
+                            Kan ku asah setiap<br>
+                            Yang tlah kau anugerahkan<br>
+                            Aku; menolak mati<br>
+                            Sebelum jadi pemenang
+                        </p>
+
+                        <p>
+                            <strong>Pre-Chorus pecah</strong><br>
+                            Ohh woah oh<br>
+                            Tebarkan berkat<br>
+                            Ohh woah oh<br>
+                            Tuangkan seluruh jiwa
+                        </p>
+
+                        <p>
+                            <strong>Chorus pecah</strong><br>
+                            Segala yang tanganmu jumpai<br>
+                            Kerjakanlah dengan kekuatanmu.<br>
+                            Meski bumi terus menjatuhkan<br>
+                            Biar luka dan ragu menghadang<br>
+                            Mustahil mengalahkan<br>
+                            Kan kujalani sepenuh jiwaku
+                        </p>
+
+                        <p>
+                            <strong>Guitar Solo</strong>
+                        </p>
+
+                        <p>
+                            <strong>Chorus</strong><br>
+                            Segala yang tanganmu jumpai<br>
+                            Kerjakanlah dengan kekuatanmu.<br>
+                            Meski bumi terus menjatuhkan<br>
+                            Biar luka dan ragu menghadang<br>
+                            Mustahil mengalahkan<br><br>
+
+                            Segala yang tanganmu jumpai<br>
+                            Kerjakanlah dengan kekuatanmu.<br>
+                            Meski bumi terus menjatuhkan<br>
+                            Biar luka dan ragu menghadang<br>
+                            Mustahil mengalahkan<br>
+                            Kan kujalani sepenuh jiwaku
+                        </p>
+
+                        <p>
+                            <strong>End</strong>
+                        </p>
+                    </section>
+                `
+
+                initAudio();
+            }
+
+            requestAnimationFrame(() => {
+                desc.style.opacity = 1;
+            })
+
+        }, {once: true});
+        
+    }
+
+    function initAudio(){
+        const audio = document.getElementById("audio");
+        const audioButton = document.getElementById("audioControls");
+        const seek = document.getElementById("seek");
+        const timeID = document.getElementById("timeID");
+        const volume = document.getElementById("volume");
+
+        function toTime(dur){
+            var minutes = Math.floor(dur / 60);
+            var seconds = Math.floor(dur - (minutes * 60));
+            seconds = seconds.toString().padStart(2, "0");
+
+            return (`${minutes}:${seconds}`);
+        }
+
+    audioButton.addEventListener("click", () => {
+            if (audio.paused){ 
+                audio.play() 
+                audioButton.innerHTML = `&#10074;&#10074;`;
+            } else {
+                audio.pause();
+                audioButton.innerHTML = `&#9654;`;
+            }
+    });
+
+        //Audio Functions
+        audio.addEventListener("loadedmetadata", () => {
+            seek.max = audio.duration;
+            timeID.innerHTML = `0:00 / ${toTime(audio.duration)}`;
+        })
+        audio.addEventListener("timeupdate", () => {
+            seek.value = audio.currentTime;
+            timeID.innerHTML = `${toTime(seek.value)} / ${toTime(audio.duration)}`;
+        })
+        //Track
+        seek.addEventListener("input", () => {
+            audio.currentTime = seek.value;
+        })
+        //Volume
+        volume.addEventListener("input", () => {
+            audio.volume = volume.value;
+        })
+    };
+</script>
 </html>

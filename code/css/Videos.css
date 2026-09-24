@@ -1,0 +1,30 @@
+.articleTop {
+    position: relative;
+    z-index: 0;
+
+    overflow: hidden;
+}
+.articleTop::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: var(--black20);
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+.divider {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 10%);
+    width: 100%;
+}
+
+.secondaryArticle {
+    height: calc((100vh - 5rem) / 1.5);
+    background-color: var(--black);
+}
