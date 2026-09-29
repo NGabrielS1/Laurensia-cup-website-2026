@@ -25,7 +25,7 @@
             <ul class="nav-link" id="pageOne">
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="#" class="active">ABOUT</a></li>
-                <li><a href="videos.html">VIDEOS</a></li>
+                <li><a href="">VIDEOS</a></li>
             </ul>
             <ul class="nav-link hidden" id="pageTwo">
                 <li><a href="">OUR MERCH</a></li>
@@ -37,6 +37,20 @@
             </ul>
             <button class="navbutton" id="arrowR" onclick="navForw()"><img src="Assets/Images/Icons/ArrowR.png" alt="Navigate Right"></button>
         </nav>
+        <div class="hamburger" id="menu-button" onclick="showPopup()">
+            <hr class="line" id="top-line">
+            <hr class="line" id="mid-line">
+            <hr class="line" id="bottom-line">
+        </div>
+        <div id="pop-up">
+            <a href="index.html" class="active">HOME</a>
+            <a href="aboutus.html">ABOUT</a>
+            <a href="">VIDEOS</a>
+            <a href="">OUR MERCH</a>
+            <a href="">INFO & SCHEDULES</a>
+            <a href="registration.html">REGISTRATION</a>
+            <a href="sponsor.html">SPONSORS</a>
+        </div>
     </header>
 
     <main id="mainContent">
@@ -75,15 +89,16 @@
                 <li>Jericho (<a href="https://wa.me/6281319333302">+62 813-1933-3302</a>)</li>
                 <li>Ms Reni (<a href="https://wa.me/6287780654548">+62 877-8065-4548</a>)</li>
                 <li>Mr Danang (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
-                <li>Dina (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
+                <li>Dina (<a href="https://wa.me/6285282381823">+62 812-9821-3188</a>)</li>
                 <!-- cHJvZ3JhbW1lcjogc29tZXRoaWdu -->
             </ul>
         </div>
-        <a href="https://2024.laurensiacup.id/">Looking for the Old Website? &rarr;</a>
+        <a href="https://2024.laurensiacup.id/">Looking for the Laurensia Cup 2024? &rarr;</a>
     </footer>
 </body>
 <script src="Code/JS/Main.js" defer></script>
 <script>
+    document.addEventListener("DOMContentLoaded", ()=>setPage(2));
     const images = {logo:"Assets/Logo/Logo.png", mascot:"Assets/Images/Mascot/Bird.png", song:"Assets/Images/Sports/sing.png"}
     const textList = {
         logo: ["Our logo represents a peacock with a plumage that serves as its signature identity, which symbolises the natural gift, talents, and inner beauty each student carries from birth.  Its feathers are depicted in their folded form to represent how this gift, while already present, still has room to be developed. They continue to unfold through dedication and experience. Through Laurensia Cup, students are given the opportunity to further develop these abilities, express their uniqueness, and allow their potential to shine.", "The crystals and diamonds element resembles preciousness and resilience. Just like diamonds, every one of our talents are valuable, no talent is less valuable than another. As something precious, these talents are worth nurturing and developing. Furthermore, just as crystals and diamonds take time and undergo various processes to form, developing our talents also requires time, perseverance, and the willingness to encounter challenges.", "The colour palette reinforces the meaning of meracharis further. Blue represents the openness and youthful spirit of the participants, encouraging them to explore their interests and discover their potential. On the other hand, gold represents achievement of every effort, reminding us that achievements are not defined solely with winning, but the courage to grow and determination to give their best of themselves."],
@@ -131,6 +146,9 @@
                         </div>
                     </div>
                     <section id="descriptionArea">
+                        <p>
+                            <strong>Sepenuh Jiwa</strong>
+                        </p>
                         <p>
                             <strong>Intro</strong>
                         </p>
@@ -219,6 +237,34 @@
                         <p>
                             <strong>End</strong>
                         </p>
+                        <p><strong>Producer</strong><br>
+                        Valentino Xavier Alden</p>
+
+                        <p><strong>Lyricist</strong><br>
+                        Valentino Xavier Alden</p>
+
+                        <p><strong>Audio Engineer</strong><br>
+                        Valentino Xavier Alden</p>
+
+                        <p><strong>Keyboard Arrangement</strong><br>
+                        Richard Oentoro</p>
+
+                        <p><strong>Vocals</strong><br>
+                        Kaela Abigail Gozali<br>
+                        Charlize Evangeline</p>
+
+                        <p><strong>Keyboard</strong><br>
+                        Amilia Luis</p>
+
+                        <p><strong>Guitar</strong><br>
+                        Valentino Xavier Alden<br>
+                        Raeven Kusnadi</p>
+
+                        <p><strong>Bass</strong><br>
+                        Joseph Jericho Marthez</p>
+
+                        <p><strong>Drums</strong><br>
+                        Marlon Maraville Swidja</p>
                     </section>
                 `
 

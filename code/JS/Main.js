@@ -10,6 +10,21 @@ var pageMax = pages.length;
 const arrowL = document.getElementById("arrowL");
 const arrowR = document.getElementById("arrowR");
 
+var popup_out = false;
+const hamburger = document.getElementById("menu-button");
+const popup = document.getElementById("pop-up");
+function showPopup(){
+    if (popup_out) {
+        popup_out = false;
+        hamburger.classList.remove('clicked');
+        popup.style.display = "none";
+    } else {
+        popup_out = true
+        hamburger.classList.add('clicked');
+        popup.style.display = "flex";
+    }
+}
+
 function updateArrows(){
     if (page == pageMax){
         arrowR.classList.add("disabled");

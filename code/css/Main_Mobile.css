@@ -137,6 +137,9 @@ header section h1 span {
 header section img {
     height: 4rem;
 }
+header .hamburger {
+    display: none;
+}
 header nav {    
     display: flex;
     flex-direction: row;

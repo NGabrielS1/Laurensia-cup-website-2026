@@ -25,7 +25,7 @@
             <ul class="nav-link" id="pageOne">
                 <li><a href="index.html" class="active">HOME</a></li>
                 <li><a href="aboutus.html">ABOUT</a></li>
-                <li><a href="videos.html">VIDEOS</a></li>
+                <li><a href="">VIDEOS</a></li>
             </ul>
             <ul class="nav-link hidden" id="pageTwo">
                 <li><a href="">OUR MERCH</a></li>
@@ -37,6 +37,20 @@
             </ul>
             <button class="navbutton" id="arrowR" onclick="navForw()"><img src="Assets/Images/Icons/ArrowR.png" alt="Navigate Right"></button>
         </nav>
+        <div class="hamburger" id="menu-button" onclick="showPopup()">
+            <hr class="line" id="top-line">
+            <hr class="line" id="mid-line">
+            <hr class="line" id="bottom-line">
+        </div>
+        <div id="pop-up">
+            <a href="index.html" class="active">HOME</a>
+            <a href="aboutus.html">ABOUT</a>
+            <a href="">VIDEOS</a>
+            <a href="">OUR MERCH</a>
+            <a href="">INFO & SCHEDULES</a>
+            <a href="registration.html">REGISTRATION</a>
+            <a href="sponsor.html">SPONSORS</a>
+        </div>
     </header>
 
     <main id="mainContent">
@@ -83,7 +97,7 @@
             <section class="latestNews">
                 <h2>Latest News</h2>
                 <div>
-                    <img src="Assets/Images/Sports/mural.jpeg" alt="">
+                    <img src="Assets/Images/Sports/mural.jpg" alt="">
                     <section class="flex-col">
                         <h3>Mural Laurensia Cup 2026 : The Walls Come Alive</h3>
                         <p>Introducing the massive blast of color thanks to the students who came together to paint this year&#8217;s mural. Stop by the corridor to see these incredible mural paintings.</p>
@@ -91,10 +105,10 @@
                     </section>
                 </div>
                 <div>
-                    <img src="Assets/Images/Sports/fundraising.jpeg" alt="">
+                    <img src="Assets/Images/Sports/october.png" alt="">
                     <section class="flex-col">
-                        <h3>Meet the Fundraising Team</h3>
-                        <p>A massive shoutout to our incredible fundraising team for keeping everyone energized with delicious and tasty sweets and foods.</p>
+                        <h3>Registration Extended to October 5!</h3>
+                        <p>Registration for Laurensia Cup 2026 has been extended until October 5, 2026. The Technical Meeting schedule has also been postponed. Stay tuned for further updates and make sure to register before the new deadline!</p>
                         <button>Read More</button>
                     </section>
                 </div>
@@ -160,14 +174,15 @@
                 <li>Jericho (<a href="https://wa.me/6281319333302">+62 813-1933-3302</a>)</li>
                 <li>Ms Reni (<a href="https://wa.me/6287780654548">+62 877-8065-4548</a>)</li>
                 <li>Mr Danang (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
-                <li>Dina (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
+                <li>Dina (<a href="https://wa.me/6285282381823">+62 812-9821-3188</a>)</li>
             </ul>
         </div>
-        <a href="https://2024.laurensiacup.id/">Looking for the Old Website? &rarr;</a>
+        <a href="https://2024.laurensiacup.id/">Looking for the Laurensia Cup 2024? &rarr;</a>
     </footer>
 </body>
 <script src="Code/JS/Main.js" defer></script>
 <script>
+    document.addEventListener("DOMContentLoaded", ()=>setPage(1));
     const lorencupDate = new Date("Oct 10, 2026 07:15:00");
 
     const days = document.getElementById("dayCounter");
