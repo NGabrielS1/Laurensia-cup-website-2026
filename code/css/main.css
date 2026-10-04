@@ -156,12 +156,13 @@ header .hamburger {
     display: none;
     flex-direction: column;
     padding: 2rem;
+    line-height: 2;
     align-items: flex-start;
     justify-content: center;
     position: fixed;
     top: 100%;
     right: 0;
-    background-color: var(--lightblue60);
+    background-color: #92ceffd5;
     z-index: 9999;
     width: auto;
     height: auto;

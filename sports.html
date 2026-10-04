@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merch &#124; Laurensia Cup 2026</title>
+    <link rel="icon" href="Assets/Logo/favicon.ico">
+
+    <!-- REFS -->
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Main.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Main_Mobile.css">
+
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Sports.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Sports_Mobile.css">
+</head>
+<body onload="initPage()">
+    <header>
+        <section>
+            <img src="Assets/Logo/Logo.png" alt="Laurensia Cup Logo">
+            <h1>LAURENSIA CUP <span>2026</span></h1>
+        </section>
+
+        <nav>
+            <button class="navbutton disabled" id="arrowL" onclick="navBack()"><img src="Assets/Images/Icons/ArrowL.png" alt="Navigate Left"></button>
+            <ul class="nav-link" id="pageOne">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT</a></li>
+                <li><a href="videos.html">VIDEOS</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageTwo">
+                <li><a href="merch.html">OUR MERCH</a></li>
+                <li><a href="schedules.html" class="active">OUR COMPETITIONS</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageThree">
+                <li><a href="registration.html">REGISTRATION</a></li>
+                <li><a href="">SPONSORS</a></li>
+            </ul>
+            <button class="navbutton" id="arrowR" onclick="navForw()"><img src="Assets/Images/Icons/ArrowR.png" alt="Navigate Right"></button>
+        </nav>
+        <div class="hamburger" id="menu-button" onclick="showPopup()">
+            <hr class="line" id="top-line">
+            <hr class="line" id="mid-line">
+            <hr class="line" id="bottom-line">
+        </div>
+        <div id="pop-up">
+            <a href="index.html">HOME</a>
+            <a href="aboutus.html">ABOUT</a>
+            <a href="">VIDEOS</a>
+            <a href="">OUR MERCH</a>
+            <a href="schedules.html" class="active">OUR COMPETITIONS</a>
+            <a href="registration.html">REGISTRATION</a>
+            <a href="sponsor.html">SPONSORS</a>
+        </div>
+    </header>
+
+    <main >
+        <article class="articleTop">
+            <section class="titleHeader">
+                <h2 id="sportTitle">Sport Title</h2>
+                <h3 id="sportTagline">Tagline</h3>
+            </section>
+            <section class="mainInfo">
+                <p id="sportDesc">
+                    LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT 
+                    LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT 
+                    LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT 
+                </p>
+                <div class="contact">
+                    <div class="regis1">
+                        <h3 id="regisPrice1">Rp. ???</h3>
+                        <p><strong>Match Fee</strong></p>
+                    </div>
+                    <div class="regis2">
+                        <h3 id="regisPrice2">Rp. ???</h3>
+                        <p><strong>Walkout Fee</strong></p>
+                    </div>
+                    <section class="contactButtons">
+                        <button onclick="window.location.href='https://drive.google.com/file/d/1pBYMItpFpUWBQMM_bKO7GhRbFL_fk0fI/view?usp=sharing'"><strong>More Info</strong></button>
+                        <button onclick="window.open('registration.html')"><strong>Register</strong></button>
+                    </section>
+                </div>
+            </section>
+        </article>
+        <article class="articleMid">
+            <section class="prizes">
+                <h2>Prizes</h2>
+                <div class="firstPlace">
+                    <div>
+                        <h3 id="first">1st Place</h3>
+                        <p id="prize1">Text Prize</p>
+                    </div>
+                </div>
+                <div class="secondPlace">
+                    <div>
+                        <h3 id="second">2nd Place</h3>
+                        <p id="prize2">Text Prize</p>
+                    </div>
+                </div>
+                <div class="thirdPlace">
+                    <div>
+                        <h3 id="third">3rd Place</h3>
+                        <p id="prize3">Text Prize</p>
+                    </div>
+                </div>
+            </section>
+            <section class="timeline">
+                <hr>
+                <div class="time1">
+                    <section>
+                        <h3 id="date1">20</h3>
+                        <p>OCT</p>
+                    </section>
+                    <div>
+                        <h3 id="title1"></h3>
+                        <p id="text1"></p>
+                    </div>
+                </div>
+                <div class="time2">
+                    <section>
+                        <h3 id="date2"></h3>
+                        <p>OCT</p>
+                    </section>
+                    <div>
+                        <h3 id="title2"></h3>
+                        <p id="text2"></p>
+                    </div>
+                </div>
+                <div class="time3">
+                    <section>
+                        <h3 id="date3"></h3>
+                        <p>OCT</p>
+                    </section>
+                    <div>
+                        <h3 id="title3"></h3>
+                        <p id="text3"></p>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <article class="articleBottom">
+            <h2>Rules</h2>
+            <ul id="ruleList">
+                <li>Text1</li>
+                <li>Text1</li>
+                <li>Text1</li>
+                <li>Text1</li>
+            </ul>
+        </article>
+    </main>
+
+    <footer id="footer">
+        <div class=flex-col>
+            <h2>CONTACT US</h2>
+            <ul>
+                <li>Maira (<a href="https://wa.me/62818230809">+62 818-230-809</a>)</li>
+                <li>Jericho (<a href="https://wa.me/6281319333302">+62 813-1933-3302</a>)</li>
+                <li>Ms Reni (<a href="https://wa.me/6287780654548">+62 877-8065-4548</a>)</li>
+                <li>Mr Danang (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
+                <li>Dina (<a href="https://wa.me/6281298213188">+62 812-9821-3188</a>)</li>
+                <!-- cHJvZ3JhbW1lcjogc29tZXRoaWdu -->
+            </ul>
+        </div>
+        <a href="">Looking for the Old Website? &rarr;</a>
+    </footer>
+</body>
+<script src="Code/JS/Main.js" defer></script>
+<script>
+    // ADD IN EVERY PAGE
+    document.addEventListener("DOMContentLoaded", () => setPage(2));
+
+    function capitalizeFirstLetter(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    // MAIN
+    const sportData = {
+        soccer : {
+            tagline: "It’s time to bring your team to the big pitch, play for the badge, and give your best on the field!",
+            longdesc: "In soccer, one team will consist of 11 players with 7 substitutes, who have the chance to substitute a maximum of about 5 times. For each team, the players must wear the same bright or dark colored jersey, except for the goalkeeper. All players are required to wear long socks and soccer cleats, and are recommended to wear shin guards. For the goalkeeper, it is mandatory to wear keeper gloves. One match will be 2 x 30 minutes with a break of up to 15 minutes, and the match will cover the whole soccer field.",
+            // [Regis1, Regis2, ...] 
+            prices: [600, 150],
+
+            // [1st, 2nd, 3rd]
+            prizes: [
+                // Prize Money, Item
+                ["2.000", "Trophy,", "Certificate"],
+                ["1.500", "Trophy,", "Certificate"],
+                ["1.000", "Trophy,", "Certificate"]
+            ],
+            timeline: [
+                // Date, Title, ShortDesc
+                [1, "Technical Meeting", "Team reps attend the technical meeting at 16:00."],
+                [10, "Opening & Matches Begin", "Opening ceremony and pool stage kicks off."],
+                [16, "Closing & Awards", "Winners announced and prizes given at 16:30."],
+            ],
+            rules: [
+                "Each team has 11 players and 7 substitutes, with a maximum of 5 substitutions.",
+                "Wear a school jersey or school sportswear.",
+                "The goalkeeper wears a different jersey and must wear goalkeeper gloves.",
+                "Long socks and football boots are required.",
+                "Shin guards are recommended.",
+                "Match length is 2 x 30 minutes with a break of up to 15 minutes.",
+                "Group stage: 9 teams in 3 pools of 3, round robin.",
+                "Pool winners advance to a semifinal pool (round robin).",
+                "The semifinal pool team with the lowest points gets 3rd place.",
+                "The top two teams of the semifinal pool play the final for 1st and 2nd.",
+                "Full-size pitch.",
+                "Walkover: a team that is late without notice or a valid reason loses automatically.",
+                "A team with too few players gets 5 minutes to complete the squad, after which it is a walkover.",
+            ]
+        },
+        basketball : {
+            tagline: "Lace up your sneakers, leave your heart on the court and let’s see who owns the hoop this year!",
+            longdesc: "In this fierce basketball competition, there will be 12 teams divided into 3 pools. Each pool will have 3 teams competing against one another. Each team must wear the same bright or dark colored jerseys and have a minimum of  5 players for the competition. One pool with 3 teams will compete in the preliminary round. Then, the winner of each preliminary round will advance to the semifinal that uses a knockout system. The match will be conducted in 4 quarters, all in 10 minutes. In the first until third quarters, the whole 10 minutes will be running time. However, during the fourth quarter, 8 minutes will be running time, and the last 2 minutes will use the semi-stopped clock method. For each match, the scoring system will be different in the preliminary round and the semifinal. In addition, we hope every team can arrive on time, maintain sportsmanship, and respect the referee’s decisions.",
+            // [Regis1, Regis2, ...] 
+            prices: [600, 150],
+
+            // [1st, 2nd, 3rd]
+            prizes: [
+                // Prize Money, Item
+                ["2.000", "Trophy,", "Certificate"],
+                ["1.500", "Trophy,", "Certificate"],
+                ["1.000", "Trophy,", "Certificate"]
+            ],
+            timeline: [
+                // Date, Title, ShortDesc
+                [1, "Technical Meeting", "Team reps attend the technical meeting at 16:00."],
+                [10, "Opening & Matches Begin", "Opening ceremony and pool stage kicks off."],
+                [16, "Closing & Awards", "Winners announced and prizes given at 16:30."],
+            ],
+            rules: [
+                "Each team can register a maximum of 12 players.",
+                "A team must have at least 5 players present to play a match.",
+                "Each team needs 1 light kit and 1 dark kit.",
+                "Kits must be uniform within the team and use numbers of maximum 2 digits.",
+                "4 quarters. Quarters 1, 2 and 3 are 10 minutes running clock.",
+                "In the last 2 minutes of quarter 4 the clock is semi-stopped (it stops for time-outs, free throws and when the ball goes out).",
+                "Break between quarters is 2 minutes.",
+                "Overtime is 5 minutes running clock, with the last 1 minute semi-stopped.",
+                "Time-outs are 30 seconds. Each team has 5 time-outs per game.",
+                "In overtime, each team gets 1 time-out per overtime period.",
+                "If a disruption in quarter 1 or 2 lasts 10-15 minutes, the game continues to the next quarter with the score from before the disruption.",
+                "If a disruption after halftime cannot be resolved within 20 minutes, the game ends with the last score before the disruption.",
+                "Group stage: 12 teams in 4 pools of 3, round robin.",
+                "Pool winners advance to the semifinals (A vs B, C vs D).",
+                "The two semifinal losers play for 3rd place.",
+                "The two semifinal winners play the final.",
+                "Walkover: fewer than 5 players after a 5 minute wait.",
+                "Walkover: late without notice or a valid reason.",
+                "Disqualification and walkover for wrong kit (mixed colors in a team or numbers over 2 digits).",
+            ]
+        },
+        volleyball : {
+            tagline: "It all comes down to trust, heavy spikes, and keeping the ball alive no matter what!",
+            longdesc: "In this game that requires strength and endurance, one team will work together in the game of volleyball. One team consists of 6 to 12 players, who must wear the same bright or dark colored jerseys. Every team must bring their own ball for warm-up, and they may use the libero system. If they use the libero system, they must wear the opposite colored jersey from the rest of the team. In this competition, the total of 12 teams will be divided into 3 pools, where the teams in the pools will compete in the preliminary round. The winner from each pool will advance to the semifinals. In the preliminary round and semifinals, the winner will be determined by the best of 3 sets, while the finals will use the best of 5 sets. All of the matches will follow the rules from FIVB, and every team must show sportsmanship and respect the referee’s decisions.",
+            // [Regis1, Regis2, ...] 
+            prices: [600, 150],
+
+            // [1st, 2nd, 3rd]
+            prizes: [
+                // Prize Money, Item
+                ["2.000", "Trophy,", "Certificate"],
+                ["1.500", "Trophy,", "Certificate"],
+                ["1.000", "Trophy,", "Certificate"]
+            ],
+            timeline: [
+                // Date, Title, ShortDesc
+                [1, "Technical Meeting", "Team reps attend the technical meeting at 16:00."],
+                [10, "Opening & Matches Begin", "Opening ceremony and pool stage kicks off."],
+                [16, "Closing & Awards", "Winners announced and prizes given at 16:30."],
+            ],
+            rules: [
+                "Each team has a maximum of 12 players and a minimum of 6.",
+                "A libero system is allowed, and the libero must wear a different color kit.",
+                "Each team must bring its own ball for warm-up.",
+                "Each team must prepare 2 kits: 1 dark and 1 light.",
+                "Group stage: 12 teams in 4 pools of 3, round robin.",
+                "Pool winners advance to the semifinals (A vs B, C vs D).",
+                "The two semifinal losers play for 3rd place.",
+                "The two semifinal winners play the final.",
+                "Group stage and semifinals are best of 3 sets.",
+                "A set is won by the first team to 25 points with a 2-point lead, up to 30 points.",
+                "The winner of 2 sets wins the match.",
+                "The 3rd set is played to 15 points with a 2-point lead, up to 20 points.",
+                "If pool teams are tied, the pool winner is decided by score difference.",
+                "The final is best of 5 sets: sets 1-4 go to 25 points (with a 2-point lead, up to 30).",
+                "The first team to win 3 sets wins the final.",
+                "The 5th set is played to 15 points with a 2-point lead, up to 20 points.",
+                "Official FIVB rules apply.",
+                "Players must show sportsmanship and respect opponents and referees.",
+                "The referee's decision is final and cannot be contested.",
+                "Walkover: fewer than 5 players after a 5 minute wait.",
+                "Walkover: late without notice or a valid reason.",
+                "Disqualification and walkover for wrong kit.",
+            ]
+        },
+        tabletennis : {
+            tagline: "Give you best speed, insane spin, and intense table battles!",
+            longdesc: "In the table tennis competition, each school may register a maximum of 5 players, consisting of 2 doubles pairs and 1 singles player. A total of 12 teams will compete in the tournament and will be divided into four pools, with 3 teams in each pool. Every team in each pool will compete against one another in the preliminary round, and the winner of each pool will advance to the semifinals. The semifinal matches will follow a knockout system, with the winners advancing to the finals and the losing teams competing for third place. Each match will use a best-of-5 system, with each game played to 11 points and requiring a 2-point difference to win. Players will also be given designated break and timeout opportunities during matches. All participants are expected to follow the tournament rules, arrive on time, wear appropriate sports attire, and demonstrate good sportsmanship throughout the competition. ",
+            // [Regis1, Regis2, ...] 
+            prices: [600, 150],
+
+            // [1st, 2nd, 3rd]
+            prizes: [
+                // Prize Money, Item
+                ["2.000", "Trophy,", "Certificate"],
+                ["1.500", "Trophy,", "Certificate"],
+                ["1.000", "Trophy,", "Certificate"]
+            ],
+            timeline: [
+                // Date, Title, ShortDesc
+                [1, "Technical Meeting", "Team reps attend the technical meeting at 16:00."],
+                [10, "Opening & Matches Begin", "Opening ceremony and pool stage kicks off."],
+                [16, "Closing & Awards", "Winners announced and prizes given at 16:30."],
+            ],
+            rules: [
+                "Knockout format: any player or pair that loses is eliminated.",
+                "16 singles players and 16 doubles players in total.",
+                "Each school team has 2 singles players and 1 doubles pair.",
+                "Rounds: Round of 16, quarterfinals, semifinals, final and a 3rd place game.",
+                "Round of 16: 2 games per match, each to 11 points with a 2-point lead and no maximum.",
+                "Quarterfinals, semifinals, 3rd place game and final: best of 3 games to 11 points.",
+                "Arrive 30 minutes before the scheduled match.",
+                "Walkover: more than 10 minutes late.",
+                "In case of accident or illness, the umpire must report to the Referee immediately.",
+                "The Referee may grant an emergency suspension of up to 10 minutes for treatment or rest. If the player still cannot continue after that, the match is stopped.",
+                "Official ITTF rules apply.",
+                "Players must show sportsmanship and respect opponents and referees.",
+                "The referee's decision is final and cannot be contested.",
+                "Disputes over rule interpretation must be raised immediately on court with the Referee before play continues. The Referee's decision is final.",
+                "Written appeals after the match only cover matters outside technical rule interpretation and cannot change a result decided by the Referee.",
+            ]
+        },
+        badminton : {
+            tagline: "A true test of lightning-fast reflexes and smash-heavy rallies that will keep you on your toes!",
+            longdesc: "In this exciting badminton competition, there will be five categories: men’s singles, women’s singles, men’s doubles, women’s doubles, and mixed doubles. Each category will consist of 16 players or pairs competing in a knockout system, where the winner advances to the next round. The competition will begin with the Round of 16, followed by the quarterfinals, semifinals, and finals, with a separate match to determine third place. In the Round of 16, each match will consist of 2 sets to 15 points without deuce, while the quarterfinals onwards will use the standard badminton scoring system of 21 points, best of 3 sets, with deuce up to 30 points. All matches will follow the official rules of the Badminton World Federation (BWF), and players are expected to arrive on time, maintain sportsmanship, and respect the referee’s decisions. ",
+            // [Regis1, Regis2, ...] 
+            prices: [600, 150],
+
+            // [1st, 2nd, 3rd]
+            prizes: [
+                // Prize Money, Item
+                ["2.000", "Trophy,", "Certificate"],
+                ["1.500", "Trophy,", "Certificate"],
+                ["1.000", "Trophy,", "Certificate"]
+            ],
+            timeline: [
+                // Date, Title, ShortDesc
+                [1, "Technical Meeting", "Team reps attend the technical meeting at 16:00."],
+                [10, "Opening & Matches Begin", "Opening ceremony and pool stage kicks off."],
+                [16, "Closing & Awards", "Winners announced and prizes given at 16:30."],
+            ],
+            rules: [
+                "Each category (boys, girls) has 12 teams.",
+                "Teams are split into 4 groups of 3, drawn by the committee.",
+                "Group stage is round robin: each team plays every other team in its group.",
+                "Each tie has up to 3 matches: Doubles 1, Singles and Doubles 2.",
+                "The team that wins 2 of 3 matches wins the tie.",
+                "Group ranking is decided by: tie wins, match difference, game difference, then point difference.",
+                "Group winners and runners-up (8 teams) advance to the quarterfinals.",
+                "Quarterfinals to final are knockout, with a 3rd place game.",
+                "Each match is best of 3 games to 15 points, rally point.",
+                "At 14-14, play continues until a 2-point lead.",
+                "At 20-20, the player or pair who scores the 21st point wins the game.",
+                "In the 3rd game, players change sides when one side reaches 8 points.",
+                "Arrive 30 minutes before the scheduled match.",
+                "Walkover: more than 15 minutes late.",
+                "Walkover: an injured player who cannot continue.",
+                "Official BWF rules apply.",
+                "Players must show sportsmanship and respect opponents and referees.",
+                "The referee's decision is final and cannot be contested.",
+                "Protests must be submitted in writing within 30 minutes after the match ends. Later protests are not processed.",
+            ]
+        },
+        science : {
+            tagline: "Put your theories to the test, show off your innovations, and turn complex ideas into mind-blowing experiments.",
+            longdesc: "",
+            // [Regis1, Regis2, ...] 
+            prices: [150, 0],
+
+            // [1st, 2nd, 3rd]
+            prizes: [
+                // Prize Money, Item
+                ["750", "", "Certificate"],
+                ["500", "", "Certificate"],
+                ["300", "", "Certificate"]
+            ],
+            timeline: [
+                // Date, Title, ShortDesc
+                [10, "Data Recording Starts", "Record match data and analyze it in the Science Lab (until 13 Oct)."],
+                [14, "Report Submission", "Submit the A2 infographic PDF and project files by 16:00."],
+                [15, "Jury Presentation", "10 min presentation + 10 min Q&A, 08:00-14:00."],
+            ],
+            rules: [
+                "Teams of 2-3 SMP students (not individual).",
+                "The competition runs only with at least 10 teams (maximum 15).",
+                "Analysis software must be open source: Tracker Video Analysis or Kinovea.",
+                "Recording data must not disturb matches or the movement of athletes, committee and spectators.",
+                "Participants provide all their own equipment (camera or phone, laptop, measuring tools, distance calibration instruments, etc.) and are personally responsible for it.",
+                "Participants must also look after any equipment lent by the committee.",
+                "Submit the video or project files via Google Drive, together with the infographic report as a PDF.",
+                "The final report is an infographic in PDF format, with enough resolution to print at A2 landscape.",
+                "The infographic must include: Introduction, Analysis Method & Calibration, Data & Graphs, Physics/Biomechanics Discussion, and Recommendation/Conclusion.",
+                "Present results to the jury for 10 minutes of presentation plus 10 minutes of Q&A.",
+                "Use only the infographic for the presentation. No other presentation media is needed.",
+                "Camera must record at minimum 60 fps (120 fps slow motion recommended) and use a stable tripod.",
+                "A phone may be used as a stopwatch.",
+                "Bring a laptop for making the report.",
+                "Committee provides: wifi for the report, rulers and measuring tape, spring balance (dynamometer), IR thermal gun, launch ramp, basketball, tennis ball, badminton rackets, shuttlecocks, visual field testing set, basketball shoes and weights, gym chalk, salt solution, and cooling and heating boxes.",
+                "Maximum total score is 100 points.",
+                "Scoring covers technical use of the software, depth of scientific analysis, written report quality and mastery of the material during the presentation.",
+                "Detailed scoring is given at the technical meeting.",
+                "The jury's decision is final and cannot be contested.",
+            ]
+        },
+        photography : {
+            tagline: "Help us tell the story of LORCUP 2026 by catching the raw sweat, tears, and triumph through your lens!",
+            longdesc: "Photos are only allowed to be taken inside Santa Laurensia Alam Sutera School, when Laurensia Cup is taking place. The theme for the competition and place of submission will be announced beforehand at the technical meeting. Participants are recommended to use a DSLR camera or mirrorless, although using phone cameras are also accepted. Participants are only allowed to submit 1 best photo per theme. Photos taken are allowed to be edited, but editing using generative AI or removal is prohibited. If the submitted photos are edited, a description of what was edited is required (e.g. cropping, color grading, etc.). Participants will be disqualified if found violating the general rules.",
+            // [Regis1, Regis2, ...] 
+            prices: [250, 150],
+
+            // [1st, 2nd, 3rd]
+            prizes: [
+                // Prize Money, Item
+                ["1.000", "Trophy,", "Certificate"],
+                ["750", "Trophy,", "Certificate"],
+                ["500", "Trophy,", "Certificate"]
+            ],
+            timeline: [
+                // Date, Title, ShortDesc
+                [10, "Shooting Starts", "Technical meeting at 08:30 announces the themes, then shooting begins."],
+                [13, "Photo Submission Deadline", "Submit 1 photo per main theme via Google Forms."],
+                [16, "Winner Announcement", "Winners announced and prizes given at 16:30."],
+            ],
+            rules: [
+                "The competition runs only if there are at least 30 participants (maximum 50).",
+                "Photos may only be taken inside SMA Santa Laurensia Alam Sutera, during Laurensia Cup activities.",
+                "The themes are announced at the technical meeting, before shooting starts.",
+                "There are 2 main themes. Submit 1 best photo per theme (2 photos in total).",
+                "A separate fan-vote photo with its own theme must also be submitted.",
+                "Photos are submitted via Google Forms.",
+                "DSLR or mirrorless cameras are recommended, but phone cameras are allowed.",
+                "Editing is allowed (for example contrast, crop, colour grading).",
+                "AI features, generative or removal, are not allowed.",
+                "If a photo is edited, describe which parts were edited.",
+                "The Laurensia Cup 2026 documentation team cannot take part.",
+                "Participants must submit 1 photo for each of the 2 main themes and 1 photo for the fan vote, or they are treated as walkover.",
+            ]
+        },
+        mun : {
+            tagline: "Step into the shoes of a global diplomat, debate world issues, and experience the thrill of real-life international negotiations.",
+            longdesc: "Participants in the MUN competition will register through the 2 phases conducted (i.e. Early Bird and regular Phase Registration). Participants must state thor first and second choice of councils, as well as topics & identity. Delegates are required to write a Position Paper containing their background issue, country/figure stance, and proposing resolutions beforehand, due at … (insert date). The Position Paper is mandatory for council allocation, whereas if not submitted the delegate will be ineligible to receive any awards. During committee sessions, delegates will present their countries’ position, negotiate, and work  collaboratively to draft resolutions. The session will also open the floor to several types of caucus such as moderated, unmoderated, consultation, etc. The MUN competition is open to all participants from Junior-High Schools to Senior-High Schools all over Indonesia, with no price differences for each delegate. However, delegations are registered for the Best Delegation Award.",
+            // [Regis1, Regis2, ...] 
+            prices: [300, 100],
+
+            // [1st, 2nd, 3rd]
+            prizes: [
+                // Prize Money, Item
+                ["750", "", "Certificate"],
+                ["500", "", "Certificate"],
+                ["250", "", "Certificate"]
+            ],
+            timeline: [
+                // Date, Title, ShortDesc
+                [10, "Opening & Position Papers Due", "Position papers due 23:59, mandatory for council allocation."],
+                [12, "Committee Sessions", "Delegates attend all 6 sessions to be eligible for awards."],
+                [16, "Closing & Awards", "Winners announced and prizes given at 16:30."],
+            ],
+            rules: [
+                "Register through Google Forms.",
+                "Fill in your first and second choice of council and topic, plus identity details.",
+                "Delegates must research and write a Position Paper: background issue, country or figure stance, and proposed resolutions.",
+                "The Position Paper is mandatory for council allocation. A delegate without one is not eligible for any award.",
+                "Committee sessions are structured: delegates present positions, negotiate and draft resolutions or solutions.",
+                "Moderated caucus: delegates only give speeches on the topic, in the order set by the Chair.",
+                "Unmoderated caucus: free-form debate to find cooperation and negotiate. General rules still apply (such as a set duration), but the Chair does not put countries in order.",
+                "Consultation of the Whole: informal discussion started by a country, moderated by the delegates with no set speaking time, with parliamentary rules suspended.",
+                "Participants must be active SMP and/or SMA students from anywhere in Indonesia.",
+                "There is no price difference between delegates.",
+                "Delegations can be registered for the Best Delegation Award.",
+                "Delegates must attend all 6 of 6 committee sessions to be eligible for awards.",
+                "A minimum of 4 of 6 committee sessions is needed to receive a Certificate of Participation.",
+            ]
+        },
+        debate : {
+            tagline: "Sharpen your arguments and prove your team has what it takes to own the stage in the ultimate battle of wits.",
+            longdesc: "",
+            // [Regis1, Regis2, ...] 
+            prices: [300, 0],
+
+            // [1st, 2nd, 3rd]
+            prizes: [
+                // Prize Money, Item
+                ["1.000", "Trophy,", "Certificate"],
+                ["500", "", "Certificate"],
+                ["", "", ""]
+            ],
+            timeline: [
+                // Date, Title, ShortDesc
+                [10, "Opening & Preliminary Rounds", "Opening ceremony and Asian Parliamentary rounds begin."],
+                [12, "Debate Rounds", "Preliminary and elimination rounds continue offline at school."],
+                [16, "Closing & Awards", "Best Team and Best Speaker announced at 16:30."],
+            ],
+            rules: [
+                "Teams of 3 active SMA/SMP students (up to 18 years old) from the same school.",
+                "Maximum 2 teams per school.",
+                "Register via Google Form with ID cards or a school letter and 3x4 cm photos.",
+                "Registration fee is Rp300,000 per team and non-refundable.",
+                "Format is Asian Parliamentary: Government supports the motion, Opposition opposes it.",
+                "Substantive speeches are 7 min 20 sec, reply speeches are 4 min 20 sec.",
+                "POIs are allowed between the 1st and 6th minute, max 15 seconds each.",
+                "Prelims can run with 2 members if one is absent, but no substitutes.",
+                "Quarterfinal and final teams must be complete or they are disqualified.",
+                "All rounds are offline at the school and all teams debate the same motion each round, except the final.",
+                "Government prepares inside the chamber, Opposition outside, guided by a Liaison Officer.",
+                "Case building starts 30 minutes after the motion launch.",
+                "No internet during case building and devices are handed to the Liaison Officer.",
+                "Printed notes are allowed in prep but not during the debate.",
+                "No help from anyone except your teammates.",
+                "Spectators are teachers only and cannot help with case building or enter once the debate starts.",
+                "Prelims 1 and 2 may have oral feedback, while prelim 3 and elimination rounds are silent.",
+                "Best Speaker is based on the 3 prelim rounds, Best Team is the finalist with the most victory points.",
+            ]
+        },
+        minisoccer : {
+            tagline: "Fast-paced, high-energy, and all about quick feet! ",
+            longdesc: "In the game of mini soccer, one team consists of 7 players with 7 substitutes and a total of 7 substitutions throughout the entire match. All players are required to wear the same bright-dark colored jerseys, except for the goalkeeper. Every player must wear long socks and soccer cleats, and goalkeeper gloves just for the goalkeeper. In addition, it is also recommended that everyone wear shin guards deker. One match will be 2 x 20 minutes long, along with a maximum 5-minute break, and will be played on the full mini-soccer field. The match will be conducted in 2 pools, with 3 teams in 1 pool. In the pools, they will face off in the preliminary round, and the winner and runner-up will proceed to the semifinals, that uses the knockout system. The winning team from each pool will compete against the runner-up from the opposing pool. Two teams that lost will fight for third place, while the two teams that won will face off each other in the finals. ",
+            // [Regis1, Regis2, ...] 
+            prices: [600, 150],
+
+            // [1st, 2nd, 3rd]
+            prizes: [
+                // Prize Money, Item
+                ["2.000", "Trophy,", "Certificate"],
+                ["1.500", "Trophy,", "Certificate"],
+                ["1.000", "Trophy,", "Certificate"]
+            ],
+            timeline: [
+                // Date, Title, ShortDesc
+                [1, "Technical Meeting", "Team reps attend the technical meeting at 16:00."],
+                [10, "Opening & Matches Begin", "Opening ceremony and pool stage kicks off."],
+                [16, "Closing & Awards", "Winners announced and prizes given at 16:30."],
+            ],
+            rules: [
+                "Each team has 7 players and 7 substitutes, with a maximum of 7 substitutions.",
+                "Wear a school jersey or school sportswear.",
+                "The goalkeeper wears a different jersey and must wear goalkeeper gloves.",
+                "Long socks are required.",
+                "Football boots are required.",
+                "Shin guards are recommended.",
+                "Match length is 2 x 20 minutes with a 5 minute break.",
+                "Two matches are played at the same time.",
+                "Group stage: 6 teams in 2 pools of 3, round robin.",
+                "The winner and runner-up of each pool advance to the semifinals.",
+                "Semifinals are knockout: Pool A winner vs Pool B runner-up, and Pool A runner-up vs Pool B winner.",
+                "The two semifinal losers play for 3rd place.",
+                "The two semifinal winners play the final.",
+                "Half pitch (mini soccer).",
+                "Walkover: a team that is late without notice or a valid reason loses automatically.",
+                "A team with too few players gets 5 minutes to complete the squad, after which it is a walkover.",
+            ]
+        },
+    }
+
+    function initPage(){
+        const params = new URLSearchParams(window.location.search);
+        const toDisplay = params.get("sport");
+        if(!toDisplay){
+            window.location.href = `schedules.html`;
+        }
+
+        // SPORT TITLE
+        const sportTitle = document.getElementById("sportTitle");
+
+        if(toDisplay == "mun"){
+            sportTitle.innerHTML = `MUN Competition`;
+            document.title = `MUN | Laurensia Cup 2026`;
+        } else if(toDisplay == "tabletennis"){
+            sportTitle.innerHTML = `Table Tennis Competition`;
+            document.title = `Table Tennis | Laurensia Cup 2026`;
+        } else if(toDisplay =="minisoccer"){
+            sportTitle.innerHTML = `Mini Soccer Competition`;
+            document.title = `Mini Soccer | Laurensia Cup 2026`;
+         } else if(toDisplay =="moderndance"){
+            sportTitle.innerHTML = `Modern Dance Competition`;
+            document.title = `Modern Dance | Laurensia Cup 2026`;
+        } else if(toDisplay =="Chess"){
+            sportTitle.innerHTML = `Chess Competition`;
+            document.title = `Chess | Laurensia Cup 2026`;
+        } else {            
+            sportTitle.innerHTML = `${capitalizeFirstLetter(toDisplay)} Competition`;
+            document.title = `${capitalizeFirstLetter(toDisplay)} | Laurensia Cup 2026`;
+            if (toDisplay=="debate") {
+                document.getElementById("first").innerHTML = "Best Teams"
+                document.getElementById("second").innerHTML = "Best Speaker"
+                document.getElementById("third").innerHTML = ""
+            }
+        }
+
+        // SPORT TAGLINE
+        const sportTag = document.getElementById("sportTagline");
+        sportTag.innerHTML = sportData[toDisplay].tagline
+
+        const sportDesc = document.getElementById("sportDesc");
+        sportDesc.innerHTML = sportData[toDisplay].longdesc
+
+        // PRICES
+        const regisPrice1 = document.getElementById("regisPrice1");
+        const regisPrice2 = document.getElementById("regisPrice2");
+
+        regisPrice1.innerHTML = `Rp. ${sportData[toDisplay].prices[0]}.000`;
+        regisPrice2.innerHTML = `Rp. ${sportData[toDisplay].prices[1]}.000`;
+        if (sportData[toDisplay].prices[1]== 0) {
+            regisPrice2.innerHTML = "-"
+        }
+
+        // PRIZES
+        const prize1 = document.getElementById("prize1");
+        const prize2 = document.getElementById("prize2");
+        const prize3 = document.getElementById("prize3");
+
+        prize1.innerHTML = `Rp. ${sportData[toDisplay].prizes[0][0]}.000, ${sportData[toDisplay].prizes[0][1]} ${sportData[toDisplay].prizes[0][2]}`;
+        prize2.innerHTML = `Rp. ${sportData[toDisplay].prizes[1][0]}.000, ${sportData[toDisplay].prizes[1][1]} ${sportData[toDisplay].prizes[1][2]}`;
+        prize3.innerHTML = `Rp. ${sportData[toDisplay].prizes[2][0]}.000, ${sportData[toDisplay].prizes[2][1]} ${sportData[toDisplay].prizes[2][2]}`;
+        if (sportData[toDisplay].prizes[2][0] == "") {
+            prize3.innerHTML = "";
+        }
+
+        // TIMELINE
+        const date1 = document.getElementById("date1");
+        const date2 = document.getElementById("date2");
+        const date3 = document.getElementById("date3");
+
+        date1.innerHTML = `${sportData[toDisplay].timeline[0][0]}`;
+        date2.innerHTML = `${sportData[toDisplay].timeline[1][0]}`;
+        date3.innerHTML = `${sportData[toDisplay].timeline[2][0]}`;
+
+        const title1 = document.getElementById("title1");
+        const title2 = document.getElementById("title2");
+        const title3 = document.getElementById("title3");
+
+        title1.innerHTML = `${sportData[toDisplay].timeline[0][1]}`;
+        title2.innerHTML = `${sportData[toDisplay].timeline[1][1]}`;
+        title3.innerHTML = `${sportData[toDisplay].timeline[2][1]}`;
+
+        const text1 = document.getElementById("text1");
+        const text2 = document.getElementById("text2");
+        const text3 = document.getElementById("text3");
+
+        text1.innerHTML = `${sportData[toDisplay].timeline[0][2]}`;
+        text2.innerHTML = `${sportData[toDisplay].timeline[1][2]}`;
+        text3.innerHTML = `${sportData[toDisplay].timeline[2][2]}`;
+
+        // RULES
+        const ruleList = document.getElementById("ruleList");
+        ruleList.innerHTML = "";
+        
+        for(let i = 0; i < sportData[toDisplay].rules.length; i++){
+            ruleList.innerHTML += `<li>${sportData[toDisplay].rules[i]}</li>`
+        };
+    };
+</script>
+</html>

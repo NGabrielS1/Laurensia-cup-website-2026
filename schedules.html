@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info & Schedules &#124; Laurensia Cup 2026</title>
+    <link rel="icon" href="Assets/Logo/favicon.ico">
+
+    <!-- REFS -->
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Main.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Main_Mobile.css">
+
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Schedules.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Schedules_Mobile.css">
+</head>
+<body onload="initPage()">
+    <header>
+        <section>
+            <img src="Assets/Logo/Logo.png" alt="Laurensia Cup Logo">
+            <h1>LAURENSIA CUP <span>2026</span></h1>
+        </section>
+
+        <nav>
+            <button class="navbutton disabled" id="arrowL" onclick="navBack()"><img src="Assets/Images/Icons/ArrowL.png" alt="Navigate Left"></button>
+            <ul class="nav-link" id="pageOne">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT</a></li>
+                <li><a href="videos.html">VIDEOS</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageTwo">
+                <li><a href="merch.html">OUR MERCH</a></li>
+                <li><a href="schedules.html" class="active">OUR COMPETITIONS</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageThree">
+                <li><a href="registration.html">REGISTRATION</a></li>
+                <li><a href="">SPONSORS</a></li>
+            </ul>
+            <button class="navbutton" id="arrowR" onclick="navForw()"><img src="Assets/Images/Icons/ArrowR.png" alt="Navigate Right"></button>
+        </nav>
+        <div class="hamburger" id="menu-button" onclick="showPopup()">
+            <hr class="line" id="top-line">
+            <hr class="line" id="mid-line">
+            <hr class="line" id="bottom-line">
+        </div>
+        <div id="pop-up">
+            <a href="index.html">HOME</a>
+            <a href="aboutus.html">ABOUT</a>
+            <a href="">VIDEOS</a>
+            <a href="">OUR MERCH</a>
+            <a href=schedules.html" class="active">OUR COMPETITIONS</a>
+            <a href="registration.html">REGISTRATION</a>
+            <a href="sponsor.html">SPONSORS</a>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <section class="sportsNav">
+                <button id="topNav" onclick="scrollNum(-1)"></button>
+                <div id="sportsItems">
+            
+                </div>
+                <button id="botNav" onclick="scrollNum(1)"></button>
+            </section>
+            <section id="mainContent">
+                <h2 id="sportTitle">Sport Name</h2>
+                <h3 id="sportTagline">Tagline</h3>
+                <div class="buttonArea">
+                    <button onclick="window.open('registration.html')">Registration</button>
+                    <button onclick="location.href='#footer'">Contact</button>
+                    <button onclick="openSports()">See More</button>
+                </div>
+                <p id="sportText"></p>
+            </section>
+        </article>
+    </main>
+
+    <footer id="footer">
+        <div class=flex-col>
+            <h2>CONTACT US</h2>
+            <ul>
+                <li>Maira (<a href="https://wa.me/62818230809">+62 818-230-809</a>)</li>
+                <li>Jericho (<a href="https://wa.me/6281319333302">+62 813-1933-3302</a>)</li>
+                <li>Ms Reni (<a href="https://wa.me/6287780654548">+62 877-8065-4548</a>)</li>
+                <li>Mr Danang (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
+                <li>Dina (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
+            </ul>
+        </div>
+        <a href="">Looking for the Old Website? &rarr;</a>
+    </footer>
+</body>
+<script src="Code/JS/Main.js" defer></script>
+<script>
+    // ADD IN EVERY PAGE
+    document.addEventListener("DOMContentLoaded", () => setPage(2));
+
+    //MATCH MEDIA
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    
+    // OTHERS
+    const sportsItems = document.getElementById("sportsItems");
+        
+    const sports = {
+        // Sports: [Icon, Header, Tagline]
+        soccer:      ["Assets/Images/Sports/soccer.JPG", "Assets/Images/Sports/soccer.JPG", "It’s time to bring your team to the big pitch, play for the badge, and give your best on the field! ", "In soccer, one team will consist of 11 players with 7 substitutes, who have the chance to substitute a maximum of about..."],
+        basketball:  ["Assets/Images/Sports/Basketball.jpeg", "Assets/Images/Sports/Basketball.jpeg", "Lace up your sneakers, leave your heart on the court and let’s see who owns the hoop this year!", "In this fierce basketball competition, there will be 12 teams divided into 3 pools. Each pool will have 3..."],
+        volleyball:  ["Assets/Images/Sports/volley.jpg", "Assets/Images/Sports/volley.jpg", "It all comes down to trust, heavy spikes, and keeping the ball alive no matter what!", "In this game that requires strength and endurance, one team will work together in the game of volleyball. One team consists..."],
+        tabletennis: ["Assets/Images/Sports/tabletennis.PNG", "Assets/Images/Sports/tabletennis.PNG", "Give you best speed, insane spin, and intense table battles!", "In the table tennis competition, each school may register a maximum of 5 players, consisting of 2 doubles pairs and 1..."],
+        badminton:   ["Assets/Images/Sports/badmin.JPG", "Assets/Images/Sports/badmin.JPG", "A true test of lightning-fast reflexes and smash-heavy rallies that will keep you on your toes!", "In this exciting badminton competition, there will be five categories: men’s singles, women’s singles, men’s doubles, women’s doubles, and mixed..."],
+        science:     ["Assets/Images/Sports/science.png", "Assets/Images/Sports/science.png", "Put your theories to the test, show off your innovations, and turn complex ideas into mind-blowing experiments.", ""],
+        photography: ["Assets/Images/Sports/photography.webp", "Assets/Images/Sports/photography.webp", "Help us tell the story of LORCUP 2026 by catching the raw sweat, tears, and triumph through your lens!", "Photos are only allowed to be taken inside Santa Laurensia Alam Sutera School, when Laurensia Cup is taking place. The theme for the competition..."],
+        mun:         ["Assets/Images/Sports/MUN.webp", "Assets/Images/Sports/MUN.webp", "Step into the shoes of a global diplomat, debate world issues, and experience the thrill of real-life international negotiations.", "Participants in the MUN competition will register through the 2 phases conducted (i.e. Early Bird and regular Phase Registration). Participants must state..."],
+        debate:      ["Assets/Images/Sports/debate.jpg", "Assets/Images/Sports/debate.jpg", "Sharpen your arguments and prove your team has what it takes to own the stage in the ultimate battle of wits.", ""],
+        minisoccer:  ["Assets/Images/Sports/team.jpg", "Assets/Images/Sports/team.jpg", "Fast-paced, high-energy, and all about quick feet!", "In the game of mini soccer, one team consists of 7 players with 7 substitutes and a total of 7 substitutions..."],
+    };
+
+    function capitalizeFirstLetter(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    const names = Object.keys(sports);
+    const period = () => sportsItems.children[names.length].offsetTop - sportsItems.children[0].offsetTop;
+    const periodX = () => sportsItems.children[names.length].offsetLeft - sportsItems.children[0].offsetLeft;
+
+    function displaySport(name){
+        const [icon, header, tagline, text] = sports[name];
+        
+        const mainContent = document.getElementById("mainContent");
+        const sportTitle = document.getElementById("sportTitle");
+        const sportTagline = document.getElementById("sportTagline");
+        const sportText = document.getElementById("sportText");
+        
+        mainContent.style.opacity = 0;
+
+        mainContent.addEventListener("transitionend", () => {
+            mainContent.style.backgroundImage = `url("${header}")`;
+
+            if(name == "mun"){
+                sportTitle.innerHTML = `MUN Competition`;
+            } else if(name == "tabletennis"){
+                sportTitle.innerHTML = `Table Tennis Competition`;
+            } else if(name =="minisoccer"){
+                sportTitle.innerHTML = `Mini Soccer Competition`;
+            } else if(name =="moderndance"){
+                sportTitle.innerHTML = `Modern Dance Competition`;
+            } else if(name =="Chess"){
+                sportTitle.innerHTML = `Chess Competition`;
+            } else {            
+                sportTitle.innerHTML = `${capitalizeFirstLetter(name)} Competition`;
+            }
+
+            sportTagline.innerHTML = capitalizeFirstLetter(tagline);
+            sportText.innerHTML = text;
+
+            requestAnimationFrame(() => {
+                mainContent.style.opacity = 1;
+            })
+        }, {once: true})
+    }
+
+    function initPage(){
+        const params = new URLSearchParams(window.location.search);
+        const toNav = params.get("sport");
+        if(toNav){
+            displaySport(toNav);
+        } else {
+            displaySport('soccer');
+        }
+        const html = names
+            .map(name => `<img onclick="displaySport('${name}')" src="${sports[name][0]}" alt="${name}">`)
+            .join("");
+
+        sportsItems.innerHTML = html.repeat(3);
+        requestAnimationFrame(() => sportsItems.scrollTop = period());
+    }
+
+    sportsItems.addEventListener("scroll", () => {
+        if(isMobile){
+            const p = periodX(), t = sportsItems.scrollLeft;
+            if (!p) return;
+            if (t < p) sportsItems.scrollLeft = t + p;
+            else if (t >= p * 2) sportsItems.scrollLeft = t - p;
+        } else {
+            const p = period(), t = sportsItems.scrollTop;
+            if (t < p) sportsItems.scrollTop = t + p
+            else if (t >= p * 2) sportsItems.scrollTop = t - p;
+        }
+    });
+
+    function scrollNum(mul){
+        const first = sportsItems.firstElementChild;
+        if (!first) return;
+        
+        const style = getComputedStyle(sportsItems);
+
+        if (isMobile) {
+            const gap = parseFloat(style.columnGap) || 0;
+            const step = first.offsetWidth + gap;
+            sportsItems.scrollBy({ left: mul * step, behavior: "smooth" });
+        } else {
+            const gap = parseFloat(style.rowGap) || 0;
+            const step = first.offsetHeight + gap;
+            sportsItems.scrollBy({ top: mul * step, behavior: "smooth" });
+        }
+    }
+
+    function openSports(){
+        const sportTitle = document.getElementById("sportTitle");
+
+        const str = sportTitle.innerHTML;
+
+        const words = str.trim().split(/\s+/);
+        words.pop();
+        const sportName = words.join("").toLowerCase();
+
+        window.open(`sports.html?sport=${sportName}`);
+    }
+</script>
+</html>

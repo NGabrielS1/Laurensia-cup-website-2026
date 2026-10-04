@@ -1,0 +1,322 @@
+.articleTop {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+
+    background-color: var(--black);
+    background-image: none;
+    height: auto;
+}
+.titleHeader {
+    margin: -3rem;
+    padding: 3rem;
+
+    height: fit-content;
+
+    box-sizing: border-box;
+
+    background: linear-gradient( to top, black 0%, transparent 150% ), url(../../Assets/Backgrounds/Background1.jpeg) bottom / cover no-repeat;
+}
+.titleHeader h2, .titleHeader h3 {
+    margin: 0;
+
+    font-family: Maragsa;
+    letter-spacing: 0.1em;
+}
+.titleHeader h2 {
+    font-size: 3.5rem;
+    color: var(--white);
+}
+.titleHeader h3 {
+    font-size: 1rem;
+    color: var(--yellow);
+}
+
+.mainInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    gap: 3rem;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 1.1rem;
+    color: var(--white);
+}
+#sportDesc {
+    text-align: justify;
+    line-height: 1.5;
+}
+.contact {
+    flex: 0 0 25%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+}
+.contact div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    padding: 0.5rem 1rem;
+    background-color: var(--lightblue);
+    box-sizing: border-box;
+    
+    border-radius: 0.5rem;
+}
+.contact h3, .contact p {
+    margin: 0;
+}
+.contact h3 {
+    font-family: Maragsa;
+    font-size: 3rem;
+    color: var(--blueAccent);
+
+    letter-spacing: 0.1em;
+}
+.contact div p {
+    font-size: 2.5rem;
+}
+.contactButtons {
+    display: flex;
+    flex-direction: row;
+
+    gap: 1rem;
+}
+.contactButtons button {
+    flex: 1;
+
+    font-family: serif;
+    font-size: 1.5rem;
+    color: var(--white);
+
+    background: var(--lightblue);
+
+    border: 0;
+    border-radius: 0.5rem;
+
+    transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    cursor: pointer;
+}
+.contactButtons button:hover {
+    transform: scale(1.05);
+}
+
+.contact .regis1 {
+    grid-area: 1 / 1 / 2 / 3;
+}
+.contact .regis2 {
+    grid-area: 2 / 1 / 3 / 3;
+}
+.contact .contactButtons {
+    grid-area: 3 / 1 / 4 / 3;
+}
+/* Second Article */
+.articleMid {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0;
+
+    background-image: none;
+    background-color: var(--black);
+}
+.prizes {
+    flex: 0 0 50%;
+
+    display: grid;
+
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 0.25fr 1fr 1fr 1fr;
+
+    grid-column-gap: 0rem;
+    grid-row-gap: 2rem;
+
+    padding: 3rem 1rem;
+
+    background-image: url(../../Assets/Backgrounds/BackgroundAlt1.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: var(--white);
+}
+.prizes h2 {
+    grid-area: 1 / 1 / 1 / 1;
+
+    margin: 0;
+
+    font-size: 3rem;
+}
+.prizes div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prizes div div {
+    position: relative;
+
+    display: flex;
+    justify-content: left;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0 3rem;
+
+
+    background-color: #0d2266;
+
+    border-radius: 1rem;
+}
+.prizes div div h3 {
+    position: absolute;
+
+    top: 0;
+    transform: translateY(-50%);
+
+    margin: 0;
+
+    font-family: Caveat;
+    font-size: 3rem;
+    color: var(--yellow);
+
+    letter-spacing: 0.1em;
+}
+.prizes div div p {
+    font-size: 1.3rem;
+}
+.firstPlace {
+    grid-area: 2 / 1 / span 1 / span 1;
+
+    position: relative;
+}
+.secondPlace {
+    grid-area: 3 / 1 / span 1 / span 1;
+    
+    position: relative;
+}
+.thirdPlace {
+    grid-area: 4 / 1 / span 1 / span 1;
+    
+    position: relative;
+}
+
+.timeline {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+
+
+    flex: 1;
+}
+.timeline hr {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-2000%);
+
+    width: 100%;
+
+    border: 0.2rem solid #424868;
+    box-sizing: border-box;
+}
+.time1, .time2, .time3 {
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0.1rem;
+    box-sizing: border-box;
+    padding: 0 0.1rem;
+}
+.timeline div section {
+    max-height: 8rem;
+    width: 95%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    align-self: center;
+    
+    aspect-ratio: 1/1;
+
+    background-color: var(--lightblue);
+    border-radius: 1rem;
+
+    font-family: Maragsa;
+    letter-spacing: 0.1em;
+
+    z-index: 2;
+}
+.timeline div section h3 {
+    margin: 0;
+
+    font-size: 3rem;
+    color: var(--blueAccent);
+}
+.timeline div section p {
+    margin: 0;
+
+    font-size: 1.5rem;
+    color: var(--white);
+}
+.timeline div div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+
+    gap: 1.8rem;
+
+    height: 100%;
+}
+.timeline div div h3 {
+    margin: 0;
+    text-align: center;
+
+    font-family: Maragsa;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    color: var(--yellow);
+}
+.timeline div div p {
+    margin: 0;
+    text-align: center;
+
+    font-size: 0.9rem;
+    color: var(--white);
+}
+
+/* Third Article */
+.articleBottom {
+    background-color: var(--black);
+    height: auto;
+    color: var(--white);
+    padding-bottom: 2rem;
+}
+.articleBottom h2 {
+    font-size: 3rem;
+}
+#ruleList {
+    font-size: 1.1rem;
+
+    line-height: 1.5;
+}

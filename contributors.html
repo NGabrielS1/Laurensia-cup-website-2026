@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contributors &#124; Laurensia Cup 2026</title>
+    <link rel="icon" href="Assets/Logo/favicon.ico">
+
+    <!-- REFS -->
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Main.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Main_Mobile.css">
+
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Contributors.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Contributors_Mobile.css">
+</head>
+<body onload="initPage()">
+    <header>
+        <section>
+            <img src="Assets/Logo/Logo.png" alt="Laurensia Cup Logo">
+            <h1>LAURENSIA CUP <span>2026</span></h1>
+        </section>
+
+        <nav>
+            <button class="navbutton disabled" id="arrowL" onclick="navBack()"><img src="Assets/Images/Icons/ArrowL.png" alt="Navigate Left"></button>
+            <ul class="nav-link" id="pageOne">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT</a></li>
+                <li><a href="videos.html">VIDEOS</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageTwo">
+                <li><a href="merch.html">OUR MERCH</a></li>
+                <li><a href="schedules.html">INFO & SCHEDULES</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageThree">
+                <li><a href="registration.html">REGISTRATION</a></li>
+                <li><a href="">SPONSORS</a></li>
+            </ul>
+            <button class="navbutton" id="arrowR" onclick="navForw()"><img src="Assets/Images/Icons/ArrowR.png" alt="Navigate Right"></button>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <article class="articleTop">
+            <section class="titleHeader">
+                <h2>Contributors</h2>
+                <h3>Here are the contributors to this website!</h3>
+            </section>
+            <section class="secondary">
+                <div class="list">
+                    <table>
+                        <tr>
+                            <td>
+                                <h3>Website Team</h3>
+                                <ol>
+                                    <li>Nicholas Gabriel Sulaiman </li>
+                                    <li>Jaeden Laureano Wylen </li>
+                                    <li>Oliver Christov Sitanaya</li>
+                                    <li>Nicholas Ardi Tirtaz</li>
+                                    <li>Justeen Christian Indrawan</li>
+                                    <li>Theodore Sebastian Karyanto</li>
+                                </ol>
+                            </td>
+                            <td>
+                                <h3>Content Writing Team</h3>
+                                <ol>
+                                    <li>Catherine Jennie Susanto</li>
+                                    <li>Victoria Lorraine Wibowo</li>
+                                    <li>Kathleen Novella Halim</li>
+                                    <li>Seraphina Adielle Liverdy</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <h3>Teachers</h3>
+                                <ol>
+                                    <li>Budhy Mulyana</li>
+                                </ol>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="game"></div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class=flex-col>
+            <h2>CONTACT US</h2>
+            <ul>
+                <li>Maira (<a href="https://wa.me/62818230809">+62 818-230-809</a>)</li>
+                <li>Jericho (<a href="https://wa.me/6281319333302">+62 813-1933-3302</a>)</li>
+                <li>Ms Reni (<a href="https://wa.me/6287780654548">+62 877-8065-4548</a>)</li>
+                <li>Mr Danang (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
+                <li>Dina (<a href="https://wa.me/6281298213188">+62 812-9821-3188</a>)</li>
+                <!-- cHJvZ3JhbW1lcjogc29tZXRoaWdu -->
+            </ul>
+        </div>
+        <a href="">Looking for the Old Website? &rarr;</a>
+    </footer>
+</body>
+<script src="Code/JS/Main.js" defer></script>
+<script>
+    // ADD IN EVERY PAGE
+    document.addEventListener("DOMContentLoaded", () => setPage(1));
+</script>
+</html>

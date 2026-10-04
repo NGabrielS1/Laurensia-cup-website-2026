@@ -13,6 +13,9 @@ const arrowR = document.getElementById("arrowR");
 var popup_out = false;
 const hamburger = document.getElementById("menu-button");
 const popup = document.getElementById("pop-up");
+if (window.matchMedia("(max-width: 768px)").matches) {
+    popup.style.display = "none";
+}
 function showPopup(){
     if (popup_out) {
         popup_out = false;
@@ -24,6 +27,10 @@ function showPopup(){
         popup.style.display = "flex";
     }
 }
+window.addEventListener("resize", function() {
+    hamburger.classList.remove('clicked');
+    popup.style.display = "none";
+});
 
 function updateArrows(){
     if (page == pageMax){

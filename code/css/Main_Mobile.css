@@ -140,6 +140,12 @@ header section img {
 header .hamburger {
     display: none;
 }
+header .pop-up {
+    display: none;
+}
+.pop-up a {
+ display: none;
+}
 header nav {    
     display: flex;
     flex-direction: row;
