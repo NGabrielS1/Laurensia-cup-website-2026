@@ -71,9 +71,9 @@
 
     font-family: PlayfairDisplay;
     font-size: 2rem;
+    text-align: center;
     color: var(--darkblueAccent);
-
-    white-space: nowrap ;
+    width: 100%;
 }
 .contact {
     grid-area: 2 / 2 / 3 / 4;

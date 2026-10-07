@@ -1,0 +1,144 @@
+body, html {
+    scroll-snap-type: none !important;
+}
+
+.articleTop {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    gap: 2rem;
+
+    background-color: var(--black);
+    background-image: none;
+}
+.titleHeader {
+    margin: -3rem;
+    padding: 3rem;
+
+    height: fit-content;
+
+    box-sizing: border-box;
+
+    background: linear-gradient( to top, black 0%, transparent 150% ), url(../../Assets/Backgrounds/Background1.jpeg) bottom / cover no-repeat;
+}
+.titleHeader h2, .titleHeader h3 {
+    margin: 0;
+
+    font-family: Maragsa;
+    letter-spacing: 0.1em;
+}
+.titleHeader h2 {
+    font-size: 3rem;
+    color: var(--white);
+}
+.titleHeader h3 {
+    font-size: 1.5rem;
+    color: var(--yellow);
+}
+
+.merchNavigator {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+
+    flex: 1;
+    min-height: 0;
+}
+
+.merchNavigator button {
+    align-self: center;
+
+    height: 2em;
+    width: 8em;
+
+    padding: 0rem 1.5em;
+
+    font-family: Maragsa;
+    font-size: 2.5rem;
+    color: var(--white);
+
+    background-color: var(--blue80);
+    border: 0;
+    border-radius: 100rem;
+
+    cursor: pointer;
+
+    transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.merchNavigator button:hover {
+    transform: scale(1.05);
+}
+
+.merchItems {
+    display: flex;
+    flex-direction: row;
+
+    gap: 1rem;
+
+    height: 80%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.merchItems::-webkit-scrollbar {
+    height: 0.5rem;
+}
+.merchItems::-webkit-scrollbar-track {
+    background: var(--darkblueAccent);
+}
+.merchItems::-webkit-scrollbar-thumb {
+    background: var(--blue);
+}
+.merchItems::-webkit-scrollbar-thumb:hover {
+    background: var(--yellow);
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+    flex: 0 0 20%;
+
+    padding: 2rem;
+
+    background-color: var(--blue60);
+    border-radius: 1rem;
+}
+.item h3 {
+    position: absolute;
+    
+    top: 0.4em;
+    transform: translateY(-100%);
+    width: 100%;
+
+    font-family: Caveat;
+    font-size: 3rem;
+    color: var(--yellow);
+
+    filter: drop-shadow(0.2rem 0.2rem 0 var(--darkblue40));
+}
+.item img {
+    width: 100%;
+    height: 50%;
+
+    margin-top: 1rem;
+
+    object-fit: cover;
+}
+.item p {
+    align-self: flex-start;
+    margin: 0;
+
+    color: var(--white);
+}
+.description {
+    font-size: 1.1rem;
+}
+.price {
+    font-family: Maragsa;
+    font-size: 2.5rem;
+}

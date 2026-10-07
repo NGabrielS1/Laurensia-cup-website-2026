@@ -73,8 +73,8 @@
     font-family: PlayfairDisplay;
     font-size: 1rem;
     color: var(--darkblueAccent);
-
-    white-space: nowrap ;
+    text-align: center;
+    width: 100%;
 }
 .contact {
     grid-area: 3 / 1 / 4 / 2;
