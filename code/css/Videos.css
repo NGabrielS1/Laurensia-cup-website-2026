@@ -1,4 +1,7 @@
 .articleTop {
+    display: flex;
+    flex-direction: column;
+
     position: relative;
     z-index: 0;
 
@@ -24,7 +27,124 @@
     width: 100%;
 }
 
-.secondaryArticle {
-    height: calc((100vh - 5rem) / 1.5);
+.videoHolder {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+
+    height: 85%;
+}
+.videoHolder h2 {
+    margin: 0;
+
+    font-size: 3rem;
+    color: var(--yellow);
+}
+
+.videoHolder section {
+    display: flex;
+    flex-direction: row;
+
+    flex: 1;
+    min-height: 0;
+}
+.videoEmbed {
+    position: relative;
+    height: 100%;
+    width: auto;
+    
+    aspect-ratio: 16/9;
+
     background-color: var(--black);
+}
+.videoEmbed h3 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    margin: 0;
+
+    font-family: Maragsa;
+    font-size: 3rem;
+    color: var(--white);
+
+    white-space: nowrap;
+}
+.videoEmbed h3.hidden {
+    display: none;
+    visibility: hidden;
+}
+#youtubeVideo {
+    height: 100%;
+    width: 100%;
+}
+video {
+    height: 100%;
+    width: auto;
+}
+
+.timers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+    
+    flex: 1;
+
+    font-family: Maragsa;
+    color: var(--white);
+}
+.timers div {
+    padding-bottom: 0.15em;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 1.5em;
+    width: 1.75em;
+
+    font-size: 7rem;
+
+    background-color: var(--lightblue60);
+    border-radius: 2rem;
+}
+.timers p {
+    font-size: 7rem;
+}
+
+.secondaryArticle {
+    display: flex;
+    flex-direction: row;
+
+    min-height: calc((100vh - 5rem) / 2);
+    height: fit-content;
+    background-color: var(--black);
+}
+.secondaryArticle div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    width: 50%;
+}
+.secondaryArticle h3 {
+    margin: 0;
+
+    font-family: Maragsa;
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    color: var(--white);
+}
+.secondaryArticle p {
+    margin: 0;
+
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--yellow);
 }

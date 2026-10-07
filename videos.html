@@ -13,7 +13,7 @@
     <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Videos.css">
     <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Videos_Mobile.css">
 </head>
-<body>
+<body onload="initPage()">
     <header>
         <section>
             <img src="Assets/Logo/Logo.png" alt="Laurensia Cup Logo">
@@ -25,15 +25,15 @@
             <ul class="nav-link" id="pageOne">
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="aboutus.html">ABOUT</a></li>
-                <li><a href="#" class="active">VIDEOS</a></li>
+                <li><a href="videos.html" class="active">VIDEOS</a></li>
             </ul>
             <ul class="nav-link hidden" id="pageTwo">
-                <li><a href="">OUR MERCH</a></li>
-                <li><a href="schedules.html">OUR COMPETITIONS</a></li>
+                <li><a href="merch.html">OUR MERCH</a></li>
+                <li><a href="schedules.html">INFO & SCHEDULES</a></li>
             </ul>
             <ul class="nav-link hidden" id="pageThree">
                 <li><a href="registration.html">REGISTRATION</a></li>
-                <li><a href="sponsor.html">SPONSORS</a></li>
+                <li><a href="">SPONSORS</a></li>
             </ul>
             <button class="navbutton" id="arrowR" onclick="navForw()"><img src="Assets/Images/Icons/ArrowR.png" alt="Navigate Right"></button>
         </nav>
@@ -45,7 +45,7 @@
         <div id="pop-up">
             <a href="index.html">HOME</a>
             <a href="aboutus.html">ABOUT</a>
-            <a href="" class="active">VIDEOS</a>
+            <a href="videos.html" class="active">VIDEOS</a>
             <a href="">OUR MERCH</a>
             <a href="schedules.html">OUR COMPETITIONS</a>
             <a href="registration.html">REGISTRATION</a>
@@ -55,11 +55,42 @@
 
     <main id="mainContent">
         <article class="articleTop">
-            <img class="divider" src="Assets/Backgrounds/Divider.png" alt="">
-            
+            <img class="divider noSelect" draggable="false" src="Assets/Backgrounds/Divider.png" alt="">
+            <div class="videoHolder">
+                <h2>Trailer</h2>
+                <section>
+                    <video controls>
+                        <source src="Assets/Videos/trailer.mp4" type="video/mp4"/>
+                    </video>
+                </section>
+            </div>
+        </article>
+        <article class="articleTop">
+            <img class="divider noSelect" draggable="false" src="Assets/Backgrounds/Divider.png" alt="">
+            <div class="videoHolder">
+                <h2>Youtube Live</h2>
+                <section>
+                    <div class="videoEmbed">
+                        <iframe id="youtubeVideo" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h3 id="streamStatus" class="noSelect">No Upcoming Stream!</h3>
+                    </div>
+                    <div class="timers">
+                        <div id="minutes">00</div>
+                        <p class="noSelect">:</p>
+                        <div id="seconds">00</div>
+                    </div>
+                </section>
+            </div>
         </article>
         <article class="secondaryArticle">
-
+            <div>
+                <h3>Time</h2>
+                <p id="timeText"></p>
+            </div>
+            <div>
+                <h3>Location</h2>
+                <p>Santa Laurensia School Alam Sutera</p>
+            </div>
         </article>
     </main>
 
@@ -71,15 +102,92 @@
                 <li>Jericho (<a href="https://wa.me/6281319333302">+62 813-1933-3302</a>)</li>
                 <li>Ms Reni (<a href="https://wa.me/6287780654548">+62 877-8065-4548</a>)</li>
                 <li>Mr Danang (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
-                <li>Dina (<a href="https://wa.me/6285282381823">+62 812-9821-3188</a>)</li>
+                <li>Dina (<a href="https://wa.me/6281298213188">+62 812-9821-3188</a>)</li>
                 <!-- cHJvZ3JhbW1lcjogc29tZXRoaWdu -->
             </ul>
         </div>
-        <a href="https://2024.laurensiacup.id/">Looking for the Laurensia Cup 2024? &rarr;</a>
+        <a href="">Looking for the Old Website? &rarr;</a>
     </footer>
 </body>
 <script src="Code/JS/Main.js" defer></script>
 <script>
+    // ADD IN EVERY PAGE
     document.addEventListener("DOMContentLoaded", () => setPage(1));
+
+    // UPDATE THIS ARRAY
+    // const nextStream = ["https://www.youtube.com/embed/cCZOz1RbvHs?si=23cB9Ad3mT4M9NmS", new Date("2026-09-23T21:58:00")]
+    const nextStream = []
+
+    const streamUpdate = document.getElementById("streamStatus")
+
+    const videoPlayer = document.getElementById("youtubeVideo");
+    const timeText = document.getElementById("timeText");
+    const minutes = document.getElementById("minutes");
+    const seconds = document.getElementById("seconds");
+    
+    function formatDate(date) {
+        const months = [
+            "January", "February", "March", "April",
+            "May", "June", "July", "August",
+            "September", "October", "November", "December"
+        ];
+
+        const day = String(date.getDate()).padStart(2, "0");
+        const month = months[date.getMonth()];
+        const year = date.getFullYear();
+
+        const hours = String(date.getHours()).padStart(2, "0");
+        const minutes = String(date.getMinutes()).padStart(2, "0");
+
+        return `${day} ${month} ${year}, ${hours}.${minutes} WIB`;
+    }
+
+    function initPage(){
+        if (nextStream.length != 2){
+            timeText.textContent = "XX";
+            return;
+        }
+
+        streamUpdate.classList.add("hidden");
+
+        videoPlayer.src = nextStream[0];
+
+        if (nextStream[1]) {
+            timeText.textContent = formatDate(nextStream[1]);
+        } else {
+            timeText.textContent = "No Upcoming Stream!";
+        }
+    }
+
+    function updateTimer(){        
+        if (nextStream.length != 2){
+            minutes.innerHTML = "X";
+            seconds.innerHTML = "X";
+            return;
+        }
+
+        const timeNow = new Date();
+
+        const timeDiff = nextStream[1] - timeNow;
+        if(timeDiff < 0) {
+            minutes.innerHTML = "00";
+            seconds.innerHTML = "00";
+            return;
+
+        } else if (timeDiff > (1000 * 99 * 60 + 1000 * 99)){
+            minutes.innerHTML = "99";
+            seconds.innerHTML = "99";
+            return;
+
+        }   
+
+        const minutesLeft = Math.floor(timeDiff / (60 * 1000));
+        const secondsLeft = Math.floor(timeDiff % (60 * 1000) / 1000);
+
+        minutes.innerHTML = String(minutesLeft).padStart(2, "0");
+        seconds.innerHTML = String(secondsLeft).padStart(2, "0");
+    }
+
+    setInterval(updateTimer, 900)
 </script>
 </html>

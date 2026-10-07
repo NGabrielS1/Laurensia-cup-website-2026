@@ -1,0 +1,158 @@
+.articleTop {
+    display: flex;
+    flex-direction: column;
+
+    min-height: calc((100vh - 10rem) * 0.70);
+    height: 30rem;
+
+    position: relative;
+    z-index: 0;
+
+    overflow: hidden;
+}
+.articleTop::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: var(--black20);
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+.divider {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 10%);
+    width: 200%;
+}
+
+.videoHolder {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    gap: 1rem;
+}
+.videoHolder h2 {
+    margin: 0;
+
+    font-size: 2.5rem;
+    color: var(--yellow);
+}
+
+.videoHolder section {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
+    height: 50%;
+}
+.videoEmbed {
+    position: relative;
+    height: auto;
+    width: 100%;
+    
+    aspect-ratio: 16/9;
+
+    background-color: var(--black);
+}
+.videoEmbed h3 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    margin: 0;
+
+    font-family: Maragsa;
+    font-size: 3rem;
+    color: var(--white);
+
+    white-space: nowrap;
+}
+.videoEmbed h3.hidden {
+    display: none;
+    visibility: hidden;
+}
+#youtubeVideo {
+    height: 100%;
+    width: 100%;
+}
+video {
+    height: auto;
+    width: 100%;
+}
+
+.timers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1;
+
+    gap: 2rem;
+
+    font-family: Maragsa;
+    color: var(--white);
+}
+.timers div {
+    padding-bottom: 0.15em;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 1.5em;
+    width: 1.75em;
+
+    font-size: 3rem;
+
+    background-color: var(--lightblue60);
+    border-radius: 0.5rem;
+}
+.timers p {
+    margin: 0;
+
+    font-size: 4rem;
+}
+
+.secondaryArticle {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2em;
+
+    min-height: calc((100vh - 10rem) * 0.3);
+    height: fit-content;
+
+    background-color: var(--black);
+}
+.secondaryArticle div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    width: 100%;
+}
+.secondaryArticle h3 {
+    margin: 0;
+
+    font-family: Maragsa;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    color: var(--white);
+}
+.secondaryArticle p {
+    margin: 0;
+
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--yellow);
+}
