@@ -231,5 +231,26 @@
 
         readExtra = !readExtra;
     }
+    const items = document.querySelectorAll(`
+        .mainArea p, .mainArea button, .articleHighlight,
+        .latestNews h2, .latestNews > div, .timerRow > div,
+        .articleBot h2, .articleBot section div,
+        .pageHeaders, .articleTop > p, .articleTop .banner,
+        .infoArticle > img, .buttonHolder
+    `);
+
+    const observer = new IntersectionObserver(entries => {
+        let i = 0;
+        entries.forEach(e => {
+            if (!e.isIntersecting) return;
+            setTimeout(() => e.target.classList.add("show"), i++ * 150);
+            observer.unobserve(e.target);
+        });
+    }, { threshold: 0.1 });
+
+    items.forEach(el => {
+        el.classList.add("reveal");
+        observer.observe(el);
+    });
 </script>
 </html>

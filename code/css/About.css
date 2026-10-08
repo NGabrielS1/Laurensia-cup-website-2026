@@ -10,6 +10,14 @@
 
     background: linear-gradient( to top, black 0%, transparent 70% ), url(../../Assets/Backgrounds/Background1.jpeg) bottom / cover no-repeat;
 }
+.articleTop .banner {
+    width: 60%;
+    height: auto;
+    align-self: center;
+    flex-shrink: 0;
+    margin-top: 1rem;
+    margin-bottom: auto;
+}
 .articleTop section {
     display: flex;
     flex-direction: row;
