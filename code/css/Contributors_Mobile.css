@@ -1,0 +1,77 @@
+body, html {
+    scroll-snap-type: none !important;
+}
+
+.articleTop {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    gap: 2rem;
+
+    background-color: var(--black);
+    background-image: none;
+}
+.titleHeader {
+    margin: -3rem;
+    padding: 3rem;
+
+    height: fit-content;
+
+    box-sizing: border-box;
+
+    background: linear-gradient( to top, black 0%, transparent 150% ), url(../../Assets/Backgrounds/Background1.jpeg) bottom / cover no-repeat;
+}
+.titleHeader h2, .titleHeader h3 {
+    margin: 0;
+
+    font-family: Maragsa;
+    letter-spacing: 0.1em;
+}
+.titleHeader h2 {
+    font-size: 3rem;
+    color: var(--white);
+}
+.titleHeader h3 {
+    font-size: 1.5rem;
+    color: var(--yellow);
+}
+
+.secondary {
+    display: flex;
+    flex-direction: row;
+
+    flex: 1;
+}
+.list {
+    width: 50%;
+}
+.list table {
+    height: 100%;
+    width: 100%;
+}
+.list table td {
+    vertical-align: top;
+
+    height: 50%;
+    width: 50%;
+}
+.list table h3 {
+    margin: 0;
+
+    font-family: Maragsa;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    color: var(--yellow);
+}
+.list table li {
+    font-size: 1.1rem;
+    list-style-type: decimal;
+    line-height: 1.5;
+
+    color: var(--white);
+}
+
+.game {
+    width: 50%;
+}

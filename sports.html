@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Merch &#124; Laurensia Cup 2026</title>
+    <title>Competition &#124; Laurensia Cup 2026</title>
     <link rel="icon" href="Assets/Logo/favicon.ico">
 
     <!-- REFS -->
@@ -33,8 +33,7 @@
             </ul>
             <ul class="nav-link hidden" id="pageThree">
                 <li><a href="registration.html">REGISTRATION</a></li>
-                <li><a href="sponsor.html">SPONSORS</a></li>
-                <li><a href="contributors.html">CONTRIBUTORS</a></li>
+                <li><a href="">SPONSORS</a></li>
             </ul>
             <button class="navbutton" id="arrowR" onclick="navForw()"><img src="Assets/Images/Icons/ArrowR.png" alt="Navigate Right"></button>
         </nav>
@@ -51,22 +50,17 @@
             <a href="schedules.html" class="active">OUR COMPETITIONS</a>
             <a href="registration.html">REGISTRATION</a>
             <a href="sponsor.html">SPONSORS</a>
-            <a href="contributors.html">CONTRIBUTORS</a>
         </div>
     </header>
 
-    <main >
+    <main class="sportPage">
         <article class="articleTop">
             <section class="titleHeader">
                 <h2 id="sportTitle">Sport Title</h2>
                 <h3 id="sportTagline">Tagline</h3>
             </section>
             <section class="mainInfo">
-                <p id="sportDesc">
-                    LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT 
-                    LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT 
-                    LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT LONG BLOCK OF TEXT 
-                </p>
+                <p id="sportDesc"></p>
                 <div class="contact">
                     <div class="regis1">
                         <h3 id="regisPrice1">Rp. ???</h3>
@@ -109,7 +103,7 @@
                 <hr>
                 <div class="time1">
                     <section>
-                        <h3 id="date1">20</h3>
+                        <h3 id="date1"></h3>
                         <p>OCT</p>
                     </section>
                     <div>
@@ -139,34 +133,42 @@
                 </div>
             </section>
         </article>
+        <article class="articleSchedule" id="scheduleArticle">
+            <h2>Matches</h2>
+            <p class="venue" id="matchVenue"></p>
+            <div class="dayTabs" id="dayTabs"></div>
+            <div class="matchList" id="matchList"></div>
+        </article>
         <article class="articleBottom">
             <h2>Rules</h2>
-            <ul id="ruleList">
-                <li>Text1</li>
-                <li>Text1</li>
-                <li>Text1</li>
-                <li>Text1</li>
-            </ul>
+            <ul id="ruleList"></ul>
         </article>
     </main>
 
-    <footer id="footer">
+    <footer>
         <div class=flex-col>
             <h2>CONTACT US</h2>
             <ul>
-                <li>Maira (<a href="https://wa.me/62818230809">+62 818-230-809</a>)</li>
-                <li>Jericho (<a href="https://wa.me/6281319333302">+62 813-1933-3302</a>)</li>
-                <li>Ms Reni (<a href="https://wa.me/6287780654548">+62 877-8065-4548</a>)</li>
-                <li>Mr Danang (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
-                <li>Dina (<a href="https://wa.me/6281298213188">+62 812-9821-3188</a>)</li>
+                <li class="gabrielfooter">Maira (<a href="https://wa.me/62818230809">+62 818-230-809</a>)</li>
+                <li class="gabrielfooter">Jericho (<a href="https://wa.me/6281319333302">+62 813-1933-3302</a>)</li>
+                <li class="gabrielfooter">Ms Reni (<a href="https://wa.me/6287780654548">+62 877-8065-4548</a>)</li>
+                <li class="gabrielfooter">Mr Danang (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
+                <li class="gabrielfooter">Dina (<a href="https://wa.me/6281298213188">+62 812-9821-3188</a>)</li>
                 <!-- cHJvZ3JhbW1lcjogc29tZXRoaWdu -->
             </ul>
+        </div>        
+        <div>
+            <h2>SOCIAL MEDIA</h2>
+            <ul class="socialMedia">
+                <li><a href="https://www.tiktok.com/@lorencup.26"><i class="fa-brands fa-tiktok"></i><u>TikTok</u></a></li>
+                <li><a href="https://www.instagram.com/lorencup2026/?__d=1%2F"><i class="fa-brands fa-instagram"></i><u>Instagram</u></a></li>
+            </ul>
         </div>
-        <a href="">Looking for the Old Website? &rarr;</a>
+        <h2><a href="">Looking for the Old Website? &rarr;</a></h2>
     </footer>
-</body>
-<script src="Code/JS/Main.js" defer></script>
-<script>
+
+    <script src="Code/JS/Main.js" defer></script>
+    <script>
     // ADD IN EVERY PAGE
     document.addEventListener("DOMContentLoaded", () => setPage(2));
 
@@ -174,12 +176,21 @@
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
 
+    // Display names that are not just "Capitalized key"
+    const sportNames = {
+        mun: "MUN",
+        tabletennis: "Table Tennis",
+        minisoccer: "Mini Soccer",
+        moderndance: "Modern Dance",
+        chess: "Chess"
+    };
+
     // MAIN
     const sportData = {
         soccer : {
             tagline: "It’s time to bring your team to the big pitch, play for the badge, and give your best on the field!",
             longdesc: "In soccer, one team will consist of 11 players with 7 substitutes, who have the chance to substitute a maximum of about 5 times. For each team, the players must wear the same bright or dark colored jersey, except for the goalkeeper. All players are required to wear long socks and soccer cleats, and are recommended to wear shin guards. For the goalkeeper, it is mandatory to wear keeper gloves. One match will be 2 x 30 minutes with a break of up to 15 minutes, and the match will cover the whole soccer field.",
-            // [Regis1, Regis2, ...] 
+            // [Regis1, Regis2, ...]
             prices: [600, 150],
 
             // [1st, 2nd, 3rd]
@@ -214,18 +225,13 @@
         basketball : {
             tagline: "Lace up your sneakers, leave your heart on the court and let’s see who owns the hoop this year!",
             longdesc: "In this fierce basketball competition, there will be 12 teams divided into 3 pools. Each pool will have 3 teams competing against one another. Each team must wear the same bright or dark colored jerseys and have a minimum of  5 players for the competition. One pool with 3 teams will compete in the preliminary round. Then, the winner of each preliminary round will advance to the semifinal that uses a knockout system. The match will be conducted in 4 quarters, all in 10 minutes. In the first until third quarters, the whole 10 minutes will be running time. However, during the fourth quarter, 8 minutes will be running time, and the last 2 minutes will use the semi-stopped clock method. For each match, the scoring system will be different in the preliminary round and the semifinal. In addition, we hope every team can arrive on time, maintain sportsmanship, and respect the referee’s decisions.",
-            // [Regis1, Regis2, ...] 
             prices: [600, 150],
-
-            // [1st, 2nd, 3rd]
             prizes: [
-                // Prize Money, Item
                 ["2.000", "Trophy,", "Certificate"],
                 ["1.500", "Trophy,", "Certificate"],
                 ["1.000", "Trophy,", "Certificate"]
             ],
             timeline: [
-                // Date, Title, ShortDesc
                 [1, "Technical Meeting", "Team reps attend the technical meeting at 16:00."],
                 [10, "Opening & Matches Begin", "Opening ceremony and pool stage kicks off."],
                 [16, "Closing & Awards", "Winners announced and prizes given at 16:30."],
@@ -255,18 +261,13 @@
         volleyball : {
             tagline: "It all comes down to trust, heavy spikes, and keeping the ball alive no matter what!",
             longdesc: "In this game that requires strength and endurance, one team will work together in the game of volleyball. One team consists of 6 to 12 players, who must wear the same bright or dark colored jerseys. Every team must bring their own ball for warm-up, and they may use the libero system. If they use the libero system, they must wear the opposite colored jersey from the rest of the team. In this competition, the total of 12 teams will be divided into 3 pools, where the teams in the pools will compete in the preliminary round. The winner from each pool will advance to the semifinals. In the preliminary round and semifinals, the winner will be determined by the best of 3 sets, while the finals will use the best of 5 sets. All of the matches will follow the rules from FIVB, and every team must show sportsmanship and respect the referee’s decisions.",
-            // [Regis1, Regis2, ...] 
             prices: [600, 150],
-
-            // [1st, 2nd, 3rd]
             prizes: [
-                // Prize Money, Item
                 ["2.000", "Trophy,", "Certificate"],
                 ["1.500", "Trophy,", "Certificate"],
                 ["1.000", "Trophy,", "Certificate"]
             ],
             timeline: [
-                // Date, Title, ShortDesc
                 [1, "Technical Meeting", "Team reps attend the technical meeting at 16:00."],
                 [10, "Opening & Matches Begin", "Opening ceremony and pool stage kicks off."],
                 [16, "Closing & Awards", "Winners announced and prizes given at 16:30."],
@@ -299,18 +300,13 @@
         tabletennis : {
             tagline: "Give you best speed, insane spin, and intense table battles!",
             longdesc: "In the table tennis competition, each school may register a maximum of 5 players, consisting of 2 doubles pairs and 1 singles player. A total of 12 teams will compete in the tournament and will be divided into four pools, with 3 teams in each pool. Every team in each pool will compete against one another in the preliminary round, and the winner of each pool will advance to the semifinals. The semifinal matches will follow a knockout system, with the winners advancing to the finals and the losing teams competing for third place. Each match will use a best-of-5 system, with each game played to 11 points and requiring a 2-point difference to win. Players will also be given designated break and timeout opportunities during matches. All participants are expected to follow the tournament rules, arrive on time, wear appropriate sports attire, and demonstrate good sportsmanship throughout the competition. ",
-            // [Regis1, Regis2, ...] 
             prices: [600, 150],
-
-            // [1st, 2nd, 3rd]
             prizes: [
-                // Prize Money, Item
                 ["2.000", "Trophy,", "Certificate"],
                 ["1.500", "Trophy,", "Certificate"],
                 ["1.000", "Trophy,", "Certificate"]
             ],
             timeline: [
-                // Date, Title, ShortDesc
                 [1, "Technical Meeting", "Team reps attend the technical meeting at 16:00."],
                 [10, "Opening & Matches Begin", "Opening ceremony and pool stage kicks off."],
                 [16, "Closing & Awards", "Winners announced and prizes given at 16:30."],
@@ -336,18 +332,13 @@
         badminton : {
             tagline: "A true test of lightning-fast reflexes and smash-heavy rallies that will keep you on your toes!",
             longdesc: "In this exciting badminton competition, there will be five categories: men’s singles, women’s singles, men’s doubles, women’s doubles, and mixed doubles. Each category will consist of 16 players or pairs competing in a knockout system, where the winner advances to the next round. The competition will begin with the Round of 16, followed by the quarterfinals, semifinals, and finals, with a separate match to determine third place. In the Round of 16, each match will consist of 2 sets to 15 points without deuce, while the quarterfinals onwards will use the standard badminton scoring system of 21 points, best of 3 sets, with deuce up to 30 points. All matches will follow the official rules of the Badminton World Federation (BWF), and players are expected to arrive on time, maintain sportsmanship, and respect the referee’s decisions. ",
-            // [Regis1, Regis2, ...] 
             prices: [600, 150],
-
-            // [1st, 2nd, 3rd]
             prizes: [
-                // Prize Money, Item
                 ["2.000", "Trophy,", "Certificate"],
                 ["1.500", "Trophy,", "Certificate"],
                 ["1.000", "Trophy,", "Certificate"]
             ],
             timeline: [
-                // Date, Title, ShortDesc
                 [1, "Technical Meeting", "Team reps attend the technical meeting at 16:00."],
                 [10, "Opening & Matches Begin", "Opening ceremony and pool stage kicks off."],
                 [16, "Closing & Awards", "Winners announced and prizes given at 16:30."],
@@ -374,96 +365,16 @@
                 "Protests must be submitted in writing within 30 minutes after the match ends. Later protests are not processed.",
             ]
         },
-        science : {
-            tagline: "Put your theories to the test, show off your innovations, and turn complex ideas into mind-blowing experiments.",
-            longdesc: "",
-            // [Regis1, Regis2, ...] 
-            prices: [150, 0],
-
-            // [1st, 2nd, 3rd]
-            prizes: [
-                // Prize Money, Item
-                ["750", "", "Certificate"],
-                ["500", "", "Certificate"],
-                ["300", "", "Certificate"]
-            ],
-            timeline: [
-                // Date, Title, ShortDesc
-                [10, "Data Recording Starts", "Record match data and analyze it in the Science Lab (until 13 Oct)."],
-                [14, "Report Submission", "Submit the A2 infographic PDF and project files by 16:00."],
-                [15, "Jury Presentation", "10 min presentation + 10 min Q&A, 08:00-14:00."],
-            ],
-            rules: [
-                "Teams of 2-3 SMP students (not individual).",
-                "The competition runs only with at least 10 teams (maximum 15).",
-                "Analysis software must be open source: Tracker Video Analysis or Kinovea.",
-                "Recording data must not disturb matches or the movement of athletes, committee and spectators.",
-                "Participants provide all their own equipment (camera or phone, laptop, measuring tools, distance calibration instruments, etc.) and are personally responsible for it.",
-                "Participants must also look after any equipment lent by the committee.",
-                "Submit the video or project files via Google Drive, together with the infographic report as a PDF.",
-                "The final report is an infographic in PDF format, with enough resolution to print at A2 landscape.",
-                "The infographic must include: Introduction, Analysis Method & Calibration, Data & Graphs, Physics/Biomechanics Discussion, and Recommendation/Conclusion.",
-                "Present results to the jury for 10 minutes of presentation plus 10 minutes of Q&A.",
-                "Use only the infographic for the presentation. No other presentation media is needed.",
-                "Camera must record at minimum 60 fps (120 fps slow motion recommended) and use a stable tripod.",
-                "A phone may be used as a stopwatch.",
-                "Bring a laptop for making the report.",
-                "Committee provides: wifi for the report, rulers and measuring tape, spring balance (dynamometer), IR thermal gun, launch ramp, basketball, tennis ball, badminton rackets, shuttlecocks, visual field testing set, basketball shoes and weights, gym chalk, salt solution, and cooling and heating boxes.",
-                "Maximum total score is 100 points.",
-                "Scoring covers technical use of the software, depth of scientific analysis, written report quality and mastery of the material during the presentation.",
-                "Detailed scoring is given at the technical meeting.",
-                "The jury's decision is final and cannot be contested.",
-            ]
-        },
-        photography : {
-            tagline: "Help us tell the story of LORCUP 2026 by catching the raw sweat, tears, and triumph through your lens!",
-            longdesc: "Photos are only allowed to be taken inside Santa Laurensia Alam Sutera School, when Laurensia Cup is taking place. The theme for the competition and place of submission will be announced beforehand at the technical meeting. Participants are recommended to use a DSLR camera or mirrorless, although using phone cameras are also accepted. Participants are only allowed to submit 1 best photo per theme. Photos taken are allowed to be edited, but editing using generative AI or removal is prohibited. If the submitted photos are edited, a description of what was edited is required (e.g. cropping, color grading, etc.). Participants will be disqualified if found violating the general rules.",
-            // [Regis1, Regis2, ...] 
-            prices: [250, 150],
-
-            // [1st, 2nd, 3rd]
-            prizes: [
-                // Prize Money, Item
-                ["1.000", "Trophy,", "Certificate"],
-                ["750", "Trophy,", "Certificate"],
-                ["500", "Trophy,", "Certificate"]
-            ],
-            timeline: [
-                // Date, Title, ShortDesc
-                [10, "Shooting Starts", "Technical meeting at 08:30 announces the themes, then shooting begins."],
-                [13, "Photo Submission Deadline", "Submit 1 photo per main theme via Google Forms."],
-                [16, "Winner Announcement", "Winners announced and prizes given at 16:30."],
-            ],
-            rules: [
-                "The competition runs only if there are at least 30 participants (maximum 50).",
-                "Photos may only be taken inside SMA Santa Laurensia Alam Sutera, during Laurensia Cup activities.",
-                "The themes are announced at the technical meeting, before shooting starts.",
-                "There are 2 main themes. Submit 1 best photo per theme (2 photos in total).",
-                "A separate fan-vote photo with its own theme must also be submitted.",
-                "Photos are submitted via Google Forms.",
-                "DSLR or mirrorless cameras are recommended, but phone cameras are allowed.",
-                "Editing is allowed (for example contrast, crop, colour grading).",
-                "AI features, generative or removal, are not allowed.",
-                "If a photo is edited, describe which parts were edited.",
-                "The Laurensia Cup 2026 documentation team cannot take part.",
-                "Participants must submit 1 photo for each of the 2 main themes and 1 photo for the fan vote, or they are treated as walkover.",
-            ]
-        },
         mun : {
             tagline: "Step into the shoes of a global diplomat, debate world issues, and experience the thrill of real-life international negotiations.",
             longdesc: "Participants in the MUN competition will register through the 2 phases conducted (i.e. Early Bird and regular Phase Registration). Participants must state thor first and second choice of councils, as well as topics & identity. Delegates are required to write a Position Paper containing their background issue, country/figure stance, and proposing resolutions beforehand, due at … (insert date). The Position Paper is mandatory for council allocation, whereas if not submitted the delegate will be ineligible to receive any awards. During committee sessions, delegates will present their countries’ position, negotiate, and work  collaboratively to draft resolutions. The session will also open the floor to several types of caucus such as moderated, unmoderated, consultation, etc. The MUN competition is open to all participants from Junior-High Schools to Senior-High Schools all over Indonesia, with no price differences for each delegate. However, delegations are registered for the Best Delegation Award.",
-            // [Regis1, Regis2, ...] 
             prices: [300, 100],
-
-            // [1st, 2nd, 3rd]
             prizes: [
-                // Prize Money, Item
                 ["750", "", "Certificate"],
                 ["500", "", "Certificate"],
                 ["250", "", "Certificate"]
             ],
             timeline: [
-                // Date, Title, ShortDesc
                 [10, "Opening & Position Papers Due", "Position papers due 23:59, mandatory for council allocation."],
                 [12, "Committee Sessions", "Delegates attend all 6 sessions to be eligible for awards."],
                 [16, "Closing & Awards", "Winners announced and prizes given at 16:30."],
@@ -487,18 +398,13 @@
         debate : {
             tagline: "Sharpen your arguments and prove your team has what it takes to own the stage in the ultimate battle of wits.",
             longdesc: "",
-            // [Regis1, Regis2, ...] 
             prices: [300, 0],
-
-            // [1st, 2nd, 3rd]
             prizes: [
-                // Prize Money, Item
                 ["1.000", "Trophy,", "Certificate"],
                 ["500", "", "Certificate"],
                 ["", "", ""]
             ],
             timeline: [
-                // Date, Title, ShortDesc
                 [10, "Opening & Preliminary Rounds", "Opening ceremony and Asian Parliamentary rounds begin."],
                 [12, "Debate Rounds", "Preliminary and elimination rounds continue offline at school."],
                 [16, "Closing & Awards", "Best Team and Best Speaker announced at 16:30."],
@@ -527,18 +433,13 @@
         minisoccer : {
             tagline: "Fast-paced, high-energy, and all about quick feet! ",
             longdesc: "In the game of mini soccer, one team consists of 7 players with 7 substitutes and a total of 7 substitutions throughout the entire match. All players are required to wear the same bright-dark colored jerseys, except for the goalkeeper. Every player must wear long socks and soccer cleats, and goalkeeper gloves just for the goalkeeper. In addition, it is also recommended that everyone wear shin guards deker. One match will be 2 x 20 minutes long, along with a maximum 5-minute break, and will be played on the full mini-soccer field. The match will be conducted in 2 pools, with 3 teams in 1 pool. In the pools, they will face off in the preliminary round, and the winner and runner-up will proceed to the semifinals, that uses the knockout system. The winning team from each pool will compete against the runner-up from the opposing pool. Two teams that lost will fight for third place, while the two teams that won will face off each other in the finals. ",
-            // [Regis1, Regis2, ...] 
             prices: [600, 150],
-
-            // [1st, 2nd, 3rd]
             prizes: [
-                // Prize Money, Item
                 ["2.000", "Trophy,", "Certificate"],
                 ["1.500", "Trophy,", "Certificate"],
                 ["1.000", "Trophy,", "Certificate"]
             ],
             timeline: [
-                // Date, Title, ShortDesc
                 [1, "Technical Meeting", "Team reps attend the technical meeting at 16:00."],
                 [10, "Opening & Matches Begin", "Opening ceremony and pool stage kicks off."],
                 [16, "Closing & Awards", "Winners announced and prizes given at 16:30."],
@@ -564,102 +465,275 @@
         },
     }
 
-    function initPage(){
+    // MATCH SCHEDULES  
+
+    const D = (date, wk, ...slots) => ({ date, wk, slots });
+    const S = (time, ...m) => ({ time, m });
+    const B5 = "Boys 5x5", G5 = "Girls 5x5", T3 = "3x3", BO = "Boys", GI = "Girls";
+
+    const scheduleData = {
+        basketball: {
+            venue: "Courts 1 & 2 (covered) · Categories: 3x3, Boys 5x5, Girls 5x5",
+            courtWord: "Court",
+            days: [
+                D(10, "Sat",
+                    S("10:00 – 11:15", [B5,"Pool B","Yuppentek 1","Springfield",1], [B5,"Pool A","Buona Ventura","Laurensia Suvarna Sutra",2]),
+                    S("12:30 – 13:45", [G5,"Pool A","Springfield","SMAN 6",1], [B5,"Pool D","Penabur GS","Candle Tree",2]),
+                    S("13:45 – 15:00", [G5,"Pool B","Penabur GS","SMAN 12",1], [B5,"Pool C","Kumnamu","Izada",2])),
+                D(12, "Mon",
+                    S("12:30 – 13:45", [G5,"Pool A","Laurensia Putih","SMAN 6",1], [G5,"Pool A","Saint John GS","Springfield",2]),
+                    S("13:45 – 15:00", [B5,"Pool A","Saint John GS","Buona Ventura",2], [B5,"Pool C","Laurensia Biru","Kumnamu",1]),
+                    S("15:00 – 16:15", [B5,"Pool B","Springfield","Laurensia Putih",1], [B5,"Pool D","Candle Tree","SDHLV",2]),
+                    S("16:15 – 17:30", [G5,"Pool B","SMAN 12","Laurensia Biru",1])),
+                D(13, "Tue",
+                    S("12:30 – 13:45", [B5,"Pool A","Laurensia Suvarna Sutra","Saint John GS",2], [G5,"Pool B","Laurensia Biru","Penabur GS",1]),
+                    S("13:45 – 15:00", [G5,"Pool A","Springfield","Laurensia Putih",1], [G5,"Pool A","SMAN 6","Saint John GS",2]),
+                    S("15:00 – 16:15", [B5,"Pool C","Izada","Laurensia Biru",1])),
+                D(14, "Wed",
+                    S("12:30 – 13:15", [T3,"Pool B","SMP Harapan Bangsa Modernhill","SMP Laurensia Suvarna Sutra B",1], [T3,"Pool A","SMP Laurensia Suvarna Sutra A","SMP Ora et Labora",1], [T3,"Pool B","Laurensia Biru","SMP Harapan Bangsa Modernhill",1]),
+                    S("13:15 – 14:00", [T3,"Pool A","Ora et Labora","Laurensia Putih",1], [T3,"Pool B","SMP Laurensia Suvarna Sutra B","Laurensia Biru",1], [T3,"Pool A","Laurensia Putih","SMP Laurensia Suvarna Sutra A",1]),
+                    S("14:15 – 15:30", [B5,"Pool B","Laurensia Putih","Yuppentek 1",1], [B5,"Pool D","SDHLV","Penabur GS",2]),
+                    S("15:30 – 16:45", [G5,"Pool A","Laurensia Putih","Saint John GS",1])),
+                D(15, "Thu",
+                    S("12:30 – 12:45", [T3,"Semifinal AB","W>Pool A","R>Pool B",1], [T3,"Semifinal BA","R>Pool A","W>Pool B",1]),
+                    S("13:00 – 13:45", [T3,"3rd Place","L>Semifinal AB","L>Semifinal BA",1], [T3,"Final","W>Semifinal AB","W>Semifinal BA",1]),
+                    S("14:00 – 15:30", [G5,"Semifinal AB","W>Pool A","R>Pool B",2], [B5,"Semifinal BD","W>Pool B","W>Pool D",1]),
+                    S("15:30 – 17:00", [G5,"Semifinal BA","R>Pool A","W>Pool B",2], [B5,"Semifinal AC","W>Pool A","W>Pool C",1])),
+                D(16, "Fri",
+                    S("13:00 – 14:30", [G5,"3rd Place","L>Semifinal AB","L>Semifinal BA",2], [B5,"3rd Place","L>Semifinal AC","L>Semifinal BD",1]),
+                    S("14:40 – 16:10", [G5,"Final","W>Semifinal AB","W>Semifinal BA",1], [B5,"Final","W>Semifinal AC","W>Semifinal BD",2]))
+            ]
+        },
+        volleyball: {
+            venue: "Volleyball Court 1 & 2 · Categories: Boys & Girls",
+            courtWord: "Court",
+            days: [
+                D(10, "Sat",
+                    S("09:30 – 10:40", [GI,"Pool A","SMA Dian Harapan Daan Mogot","Santa Patricia",1], [BO,"Pool A","Santa Ursula BSD","Letris 2",2]),
+                    S("12:30 – 13:40", [GI,"Pool B","Santa Ursula BSD","Yuppentek",1], [BO,"Pool C","UPH College","PGRI 109",2]),
+                    S("14:00 – 15:10", [BO,"Pool B","Muhammadiyah 25 Setiabudi Pamulang","Tunas Bangsa",2]),
+                    S("15:10 – 16:20", [BO,"Pool D","Santa Patricia","Yadika 10",2])),
+                D(12, "Mon",
+                    S("12:30 – 13:40", [GI,"Pool B","Pahoa","Santa Ursula BSD",1], [BO,"Pool D","Laurensia","Santa Patricia",2]),
+                    S("13:40 – 14:50", [BO,"Pool A","Letris 2","Springfield",2]),
+                    S("14:50 – 16:00", [GI,"Pool A","Laurensia","SMA Dian Harapan Daan Mogot",1], [BO,"Pool B","Tunas Bangsa","Pahoa",2]),
+                    S("16:00 – 17:10", [BO,"Pool C","Penabur Kota Tangerang","UPH College",2])),
+                D(13, "Tue",
+                    S("12:30 – 13:40", [GI,"Pool A","Santa Patricia","Laurensia",1], [BO,"Pool C","PGRI 109","Penabur Kota Tangerang",2]),
+                    S("13:40 – 14:50", [BO,"Pool D","Yadika 10","Laurensia",2]),
+                    S("14:50 – 16:00", [GI,"Pool B","Yuppentek","Pahoa",1], [BO,"Pool A","Springfield","Santa Ursula BSD",2]),
+                    S("16:00 – 17:10", [BO,"Pool B","Pahoa","Muhammadiyah 25 Setiabudi Pamulang",2])),
+                D(14, "Wed",
+                    S("12:30 – 13:40", [GI,"Semifinal AB","W>Pool A","R>Pool B",1], [BO,"Semifinal AB","W>Pool A","W>Pool B",2]),
+                    S("13:50 – 15:00", [GI,"Semifinal BA","R>Pool A","W>Pool B",1], [BO,"Semifinal CD","W>Pool C","W>Pool D",2])),
+                D(15, "Thu",
+                    S("13:00 – 15:00", [GI,"3rd Place","L>Semifinal AB","L>Semifinal BA",1], [BO,"3rd Place","L>Semifinal AB","L>Semifinal CD",2])),
+                D(16, "Fri",
+                    S("13:00 – 15:00", [GI,"Final","W>Semifinal AB","W>Semifinal BA",1], [BO,"Final","W>Semifinal AB","W>Semifinal CD",2]))
+            ]
+        },
+        soccer: {
+            venue: "Soccer field · Category: Boys",
+            courtWord: "",
+            days: [
+                D(10, "Sat",
+                    S("12:30 – 13:45", [BO,"Pool A","YP Karya B","UPH Eagles","Soccer field"]),
+                    S("13:50 – 15:05", [BO,"Pool D","YP Karya A","SMA Tarakanita Gading Serpong","Soccer field"]),
+                    S("15:10 – 16:25", [BO,"Pool C","UPH Filanesia","Santa Laurensia Alam Sutera","Soccer field"]),
+                    S("16:30 – 17:45", [BO,"Pool B","SMAN 17","SMK Letris 2 Pamulang","Soccer field"])),
+                D(12, "Mon",
+                    S("14:40 – 15:55", [BO,"Pool A","SMAN 2 Tangsel","UPH Eagles","Soccer field"]),
+                    S("16:00 – 17:15", [BO,"Pool B","Santa Ursula BSD","SMAN 17","Soccer field"])),
+                D(13, "Tue",
+                    S("12:30 – 13:45", [BO,"Pool A","YP Karya B","SMAN 2 Tangsel","Soccer field"]),
+                    S("13:50 – 15:05", [BO,"Pool C","UPH Filanesia","Sekolah Dian Harapan LV","Soccer field"]),
+                    S("15:10 – 16:25", [BO,"Pool D","SMA Tarakanita Gading Serpong","SMAS PGRI 109","Soccer field"])),
+                D(14, "Wed",
+                    S("12:30 – 13:45", [BO,"Pool B","Santa Ursula BSD","SMK Letris 2 Pamulang","Soccer field"]),
+                    S("13:50 – 15:05", [BO,"Pool C","Sekolah Dian Harapan LV","Santa Laurensia Alam Sutera","Soccer field"]),
+                    S("15:10 – 16:25", [BO,"Pool D","SMAS PGRI 109","YP Karya A","Soccer field"])),
+                D(15, "Thu",
+                    S("12:30 – 13:45", [BO,"Semifinal AB","W>Pool A","W>Pool B","Soccer field"]),
+                    S("13:50 – 15:05", [BO,"Semifinal CD","W>Pool C","W>Pool D","Soccer field"])),
+                D(16, "Fri",
+                    S("10:00 – 11:15", [BO,"3rd Place","L>Semifinal AB","L>Semifinal CD","Soccer field"]),
+                    S("13:00 – 14:15", [BO,"Final","W>Semifinal CD","W>Semifinal AB","Soccer field"]))
+            ]
+        },
+        minisoccer: {
+            venue: "Mini soccer field 1 & 2 · Categories: Boys & Girls",
+            courtWord: "",
+            days: [
+                D(10, "Sat",
+                    S("09:30 – 10:30", [GI,"Pool A","SMA YP Karya","SMPN 9 Tangsel","Mini 1"], [BO,"Pool A","Santa Laurensia Suvarna Sutera","SMPN 7 Tangsel A","Mini 2"]),
+                    S("10:30 – 11:30", [BO,"Pool B","SMP Kanisius","SMPN 7 Tangsel B","Mini 2"])),
+                D(12, "Mon",
+                    S("12:30 – 13:30", [BO,"Pool A","SMPN 7 Tangsel A","SMP Springfield","Mini 1"], [BO,"Pool B","Santa Laurensia Alam Sutera","SMP Kanisius","Mini 2"]),
+                    S("13:30 – 14:30", [GI,"Pool A","UPHC","SMA YP Karya","Mini 1"], [GI,"Pool B","Santa Laurensia Alam Sutera","SMP Spring Field","Mini 2"])),
+                D(13, "Tue",
+                    S("16:35 – 17:35", [BO,"Pool B","SMPN 7 Tangsel B","Santa Laurensia Alam Sutera","Mini 1"], [GI,"Pool A","SMPN 9 Tangsel","UPHC","Mini 2"])),
+                D(14, "Wed",
+                    S("16:30 – 17:30", [BO,"Pool A","SMP Springfield","Santa Laurensia Suvarna Sutera","Mini 2"])),
+                D(15, "Thu",
+                    S("15:15 – 16:15", [BO,"Semifinal AB","W>Pool A","R>Pool B","Mini 1"], [GI,"Semifinal AB","W>Pool A","R>Pool B","Mini 2"]),
+                    S("16:15 – 17:15", [BO,"Semifinal BA","W>Pool B","R>Pool A","Mini 1"], [GI,"Semifinal BA","W>Pool B","R>Pool A","Mini 2"])),
+                D(16, "Fri",
+                    S("08:55 – 09:55", [BO,"3rd Place","L>Semifinal AB","L>Semifinal BA","Mini 1"], [GI,"3rd Place","L>Semifinal AB","L>Semifinal BA","Mini 2"]),
+                    S("14:30 – 15:30", [BO,"Final","W>Semifinal BA","W>Semifinal AB","Mini 1"], [GI,"Final","W>Semifinal BA","W>Semifinal AB","Mini 2"]))
+            ]
+        },
+        tabletennis: {
+            venue: "Hall, 4th floor (Table 1 & 2) · Boys team: Singles, Singles, Doubles",
+            courtWord: "Table",
+            days: [
+                D(10, "Sat",
+                    S("09:30 – 11:45", [BO,"Pool A","Pahoa Regu 2","Laurensia Suvarna Sutra",1], [BO,"Pool A","Laurensia Merah","Laurensia Putih",2]),
+                    S("12:45 – 15:00", [BO,"Pool B","Penabur GS","Pahoa Regu 1",1], [BO,"Pool A","Pahoa Regu 2","Laurensia Merah",2]),
+                    S("15:05 – 17:20", [BO,"Pool A","Laurensia Suvarna Sutra","Laurensia Putih",1])),
+                D(12, "Mon",
+                    S("12:30 – 14:45", [BO,"Pool B","Penabur GS","Springfield",1], [BO,"Pool A","Laurensia Suvarna Sutra","Laurensia Merah",2]),
+                    S("14:50 – 17:05", [BO,"Pool B","Pahoa Regu 1","Springfield",1], [BO,"Pool A","Pahoa Regu 2","Laurensia Putih",2])),
+                D(13, "Tue",
+                    S("12:30 – 13:45", [BO,"Semifinal AB","W>Pool A","R>Pool B",1], [BO,"Semifinal BA","W>Pool B","R>Pool A",2]),
+                    S("14:00 – 15:15", [BO,"3rd Place","L>Semifinal AB","L>Semifinal BA",1], [BO,"Final","W>Semifinal AB","W>Semifinal BA",2]))
+            ]
+        },
+        badminton: {
+            venue: "Gymnasium (Court 1, 2 & 3) · Team events: Doubles, Singles, Doubles",
+            courtWord: "Court",
+            days: [
+                D(10, "Sat",
+                    S("10:00 – 11:00", [BO,"Pool A","Pahoa","Laurensia Biru",1], [BO,"Pool B","SMAN 9","Kanisius",2], [GI,"Pool A","Laurensia Putih","Penabur GS",3]),
+                    S("12:00 – 13:00", [BO,"Pool C","Penabur GS","SMAN 6",1], [BO,"Pool D","SMAS PGRI","Laurensia Putih",2], [GI,"Pool B","Laurensia Biru","Candle Tree",3]),
+                    S("13:00 – 14:00", [BO,"Pool A","Labschool Cirendeu","Kristoforus 2",1], [BO,"Pool C","Candle Tree","Sekolah Harapan Bangsa",2], [GI,"Pool A","SMAN 3","Pahoa",3])),
+                D(12, "Mon",
+                    S("12:30 – 13:30", [BO,"Pool D","SMA Dian Harapan Daan Mogot","SMAS PGRI",1], [BO,"Pool A","Laurensia Biru","Kristoforus 2",2], [GI,"Pool B","Laurensia Merah","Candle Tree",3]),
+                    S("13:30 – 14:30", [BO,"Pool B","Laurensia Merah","Kanisius",1], [BO,"Pool C","Candle Tree","SMAN 6",2], [BO,"Pool A","Pahoa","Labschool Cirendeu",3]),
+                    S("14:30 – 15:30", [BO,"Pool C","Penabur GS","Sekolah Harapan Bangsa",1], [GI,"Pool A","Pahoa","Penabur GS",2], [GI,"Pool A","SMAN 3","Laurensia Putih",3])),
+                D(13, "Tue",
+                    S("12:30 – 13:30", [BO,"Pool A","Laurensia Biru","Labschool Cirendeu",1], [BO,"Pool C","Sekolah Harapan Bangsa","SMAN 6",2], [GI,"Pool A","SMAN 3","Penabur GS",3]),
+                    S("13:30 – 14:30", [BO,"Pool B","Laurensia Merah","SMAN 9",1], [BO,"Pool A","Pahoa","Kristoforus 2",2], [GI,"Pool A","Pahoa","Laurensia Putih",3]),
+                    S("14:30 – 15:30", [BO,"Pool D","Laurensia Putih","SMA Dian Harapan Daan Mogot",1], [BO,"Pool C","Penabur GS","Candle Tree",2], [GI,"Pool B","Laurensia Biru","Laurensia Merah",3])),
+                D(14, "Wed",
+                    S("12:30 – 13:30", [BO,"Quarterfinal AB","W>Pool A","R>Pool B",1], [BO,"Quarterfinal CD","W>Pool C","R>Pool D",2]),
+                    S("13:30 – 14:30", [BO,"Quarterfinal BA","R>Pool A","W>Pool B",1], [BO,"Quarterfinal DC","R>Pool C","W>Pool D",2]),
+                    S("14:30 – 15:30", [GI,"Semifinal AB","W>Pool A","R>Pool B",1], [GI,"Semifinal BA","R>Pool A","W>Pool B",2])),
+                D(15, "Thu",
+                    S("13:30 – 14:30", [BO,"Semifinal AB","W>Quarterfinal AB","W>Quarterfinal BA",1]),
+                    S("14:30 – 15:30", [BO,"Semifinal CD","W>Quarterfinal CD","W>Quarterfinal DC",1])),
+                D(16, "Fri",
+                    S("13:30 – 14:30", [BO,"3rd Place","L>Semifinal AB","L>Semifinal CD",1], [GI,"3rd Place","L>Semifinal AB","L>Semifinal BA",2]),
+                    S("14:30 – 15:30", [BO,"Final","W>Semifinal AB","W>Semifinal CD",1], [GI,"Final","W>Semifinal AB","W>Semifinal BA",2]))
+            ]
+        }
+    };
+
+    // ---------- Schedule renderer ----------
+    function el(tag, cls, text) {
+        const e = document.createElement(tag);
+        if (cls) e.className = cls;
+        if (text !== undefined) e.textContent = text;
+        return e;
+    }
+    function teamName(raw) {
+        const m = /^([WRL])>(.*)$/.exec(raw);
+        if (!m) return raw;
+        return { W: "Winner ", R: "Runner-up ", L: "Loser " }[m[1]] + m[2];
+    }
+
+    function initSchedule(key) {
+        const section = document.getElementById("scheduleArticle");
+        const sch = scheduleData[key];
+        if (!sch) { section.style.display = "none"; return; }
+
+        document.getElementById("matchVenue").textContent = sch.venue;
+        const tabs = document.getElementById("dayTabs");
+        const list = document.getElementById("matchList");
+
+        const now = new Date();
+        let cur = 0;
+        if (now.getFullYear() === 2026 && now.getMonth() === 9) {
+            const i = sch.days.findIndex(d => d.date === now.getDate());
+            if (i >= 0) cur = i;
+        }
+
+        function render() {
+            tabs.innerHTML = "";
+            sch.days.forEach((d, i) => {
+                const b = el("button", "dayTab" + (i === cur ? " active" : ""), `Day ${i + 1}`);
+                b.type = "button";
+                b.onclick = () => { cur = i; render(); };
+                tabs.append(b);
+            });
+
+            const day = sch.days[cur];
+            list.innerHTML = "";
+            list.append(el("h3", "dayTitle", `Day ${cur + 1} - ${day.wk} ${day.date} Oct 2026`));
+
+            day.slots.forEach(slot => {
+                const block = el("div", "slot");
+                block.append(el("h4", "slotTime", slot.time));
+                slot.m.forEach(([cat, stage, a, b, court]) => {
+                    const where = typeof court === "number" ? `${sch.courtWord} ${court}` : court;
+                    const line = el("p", "match");
+                    line.append(
+                        el("span", "teams", `${teamName(a)} vs ${teamName(b)}`),
+                        el("span", "info", `${cat} · ${stage} · ${where}`)
+                    );
+                    block.append(line);
+                });
+                list.append(block);
+            });
+        }
+        render();
+    }
+
+    function initPage() {
         const params = new URLSearchParams(window.location.search);
-        const toDisplay = params.get("sport");
-        if(!toDisplay){
-            window.location.href = `schedules.html`;
+        const key = (params.get("sport") || "").toLowerCase();
+        const data = sportData[key];
+
+        if (!data) {
+            window.location.href = "schedules.html";
+            return;
         }
 
-        // SPORT TITLE
-        const sportTitle = document.getElementById("sportTitle");
+        const $ = (id) => document.getElementById(id);
 
-        if(toDisplay == "mun"){
-            sportTitle.innerHTML = `MUN Competition`;
-            document.title = `MUN | Laurensia Cup 2026`;
-        } else if(toDisplay == "tabletennis"){
-            sportTitle.innerHTML = `Table Tennis Competition`;
-            document.title = `Table Tennis | Laurensia Cup 2026`;
-        } else if(toDisplay =="minisoccer"){
-            sportTitle.innerHTML = `Mini Soccer Competition`;
-            document.title = `Mini Soccer | Laurensia Cup 2026`;
-         } else if(toDisplay =="moderndance"){
-            sportTitle.innerHTML = `Modern Dance Competition`;
-            document.title = `Modern Dance | Laurensia Cup 2026`;
-        } else if(toDisplay =="Chess"){
-            sportTitle.innerHTML = `Chess Competition`;
-            document.title = `Chess | Laurensia Cup 2026`;
-        } else {            
-            sportTitle.innerHTML = `${capitalizeFirstLetter(toDisplay)} Competition`;
-            document.title = `${capitalizeFirstLetter(toDisplay)} | Laurensia Cup 2026`;
-            if (toDisplay=="debate") {
-                document.getElementById("first").innerHTML = "Best Teams"
-                document.getElementById("second").innerHTML = "Best Speaker"
-                document.getElementById("third").innerHTML = ""
-            }
+        const name = sportNames[key] || capitalizeFirstLetter(key);
+        $("sportTitle").textContent = `${name} Competition`;
+        document.title = `${name} | Laurensia Cup 2026`;
+
+        $("sportTagline").textContent = data.tagline;
+        $("sportDesc").textContent = data.longdesc;
+
+        $("regisPrice1").textContent = `Rp. ${data.prices[0]}.000`;
+        $("regisPrice2").textContent = data.prices[1] === 0 ? "-" : `Rp. ${data.prices[1]}.000`;
+
+        if (key === "debate") {
+            $("first").textContent = "Best Teams";
+            $("second").textContent = "Best Speaker";
+        }
+        for (let i = 0; i < 3; i++) {
+            const p = data.prizes[i];
+            $(`prize${i + 1}`).textContent = `Rp. ${p[0]}.000, ${p[1]} ${p[2]}`.replace(/\s+/g, " ");
         }
 
-        // SPORT TAGLINE
-        const sportTag = document.getElementById("sportTagline");
-        sportTag.innerHTML = sportData[toDisplay].tagline
-
-        const sportDesc = document.getElementById("sportDesc");
-        sportDesc.innerHTML = sportData[toDisplay].longdesc
-
-        // PRICES
-        const regisPrice1 = document.getElementById("regisPrice1");
-        const regisPrice2 = document.getElementById("regisPrice2");
-
-        regisPrice1.innerHTML = `Rp. ${sportData[toDisplay].prices[0]}.000`;
-        regisPrice2.innerHTML = `Rp. ${sportData[toDisplay].prices[1]}.000`;
-        if (sportData[toDisplay].prices[1]== 0) {
-            regisPrice2.innerHTML = "-"
-        }
-
-        // PRIZES
-        const prize1 = document.getElementById("prize1");
-        const prize2 = document.getElementById("prize2");
-        const prize3 = document.getElementById("prize3");
-
-        prize1.innerHTML = `Rp. ${sportData[toDisplay].prizes[0][0]}.000, ${sportData[toDisplay].prizes[0][1]} ${sportData[toDisplay].prizes[0][2]}`;
-        prize2.innerHTML = `Rp. ${sportData[toDisplay].prizes[1][0]}.000, ${sportData[toDisplay].prizes[1][1]} ${sportData[toDisplay].prizes[1][2]}`;
-        prize3.innerHTML = `Rp. ${sportData[toDisplay].prizes[2][0]}.000, ${sportData[toDisplay].prizes[2][1]} ${sportData[toDisplay].prizes[2][2]}`;
-        if (sportData[toDisplay].prizes[2][0] == "") {
-            prize3.innerHTML = "";
+        if (data.prizes[2][0] === "") {
+            document.querySelector(".thirdPlace").style.display = "none";
         }
 
         // TIMELINE
-        const date1 = document.getElementById("date1");
-        const date2 = document.getElementById("date2");
-        const date3 = document.getElementById("date3");
+        for (let i = 0; i < 3; i++) {
+            $(`date${i + 1}`).textContent = data.timeline[i][0];
+            $(`title${i + 1}`).textContent = data.timeline[i][1];
+            $(`text${i + 1}`).textContent = data.timeline[i][2];
+        }
 
-        date1.innerHTML = `${sportData[toDisplay].timeline[0][0]}`;
-        date2.innerHTML = `${sportData[toDisplay].timeline[1][0]}`;
-        date3.innerHTML = `${sportData[toDisplay].timeline[2][0]}`;
+        $("ruleList").innerHTML = data.rules.map(rule => `<li>${rule}</li>`).join("");
 
-        const title1 = document.getElementById("title1");
-        const title2 = document.getElementById("title2");
-        const title3 = document.getElementById("title3");
-
-        title1.innerHTML = `${sportData[toDisplay].timeline[0][1]}`;
-        title2.innerHTML = `${sportData[toDisplay].timeline[1][1]}`;
-        title3.innerHTML = `${sportData[toDisplay].timeline[2][1]}`;
-
-        const text1 = document.getElementById("text1");
-        const text2 = document.getElementById("text2");
-        const text3 = document.getElementById("text3");
-
-        text1.innerHTML = `${sportData[toDisplay].timeline[0][2]}`;
-        text2.innerHTML = `${sportData[toDisplay].timeline[1][2]}`;
-        text3.innerHTML = `${sportData[toDisplay].timeline[2][2]}`;
-
-        // RULES
-        const ruleList = document.getElementById("ruleList");
-        ruleList.innerHTML = "";
-        
-        for(let i = 0; i < sportData[toDisplay].rules.length; i++){
-            ruleList.innerHTML += `<li>${sportData[toDisplay].rules[i]}</li>`
-        };
-    };
-</script>
+        initSchedule(key);
+    }
+    </script>
+</body>
 </html>

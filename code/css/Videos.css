@@ -18,7 +18,12 @@
 
     z-index: -1;
 }
-
+.articleTop::before {
+    display: none;
+}
+video, .videoEmbed, #youtubeVideo {
+    border-radius: 1rem;
+}
 .divider {
     position: absolute;
     left: 50%;
@@ -78,7 +83,7 @@
 }
 #youtubeVideo {
     height: 100%;
-    width: 100%;
+    width: auto;
 }
 video {
     height: 100%;
@@ -117,7 +122,10 @@ video {
 .timers p {
     font-size: 7rem;
 }
-
+.textphonesize {
+    font-size: 1.2rem;
+    text-align: justify;
+}
 .secondaryArticle {
     display: flex;
     flex-direction: row;
@@ -147,4 +155,7 @@ video {
     font-weight: bold;
     font-size: 1.5rem;
     color: var(--yellow);
+}
+.gabrielfont {
+    font-size: 2.5rem;
 }

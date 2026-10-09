@@ -12,6 +12,7 @@
 
     <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Schedules.css">
     <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Schedules_Mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body onload="initPage()">
     <header>
@@ -65,8 +66,8 @@
                 <button id="botNav" onclick="scrollNum(1)"></button>
             </section>
             <section id="mainContent">
-                <h2 id="sportTitle">Sport Name</h2>
-                <h3 id="sportTagline">Tagline</h3>
+                <h2 id="sportTitle">Laurensia Cup</h2>
+                <h3 id="sportTagline">Meracharis</h3>
                 <div class="buttonArea">
                     <button onclick="window.open('registration.html')">Registration</button>
                     <button onclick="location.href='#footer'">Contact</button>
@@ -77,18 +78,26 @@
         </article>
     </main>
 
-    <footer id="footer">
+    <footer>
         <div class=flex-col>
             <h2>CONTACT US</h2>
             <ul>
-                <li>Maira (<a href="https://wa.me/62818230809">+62 818-230-809</a>)</li>
-                <li>Jericho (<a href="https://wa.me/6281319333302">+62 813-1933-3302</a>)</li>
-                <li>Ms Reni (<a href="https://wa.me/6287780654548">+62 877-8065-4548</a>)</li>
-                <li>Mr Danang (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
-                <li>Dina (<a href="https://wa.me/6281298213188">+62 812-9821-3188</a>)</li>
+                <li class="gabrielfooter">Maira (<a href="https://wa.me/62818230809">+62 818-230-809</a>)</li>
+                <li class="gabrielfooter">Jericho (<a href="https://wa.me/6281319333302">+62 813-1933-3302</a>)</li>
+                <li class="gabrielfooter">Ms Reni (<a href="https://wa.me/6287780654548">+62 877-8065-4548</a>)</li>
+                <li class="gabrielfooter">Mr Danang (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
+                <li class="gabrielfooter">Dina (<a href="https://wa.me/6281298213188">+62 812-9821-3188</a>)</li>
+                <!-- cHJvZ3JhbW1lcjogc29tZXRoaWdu -->
+            </ul>
+        </div>        
+        <div>
+            <h2>SOCIAL MEDIA</h2>
+            <ul class="socialMedia">
+                <li><a href="https://www.tiktok.com/@lorencup.26"><i class="fa-brands fa-tiktok"></i><u>TikTok</u></a></li>
+                <li><a href="https://www.instagram.com/lorencup2026/?__d=1%2F"><i class="fa-brands fa-instagram"></i><u>Instagram</u></a></li>
             </ul>
         </div>
-        <a href="">Looking for the Old Website? &rarr;</a>
+        <h2><a href="">Looking for the Old Website? &rarr;</a></h2>
     </footer>
 </body>
 <script src="Code/JS/Main.js" defer></script>
@@ -109,8 +118,6 @@
         volleyball:  ["Assets/Images/Sports/volley.jpg", "Assets/Images/Sports/volley.jpg", "It all comes down to trust, heavy spikes, and keeping the ball alive no matter what!", "In this game that requires strength and endurance, one team will work together in the game of volleyball. One team consists..."],
         tabletennis: ["Assets/Images/Sports/tabletennis.PNG", "Assets/Images/Sports/tabletennis.PNG", "Give you best speed, insane spin, and intense table battles!", "In the table tennis competition, each school may register a maximum of 5 players, consisting of 2 doubles pairs and 1..."],
         badminton:   ["Assets/Images/Sports/badmin.JPG", "Assets/Images/Sports/badmin.JPG", "A true test of lightning-fast reflexes and smash-heavy rallies that will keep you on your toes!", "In this exciting badminton competition, there will be five categories: men’s singles, women’s singles, men’s doubles, women’s doubles, and mixed..."],
-        science:     ["Assets/Images/Sports/science.png", "Assets/Images/Sports/science.png", "Put your theories to the test, show off your innovations, and turn complex ideas into mind-blowing experiments.", ""],
-        photography: ["Assets/Images/Sports/photography.webp", "Assets/Images/Sports/photography.webp", "Help us tell the story of LORCUP 2026 by catching the raw sweat, tears, and triumph through your lens!", "Photos are only allowed to be taken inside Santa Laurensia Alam Sutera School, when Laurensia Cup is taking place. The theme for the competition..."],
         mun:         ["Assets/Images/Sports/MUN.webp", "Assets/Images/Sports/MUN.webp", "Step into the shoes of a global diplomat, debate world issues, and experience the thrill of real-life international negotiations.", "Participants in the MUN competition will register through the 2 phases conducted (i.e. Early Bird and regular Phase Registration). Participants must state..."],
         debate:      ["Assets/Images/Sports/debate.jpg", "Assets/Images/Sports/debate.jpg", "Sharpen your arguments and prove your team has what it takes to own the stage in the ultimate battle of wits.", ""],
         minisoccer:  ["Assets/Images/Sports/team.jpg", "Assets/Images/Sports/team.jpg", "Fast-paced, high-energy, and all about quick feet!", "In the game of mini soccer, one team consists of 7 players with 7 substitutes and a total of 7 substitutions..."],
