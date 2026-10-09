@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article &#124; Laurensia Cup 2026</title>
+    <link rel="icon" href="Assets/Logo/favicon.ico">
+
+    <!-- REFS -->
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Main.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Main_Mobile.css">
+
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Articles.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Articles_Mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <section>
+            <img src="Assets/Logo/Logo.png" alt="Laurensia Cup Logo">
+            <h1>LAURENSIA CUP <span>2026</span></h1>
+        </section>
+
+        <nav>
+            <button class="navbutton disabled" id="arrowL" onclick="navBack()"><img src="Assets/Images/Icons/ArrowL.png" alt="Navigate Left"></button>
+            <ul class="nav-link" id="pageOne">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT</a></li>
+                <li><a href="videos.html">VIDEOS</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageTwo">
+                <li><a href="merch.html">OUR MERCH</a></li>
+                <li><a href="schedules.html">OUR COMPETITIONS</a></li>
+                <li><a href="articles.html" class="active">ARTICLES</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageThree">
+                <li><a href="registration.html">REGISTRATION</a></li>
+                <li><a href="sponsor.html">SPONSORS</a></li>
+                <li><a href="contributors.html">CONTRIBUTORS</a></li>
+            </ul>
+            <button class="navbutton" id="arrowR" onclick="navForw()"><img src="Assets/Images/Icons/ArrowR.png" alt="Navigate Right"></button>
+        </nav>
+        <div class="hamburger" id="menu-button" onclick="showPopup()">
+            <hr class="line" id="top-line">
+            <hr class="line" id="mid-line">
+            <hr class="line" id="bottom-line">
+        </div>
+        <div id="pop-up">
+            <a href="index.html">HOME</a>
+            <a href="aboutus.html">ABOUT</a>
+            <a href="videos.html">VIDEOS</a>
+            <a href="merch.html">OUR MERCH</a>
+            <a href="schedules.html">OUR COMPETITIONS</a>
+            <a href="articles.html" class="active">ARTICLES</a>
+            <a href="registration.html">REGISTRATION</a>
+            <a href="sponsor.html">SPONSORS</a>
+            <a href="contributors.html">CONTRIBUTORS</a>
+        </div>
+    </header>
+
+    <main id="mainContent">
+        <article class="articleTop">
+            <h2>Articles page</h2>
+            <h3>2026</h3>
+
+            <div class="box">
+                <h2>Featured News</h2>
+                <h4>Check out whats going on in Laurensia Cup!!!</h4>
+                <div class="more">
+                    <h2>
+                        <img src="Assets/Images/Sports/sing.png" class="image">
+                        Laurensia Recent Heartbeat
+                    </h2>
+                    <p>Every big event needs a beat, and for Laurensia Cup 2026, this song is the beat. The sound of Laurensia Cup is the official sound of our own, created specifically for this year's event. This song isn't just music to be listened to. This song is a way to unite us all, whether you are competing, cheering, or supporting, or walking around enjoying the atmosphere of the event.</p>
+                    <h2>
+                        Laurensia Cup Starts soon!
+                    </h2>
+                    <p>The wait is almost over! everyone is working hard, teams are practicing to compete, corridors are filled with laurensia spirit. come and cheer for your friends competing outdoors. Just dont forget to stay hydrated!</p>
+                    <h2>
+                        Laurensia cup opening!
+                    </h2>
+                    <p>Laurensia Cup prepares a huge surprise for everyone who attends this event. teams have been working hard behind the scene and teams on stage have polish their dancing and acting skills to provide entertainment for guests. Decorations have been placed and beautifully designed by our talented creative students. dancers and actors have rehearsed over and over to make sure no flaws occurs mid performance and make sure we all experience optimal time together.</p>
+                </div>
+                <button class="seemore" onclick="togglebox(this)">see more</button>
+            </div>
+
+            <div class="box">
+                <h2>Mural Laurensia Cup</h2>
+                <h4>Introducing the massive blast of color thanks to the students who came together to paint this year’s mural. </h4>
+                <div class="more">
+                    <h2>
+                        <img src="assets/images/sports/mural.JPG" class="image">
+                        Where it all started
+                    </h2>
+                    <p>Laurensia Cup isn't just about exercise and competition. This event is also a platform and place for students who show their creative side. This year, the committee wanted to try something new, which is to invite students to paint murals together. The idea is simple: instead of an empty wall, why not create a place to pour out the imagination of every student?</p>
+                    <h2>Picking up the brush</h2>
+                    <p>Students from multiple classes gather and apply their creativity. There are students who are experts at drawing, and there are also students who have never picked up a single tool. But that's not a problem; everyone has a role. There are sketchers, color mixers, and students who paint parts of the wall. Painting on a wall is very different from painting on paper. We have to consistently step back to see the bigger picture, and students have to be much more flexible, moving left and right to fill the entire wall with colours. Yes, this job is quite exhausting, but we can assure you that students have fun.</p>
+                    <h2>Compact Cooperation</h2>
+                    <p>One of the best parts of this project is the work among the students. This huge mural is impossible to finish if done alone. Everyone adds a small part of their skill and slowly combines everything into one big story. Along the process, friends gather and work together, share ideas, and fix mistakes together. If there are mistakes or flaws, the team helps fix them by covering the mistake with a better idea. This shows that art is not about perfection but about trial, learning, and the process of enjoyment. </p>
+                </div>
+                <button class="seemore" onclick="togglebox(this)">see more</button>
+            </div>
+
+            <div class="box">
+                <h2>Meet the fundraising team</h2>
+                <h4>A massive shoutout to our incredible fundraising team for keeping everyone energized with delicious and tasty sweets and foods.</h4>
+                <div class="more">
+                    <h2>Who are they?</h2>
+                    <p>Every big event requires funding in order for it to progress smoothly. Decorations, gifts, tools, and a sound system- everything requires funding. The fundraising team is a group of students who work hard collecting funds so that Laurensia Cup 2026 can launch as optimally as possible. Theta are students behind the scenes who make sure everything is ready before the first competition starts.</p>
+                    <h2>Collect funds</h2>
+                    <p>Instead of asking for money, our fundraising team found an enjoyable way to seek funds, which is through food! They sell multiple candies and snacks around the school. Whether you like something sweet or small snacks to get through a tough day, there will always be delicious snacks waiting for you. Every time you purchase, you not only fill your belly, but you also help Laurensia Cup improve.</p>
+                    <h2>Protecting everyone's enthusiasm</h2>
+                    <p>Imagine a rough day at the event and school. There are lessons, practice, and even meetings. As time passes, our bodies will be exhausted. That is where sweet snacks can restore your energy. The fundraising team supports student enthusiasm, teachers, and the committee with delicious food and snacks.  This is a small act, but the impact is beneficial for someone's mood.</p>
+                    <h2>The Hardship they go through</h2>
+                    <p>Behind every snack, there are efforts. The team has to plan what's being sold, prepare the food, set up the selling table, and keep everything clean and in order. They have to speak to many people and explain this event, along with inviting them to join. Sometimes the temperature isn't quite favorable, it's crowded, and sometimes they also have to wake up in the morning and return home late. But they keep smiling and try their best to make sure we all can get the best experience. </p>
+                </div>
+                <button class="seemore" onclick="togglebox(this)">see more</button>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        <div class=flex-col>
+            <h2>CONTACT US</h2>
+            <ul>
+                <li class="gabrielfooter">Maira (<a href="https://wa.me/62818230809">+62 818-230-809</a>)</li>
+                <li class="gabrielfooter">Jericho (<a href="https://wa.me/6281319333302">+62 813-1933-3302</a>)</li>
+                <li class="gabrielfooter">Ms Reni (<a href="https://wa.me/6287780654548">+62 877-8065-4548</a>)</li>
+                <li class="gabrielfooter">Mr Danang (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
+                <li class="gabrielfooter">Dina (<a href="https://wa.me/6281298213188">+62 812-9821-3188</a>)</li>
+                <!-- cHJvZ3JhbW1lcjogc29tZXRoaWdu -->
+            </ul>
+        </div>        
+        <div>
+            <h2>SOCIAL MEDIA</h2>
+            <ul class="socialMedia">
+                <li><a href="https://www.tiktok.com/@lorencup.26"><i class="fa-brands fa-tiktok"></i><u>TikTok</u></a></li>
+                <li><a href="https://www.instagram.com/lorencup2026/?__d=1%2F"><i class="fa-brands fa-instagram"></i><u>Instagram</u></a></li>
+            </ul>
+        </div>
+        <h2><a href="">Looking for the Old Website? &rarr;</a></h2>
+    </footer>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", ()=>setPage(2));
+    function togglebox(button) {
+        var box = button.closest(".box")
+        box.classList.toggle("open")
+
+        if (box.classList.contains("open")) {
+            button.textContent = "see less"
+        }
+        else {
+            button.textContent = "see more";
+        }
+    }
+</script>
+<script src="Code/JS/Main.js">
+</script>
+</html>

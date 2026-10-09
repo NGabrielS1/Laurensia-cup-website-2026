@@ -1,5 +1,6 @@
 .articleTop {
     position: relative;
+    height: auto;
 }
 .articleTop {
     display: flex;

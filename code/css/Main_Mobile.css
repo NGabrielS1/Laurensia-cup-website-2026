@@ -211,11 +211,11 @@ header .navbutton {
 
     color: var(--darkblue);
 }
-#pageOne, #pageTwo {
+#pageOne {
     font-size: 1.3rem;
 }
-#pageThree {
-    font-size: 1rem;
+#pageThree, #pageTwo {
+    font-size: 1.1rem;
 }
 .nav-link.hidden {
     display: none;

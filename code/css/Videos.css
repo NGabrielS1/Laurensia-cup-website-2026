@@ -1,4 +1,4 @@
-.articleTop {
+articleTop {
     display: flex;
     flex-direction: column;
 
@@ -20,6 +20,15 @@
 }
 .articleTop::before {
     display: none;
+}
+
+.articleTop:not(.articleMid) {
+    height: auto;
+    min-height: calc(100vh - 10rem);
+}
+.articleTop:not(.articleMid) .videoHolder {
+    height: auto;
+    padding-bottom: 5rem;
 }
 video, .videoEmbed, #youtubeVideo {
     border-radius: 1rem;
@@ -90,6 +99,13 @@ video {
     width: auto;
 }
 
+.articleTop video {
+    flex: none;
+    width: 50%;
+    height: auto;
+    align-self: flex-start;
+}
+
 .timers {
     display: flex;
     flex-direction: row;
@@ -123,7 +139,14 @@ video {
     font-size: 7rem;
 }
 .textphonesize {
-    font-size: 1.2rem;
+    display: block;
+    flex: 1;
+
+    padding: 0 0 0 2vw;
+
+    font-family: serif;
+    font-size: 1.1rem;
+    line-height: 1;
     text-align: justify;
 }
 .secondaryArticle {

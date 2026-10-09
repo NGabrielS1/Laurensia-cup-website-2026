@@ -1,7 +1,3 @@
-body, html {
-    scroll-snap-type: none;
-}
-
 .dividerTop {
     position: absolute;
     left: 50%;
@@ -212,7 +208,6 @@ body, html {
 }
 .latestNews {
     width: 50%;
-
     justify-content: space-between;
 }
 .latestNews h2 {
@@ -224,10 +219,9 @@ body, html {
 .latestNews div {
     display: flex;
     flex-direction: row;
-
+    border-radius: 20px;
     height: 40%;
     width: 100%;
-
     background-color: var(--lightblue);
 }
 .latestNews div img {
@@ -239,7 +233,7 @@ body, html {
 .latestNews div section {
     flex: 1;
     justify-content: flex-end;
-
+    padding: 10px 25px;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 0.5rem;
@@ -250,7 +244,7 @@ body, html {
 }
 .latestNews div section h3 {
     margin: 0;
-
+    
     font-family: PlayfairDisplay;
     font-weight: bold;
     font-size: 1.3rem;
@@ -266,7 +260,7 @@ body, html {
     width: 8em;
 
     background-color: var(--darkblue);
-
+    
     font-family: Roboto;
     font-size: 0.7rem;
 
@@ -285,10 +279,11 @@ body, html {
     display: flex;
     flex-direction: column;
 
-    max-height: 100%;
+    max-height: auto;
     justify-content: space-between;
 
     overflow: hidden;
+
 }
 .articleBot h2 {
     margin: 0;
@@ -310,7 +305,8 @@ body, html {
     height: 45%;
     width: 100%;
 
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 2%;
 }
 .articleBot section div {
     position: relative;

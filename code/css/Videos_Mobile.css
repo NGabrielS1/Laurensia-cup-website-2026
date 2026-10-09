@@ -3,7 +3,7 @@
     flex-direction: column;
 
     min-height: calc((100vh - 10rem) * 0.70);
-    height: 30rem;
+    height: auto;
 
     position: relative;
     z-index: 0;
@@ -41,6 +41,8 @@ video, .videoEmbed, #youtubeVideo {
 
     height: 100%;
     gap: 1rem;
+
+    padding-bottom: 3rem;
 }
 .videoHolder h2 {
     margin: 0;
@@ -56,6 +58,8 @@ video, .videoEmbed, #youtubeVideo {
     flex: 1;
 
     height: 50%;
+
+    gap: 1.5rem;
 }
 .videoEmbed {
     position: relative;
@@ -75,7 +79,7 @@ video, .videoEmbed, #youtubeVideo {
     margin: 0;
 
     font-family: Maragsa;
-    font-size: 3rem;
+    font-size: 1.4rem;
     color: var(--white);
 
     white-space: nowrap;
@@ -103,6 +107,8 @@ video {
 
     gap: 2rem;
 
+    padding: 1rem 0;
+
     font-family: Maragsa;
     color: var(--white);
 }
@@ -128,8 +134,14 @@ video {
     font-size: 4rem;
 }
 .textphonesize {
-    padding: 2rem 0;
-    font-size: 0.8rem;
+    display: block;
+    flex: none;
+
+    padding: 1rem 0;
+
+    font-family: serif;
+    font-size: 1rem;
+    line-height: 1.5;
     text-align: justify;
 }
 .secondaryArticle {
