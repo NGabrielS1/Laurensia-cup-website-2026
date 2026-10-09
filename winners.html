@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matchup &#124; Laurensia Cup 2026</title>
+    <link rel="icon" href="Assets/Logo/favicon.ico">
+
+    <!-- REFS -->
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Main.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Main_Mobile.css">
+
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Winner.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Winner_Mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body onload="loadData()">
+    <header>
+        <section>
+            <img src="Assets/Logo/Logo.png" alt="Laurensia Cup Logo">
+            <h1>LAURENSIA CUP <span>2026</span></h1>
+        </section>
+
+        <nav>
+            <button class="navbutton disabled" id="arrowL" onclick="navBack()"><img src="Assets/Images/Icons/ArrowL.png" alt="Navigate Left"></button>
+            <ul class="nav-link" id="pageOne">
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT</a></li>
+                <li><a href="videos.html">VIDEOS</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageTwo">
+                <li><a href="merch.html">OUR MERCH</a></li>
+                <li><a href="schedules.html">OUR COMPETITIONS</a></li>
+                <li><a href="articles.html">ARTICLES</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageThree">
+                <li><a href="registration.html">TICKETS</a></li>
+                <li><a href="sponsor.html">SPONSORS</a></li>
+                <li><a href="contributors.html">CONTRIBUTORS</a></li>
+            </ul>
+            <button class="navbutton" id="arrowR" onclick="navForw()"><img src="Assets/Images/Icons/ArrowR.png" alt="Navigate Right"></button>
+        </nav>
+        <div class="hamburger" id="menu-button" onclick="showPopup()">
+            <hr class="line" id="top-line">
+            <hr class="line" id="mid-line">
+            <hr class="line" id="bottom-line">
+        </div>
+        <div id="pop-up">
+            <a href="index.html" class="active">HOME</a>
+            <a href="aboutus.html">ABOUT</a>
+            <a href="videos.html">VIDEOS</a>
+            <a href="merch.html">OUR MERCH</a>
+            <a href="schedules.html">OUR COMPETITIONS</a>
+            <a href="articles.html">ARTICLES</a>
+            <a href="registration.html">TICKETS</a>
+            <a href="sponsor.html">SPONSORS</a>
+            <a href="contributors.html">CONTRIBUTORS</a>
+        </div>
+    </header>
+
+    <main id="mainContent">
+        <article class="banner-article" id="banner">
+            <button class="match-button" id="leftbutton" onclick="lastSport()"><img src="Assets/Images/Icons/ArrowL.png" alt="button-left"></button>
+            <h1 id="banner-title">SOCCER MATCHUPS</h1>
+            <button class="match-button" id="rightbutton" onclick="nextSport()"><img src="Assets/Images/Icons/ArrowR.png" alt="button-right"></button>
+        </article>
+        <article class="day-article" id="saturday" style="background-image: url(../../Assets/Backgrounds/BackgroundAlt2.jpeg);">
+            <h2>Saturday, October 10th</h2>
+            <section>
+                <h3 class="additional-descriptor">Putra</h3>
+                <ul class="matchup-list">
+                    <li>
+                        <div class="competitor leftfield"><p class="additional">WINNER</p><p id="name">Oliver Christov Sitanaya</p><img id="logo" src="Assets/Images/Schools/laurensia.png"/><p id="points">02</p></div>
+                        <div class="vs">VS</div>
+                        <div class="competitor rightfield"><p class="additional"></p><p id="name">Nicholas Gabriel Sulaiman</p><img id="logo" src="Assets/Images/Schools/laurensia.png"/><p id="points">01</p></div>
+                    </li>
+                    <li>
+                        <div class="competitor leftfield"><p class="additional problem">WALKOUT</p><p id="name">Michael Rafael Artanto</p><img id="logo" src="Assets/Images/Schools/laurensia.png"/><p id="points">00</p></div>
+                        <div class="vs">VS</div>
+                        <div class="competitor rightfield"><p class="additional">WINNER</p><p id="name">Jaeden Laureano Wylen</p><img id="logo" src="Assets/Images/Schools/laurensia.png"/><p id="points">00</p></div>
+                    </li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class=flex-col>
+            <h2>CONTACT US</h2>
+            <ul>
+                <li class="gabrielfooter">Maira (<a href="https://wa.me/62818230809">+62 818-230-809</a>)</li>
+                <li class="gabrielfooter">Jericho (<a href="https://wa.me/6281319333302">+62 813-1933-3302</a>)</li>
+                <li class="gabrielfooter">Ms Reni (<a href="https://wa.me/6287780654548">+62 877-8065-4548</a>)</li>
+                <li class="gabrielfooter">Mr Danang (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
+                <li class="gabrielfooter">Dina (<a href="https://wa.me/6281298213188">+62 812-9821-3188</a>)</li>
+                <!-- cHJvZ3JhbW1lcjogc29tZXRoaWdu -->
+            </ul>
+        </div>        
+        <div>
+            <h2>SOCIAL MEDIA</h2>
+            <ul class="socialMedia">
+                <li><a href="https://www.tiktok.com/@lorencup.26"><i class="fa-brands fa-tiktok"></i><u>TikTok</u></a></li>
+                <li><a href="https://www.instagram.com/lorencup2026/?__d=1%2F"><i class="fa-brands fa-instagram"></i><u>Instagram</u></a></li>
+            </ul>
+        </div>
+        <h2><a href="">Looking for the Old Website? &rarr;</a></h2>
+    </footer>
+</body>
+<script src="Code/JS/Main.js" defer></script>
+<script>
+    const sports_photos = ["Assets/Images/Sports/soccer.JPG", "Assets/Images/Sports/Basketball.jpeg", "Assets/Images/Sports/volley.jpg", "Assets/Images/Sports/tabletennis.PNG", "Assets/Images/Sports/badmin.JPG", "Assets/Images/Sports/MUN.webp", "Assets/Images/Sports/debate.jpg", "Assets/Images/Sports/team.jpg"];
+
+    const sports = [
+        'soccer', 'basketball', 'volleyball', 
+        'tabletennis', 'badminton', 'mun', 'debate', 'minisoccer'
+    ];
+
+    function nextSport() {
+        cur_num += 1;
+        if (cur_num >= sports.length) {cur_num = 0}
+        changeSport()
+    }
+    function lastSport() {
+        cur_num -= 1;
+        if (cur_num < 0) {cur_num = sports.length-1}
+        changeSport()
+    }
+    let cur_num = 0;
+    let cur_sport = 'soccer';
+    let titletext = cur_sport.toUpperCase();
+    const banner = document.getElementById("banner");
+    const title = document.getElementById("banner-title");
+    function changeSport() {
+        cur_sport = sports[cur_num];
+        titletext = cur_sport.toUpperCase();
+        if (cur_sport == "tabletennis") {titletext = "Table Tennis"}
+        if (cur_sport == "minisoccer") {titletext = "Mini Soccer"}
+        loadData()
+    }
+
+    const days = [
+        'saturday', 'sunday', 'monday',
+        'tuesday', 'wednesday', 'thursday', 'friday'
+    ];
+
+    const main = document.getElementById("mainContent");
+    let matchData = null;
+    async function loadData() {
+        try {
+            if (!matchData) {
+                const response = await fetch(
+                    "https://script.google.com/macros/s/AKfycbzP59Wl8WuqIHdADEBP_bv0-WZS23VWYKAnTsFNGxYZPAm4aMn4xrrwb0QuDyeh_65L/exec"
+                );
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error: ${response.status}`);
+                }
+
+                matchData = await response.json();
+            }
+
+            const cur_data = matchData[cur_sport] || {};
+
+            let html_string = `
+                <article class="banner-article" style="background-image: url('${sports_photos[cur_num]}')">
+                    <button class="match-button" id="leftbutton" onclick="lastSport()">
+                        <img src="Assets/Images/Icons/ArrowL.png" alt="Previous">
+                    </button>
+                    <h1>${titletext} MATCHUPS</h1>
+                    <button class="match-button" id="rightbutton" onclick="nextSport()">
+                        <img src="Assets/Images/Icons/ArrowR.png" alt="Next">
+                    </button>
+                </article>
+            `;
+
+            for (let i = 0; i < days.length; i++) {
+                const cur_day = days[i];
+                const day_data = cur_data[cur_day] || {};
+                let day_string = '';
+
+                const divisions = Object.keys(day_data);
+
+                for (const cur_division of divisions) {
+                    const matches = day_data[cur_division] || {};
+                    let division_string = '';
+
+                    for (const match_number of Object.keys(matches)) {
+                        const match_data = matches[match_number];
+
+                        division_string += `
+                            <li>
+                                <div class="competitor leftfield">
+                                    <p class="additional">${match_data.Desc1 ?? ''}</p>
+                                    <p class="name">${match_data.Name1 ?? ''}</p>
+                                    <img class="logo"
+                                        src="Assets/Images/Schools/${match_data.School1}.png">
+                                    <p class="points">${String(match_data.Score1 ?? 0).padStart(2, '0')}</p>
+                                </div>
+                                <div class="vs">VS</div>
+                                <div class="competitor rightfield">
+                                    <p class="additional">${match_data.Desc2 ?? ''}</p>
+                                    <p class="name">${match_data.Name2 ?? ''}</p>
+                                    <img class="logo"
+                                        src="Assets/Images/Schools/${match_data.School2}.png">
+                                    <p class="points">${String(match_data.Score2 ?? 0).padStart(2, '0')}</p>
+                                </div>
+                            </li>`;
+                    }
+
+                    day_string += `
+                        <section>
+                            <h3 class="additional-descriptor">${cur_division}</h3>
+                            <ul class="matchup-list">${division_string}</ul>
+                        </section>`;
+                }
+
+                if (day_string) {
+                    html_string += `
+                        <article class="day-article" id="${cur_day}">
+                            <h2>${cur_day.charAt(0).toUpperCase() + cur_day.slice(1)},
+                                October ${10 + i}</h2>
+                            ${day_string}
+                        </article>`;
+                }
+            }
+
+            main.innerHTML = html_string;
+
+        } catch (error) {
+            console.error("Failed to load match data:", error);
+            main.innerHTML +=
+                "<p>Failed to load match data. Check the browser console.</p>";
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    scroll-snap-type: none;
+}
+
+/* The big banner boy */
+.banner-article {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../../Assets/Images/Sports/soccer.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+.banner-article h1 {
+    margin: 0;
+    font-family: Maragsa;
+    font-style: italic;
+    font-size: 5rem;
+    color: var(--white);
+    text-shadow: 7px 7px 10px var(--black);
+}
+.banner-article .match-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: transparent;
+    border: 0;
+
+    user-select: none;
+    cursor: pointer;
+    height: 60%;
+    transition: transform 0.1s ease; 
+}
+.banner-article .match-button:active {
+  animation: wiggle 0.2s ease infinite;
+}
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+  75% { transform: rotate(-3deg); }
+  100% { transform: rotate(0deg); }
+}
+.match-button img {
+    height: 100%;
+    width: auto;
+}
+
+
+/* articles perday */
+.day-article {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3rem;
+    color: white;
+    background-color: var(--black);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    padding: 3rem 0 5rem 0;
+}
+.day-article h2 {
+    margin: 0;
+    font-family: Avenir;
+    font-weight: bold;
+    font-size: 3rem;
+    color: #A9D8FA;
+    text-align: center;
+}
+
+/* The winners and losers */
+.day-article section {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    color: white;
+}
+.additional-descriptor {
+    margin: 0;
+    font-family: PlayfairDisplay;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: white;
+}
+.matchup-list {
+    list-style-type: none;
+    height: auto;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+.matchup-list li {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 5rem;
+}
+.matchup-list li .vs {
+    display: inline-block;
+    width: 5%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: Roboto;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--yellow);
+}
+.matchup-list li .competitor {
+    flex: 1;
+    height: 100%;
+    background-color: var(--darkblue);
+    transform: skew(-15deg);
+    padding: 0 1rem;
+
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.leftfield {flex-direction: row;}
+.rightfield{flex-direction: row-reverse;}
+.competitor img {
+    transform: skew(15deg);
+    height: 90%;
+    width: auto;
+    background-color: none;
+    border-radius: 100%;
+    object-fit: contain;
+}
+.competitor p {
+    font-family: Maragsa;
+    font-size: 1.5rem;
+}
+#points {font-size: 2.2rem;transform: skew(15deg);}
+.competitor .additional {
+    transform: skew(15deg);
+    font-weight: bold;
+    color: var(--gold);
+    font-family: Avenir;
+    font-size: 2rem;
+    
+}
+.additional.problem {color: red;}
