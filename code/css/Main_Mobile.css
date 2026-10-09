@@ -211,6 +211,12 @@ header .navbutton {
 
     color: var(--darkblue);
 }
+#pageOne, #pageTwo {
+    font-size: 1.3rem;
+}
+#pageThree {
+    font-size: 1rem;
+}
 .nav-link.hidden {
     display: none;
     visibility: hidden;
