@@ -52,7 +52,7 @@
             <a href="merch.html">OUR MERCH</a>
             <a href="schedules.html">OUR COMPETITIONS</a>
             <a href="articles.html">ARTICLES</a>
-            <a href="registration.html">TICKETS</a>
+            <a href="registration.html">REGISTRATION</a>
             <a href="sponsor.html">SPONSORS</a>
             <a href="contributors.html">CONTRIBUTORS</a>
         </div>
@@ -102,17 +102,17 @@
         <div>
             <h2>SOCIAL MEDIA</h2>
             <ul class="socialMedia">
-                <li><a href="https://www.tiktok.com/@lorencup.26"><i class="fa-brands fa-tiktok"></i><u>TikTok</u></a></li>
-                <li><a href="https://www.instagram.com/lorencup2026/?__d=1%2F"><i class="fa-brands fa-instagram"></i><u>Instagram</u></a></li>
+                <li><a href="https://www.tiktok.com/@lorencup.26"><i class="fa-brands fa-tiktok"></i><u>TikTok: lorencup.26</u></a></li>
+                <li><a href="https://www.instagram.com/lorencup2026/?__d=1%2F"><i class="fa-brands fa-instagram"></i><u>Instagram: lorencup2026</u></a></li>
             </ul>
         </div>
-        <h2><a href="https://2024.laurensiacup.id/">Looking for the Old Website? &rarr;</a></h2>
+        <h2><a href="https://2024.laurensiacup.id">Looking for the Old Website? &rarr;</a></h2>
     </footer>
 </body>
 <script src="Code/JS/Main.js" defer></script>
 <script>
     document.addEventListener("DOMContentLoaded", ()=>setPage(1));
-    const images = {logo:"Assets/Logo/Logo.png", mascot:"Assets/Images/Mascot/Bird.png", song:"Assets/Images/Sports/sing.png"}
+    const images = {logo:"Assets/Logo/Logo.png", mascot:"Assets/Images/Mascot/Bird.png", song:"Assets/images/sports/sing.png"}
     const textList = {
         logo: ["Our logo represents a peacock with a plumage that serves as its signature identity, which symbolises the natural gift, talents, and inner beauty each student carries from birth.  Its feathers are depicted in their folded form to represent how this gift, while already present, still has room to be developed. They continue to unfold through dedication and experience. Through Laurensia Cup, students are given the opportunity to further develop these abilities, express their uniqueness, and allow their potential to shine.", "The crystals and diamonds element resembles preciousness and resilience. Just like diamonds, every one of our talents are valuable, no talent is less valuable than another. As something precious, these talents are worth nurturing and developing. Furthermore, just as crystals and diamonds take time and undergo various processes to form, developing our talents also requires time, perseverance, and the willingness to encounter challenges.", "The colour palette reinforces the meaning of meracharis further. Blue represents the openness and youthful spirit of the participants, encouraging them to explore their interests and discover their potential. On the other hand, gold represents achievement of every effort, reminding us that achievements are not defined solely with winning, but the courage to grow and determination to give their best of themselves."],
         mascot: ["Meet Kairos, our adorable blue peacock mascot!", "As the mascot of today&#8217;s Laurensia Cup 2026, Kairos embodies the spirit of meracharis. His/her/its name is taken from the Greek language, which means &#8220;the right moment&#8221; or &#8220;right opportunity&#8221;. This represents every Laurensia Cup participant who dares to seize their opportunity, give their best, embrace healthy competition, and create their own moments to shine.", "Through his/her/its presence throughout Laurensia Cup 2026, Khairos reminds us that Laurensia Cup is not only about showcasing what we can do, but also taking our opportunity to grow, step beyond our comfort zone, and let our own colours bloom. Created by Christophorus Brandon Tandova"],
@@ -133,7 +133,17 @@
         desc.addEventListener("transitionend", () => {
             text = text.toLowerCase();
 
-            image.src = images[text];
+            if (text === "song") {
+                image.outerHTML = `
+                    <video id="image" poster="${images.song}" playsinline preload="metadata">
+                        <source src="Assets/Videos/Lyricvideo.mp4" type="video/mp4">
+                    </video>
+                `;
+            } else {
+                image.outerHTML = `
+                    <img id="image" src="${images[text]}" alt="">
+                `;
+            }
 
         if (textList[text]){
             desc.innerHTML = "";
@@ -144,11 +154,10 @@
             desc.innerHTML = 
                 `
                     <div class="audioPlayer">
-                        <audio src="Assets/placeholder.mpeg" id="audio"></audio>
 
                         <div class="firstRow">
                             <div>
-                                <button id="audioControls" onclick="toggleAudio()">&#9654;</button>
+                                <button id="audioControls">&#9654;</button>
                                 <p id="timeID">0:00 / 0:00</p>
                             </div>
                             <input class="slider" type="range" id="seek" value="0" min="0" step="0.1">
@@ -293,7 +302,7 @@
     }
 
     function initAudio(){
-        const audio = document.getElementById("audio");
+        const audio = document.getElementById("image");
         const audioButton = document.getElementById("audioControls");
         const seek = document.getElementById("seek");
         const timeID = document.getElementById("timeID");

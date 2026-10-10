@@ -188,27 +188,27 @@
 <script src="Code/JS/Main.js" defer></script>
 <script>
     document.addEventListener("DOMContentLoaded", ()=>setPage(1));
-    const lorencupDate = new Date("Oct 10, 2026 07:15:00");
+    // const lorencupDate = new Date("Oct 10, 2026 07:15:00");
 
-    const days = document.getElementById("dayCounter");
-    const hours = document.getElementById("hourCounter");
-    const minutes = document.getElementById("minuteCounter");
-    const seconds = document.getElementById("secondCounter");
+    // const days = document.getElementById("dayCounter");
+    // const hours = document.getElementById("hourCounter");
+    // const minutes = document.getElementById("minuteCounter");
+    // const seconds = document.getElementById("secondCounter");
 
-    const timer = setInterval(function() {
-        const now = new Date();
-        const timeBetween = lorencupDate.getTime() - now.getTime();
+    // const timer = setInterval(function() {
+    //     const now = new Date();
+    //     const timeBetween = lorencupDate.getTime() - now.getTime();
 
-        const daysTime = Math.floor(timeBetween / (86400 * 1000));
-        const hoursTime = Math.floor((timeBetween % (86400 * 1000)) / (3600 * 1000));
-        const minutesTime = Math.floor((timeBetween % (3600 * 1000)) / (60 * 1000));
-        const secondsTime = Math.floor((timeBetween % (60 * 1000)) / 1000);
+    //     const daysTime = Math.floor(timeBetween / (86400 * 1000));
+    //     const hoursTime = Math.floor((timeBetween % (86400 * 1000)) / (3600 * 1000));
+    //     const minutesTime = Math.floor((timeBetween % (3600 * 1000)) / (60 * 1000));
+    //     const secondsTime = Math.floor((timeBetween % (60 * 1000)) / 1000);
 
-        days.textContent = String(daysTime).padStart(2, '0');
-        hours.textContent = String(hoursTime).padStart(2, '0');
-        minutes.textContent = String(minutesTime).padStart(2, '0');
-        seconds.textContent = String(secondsTime).padStart(2, '0');
-    }, 900);
+    //     days.textContent = String(daysTime).padStart(2, '0');
+    //     hours.textContent = String(hoursTime).padStart(2, '0');
+    //     minutes.textContent = String(minutesTime).padStart(2, '0');
+    //     seconds.textContent = String(secondsTime).padStart(2, '0');
+    // }, 900);
 
     var readExtra = false;
 

@@ -24,13 +24,13 @@
         <nav>
             <button class="navbutton disabled" id="arrowL" onclick="navBack()"><img src="Assets/Images/Icons/ArrowL.png" alt="Navigate Left"></button>
             <ul class="nav-link" id="pageOne">
-                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="index.html">HOME</a></li>
                 <li><a href="aboutus.html">ABOUT</a></li>
                 <li><a href="videos.html">VIDEOS</a></li>
             </ul>
             <ul class="nav-link hidden" id="pageTwo">
                 <li><a href="merch.html">OUR MERCH</a></li>
-                <li><a href="schedules.html">OUR COMPETITIONS</a></li>
+                <li><a href="schedules.html" class="active">OUR COMPETITIONS</a></li>
                 <li><a href="articles.html">ARTICLES</a></li>
             </ul>
             <ul class="nav-link hidden" id="pageThree">
@@ -50,7 +50,7 @@
             <a href="aboutus.html">ABOUT</a>
             <a href="videos.html">VIDEOS</a>
             <a href="merch.html">OUR MERCH</a>
-            <a href="schedules.html">OUR COMPETITIONS</a>
+            <a href="schedules.html" class="active">OUR COMPETITIONS</a>
             <a href="articles.html">ARTICLES</a>
             <a href="registration.html">TICKETS</a>
             <a href="sponsor.html">SPONSORS</a>
@@ -65,9 +65,9 @@
             <button class="match-button" id="rightbutton" onclick="nextSport()"><img src="Assets/Images/Icons/ArrowR.png" alt="button-right"></button>
         </article>
         <article class="day-article" id="saturday" style="background-image: url(../../Assets/Backgrounds/BackgroundAlt2.jpeg);">
-            <h2>Saturday, October 10th</h2>
+            <h2>loading...</h2>
             <section>
-                <h3 class="additional-descriptor">Putra</h3>
+                <!-- <h3 class="additional-descriptor">Putra</h3>
                 <ul class="matchup-list">
                     <li>
                         <div class="competitor leftfield"><p class="additional">WINNER</p><p id="name">Oliver Christov Sitanaya</p><img id="logo" src="Assets/Images/Schools/laurensia.png"/><p id="points">02</p></div>
@@ -79,7 +79,7 @@
                         <div class="vs">VS</div>
                         <div class="competitor rightfield"><p class="additional">WINNER</p><p id="name">Jaeden Laureano Wylen</p><img id="logo" src="Assets/Images/Schools/laurensia.png"/><p id="points">00</p></div>
                     </li>
-                </ul>
+                </ul> -->
             </section>
         </article>
     </main>
@@ -108,11 +108,26 @@
 </body>
 <script src="Code/JS/Main.js" defer></script>
 <script>
-    const sports_photos = ["Assets/Images/Sports/soccer.JPG", "Assets/Images/Sports/Basketball.jpeg", "Assets/Images/Sports/volley.jpg", "Assets/Images/Sports/tabletennis.PNG", "Assets/Images/Sports/badmin.JPG", "Assets/Images/Sports/MUN.webp", "Assets/Images/Sports/debate.jpg", "Assets/Images/Sports/team.jpg"];
+    const sports_photos = [
+        "Assets/Images/Sports/soccer.JPG", 
+        "Assets/Images/Sports/Basketball.jpeg", 
+        "Assets/Images/Sports/volley.jpg", 
+        "Assets/Images/Sports/tabletennis.PNG", 
+        "Assets/Images/Sports/badmin.JPG", 
+        "Assets/Images/Sports/MUN.webp", 
+        "Assets/Images/Sports/debate.jpg", 
+        "Assets/Images/Sports/team.jpg"
+    ];
 
     const sports = [
-        'soccer', 'basketball', 'volleyball', 
-        'tabletennis', 'badminton', 'mun', 'debate', 'minisoccer'
+        'soccer', 
+        'basketball', 
+        'volleyball', 
+        'tabletennis', 
+        'badminton', 
+        'mun', 
+        'debate', 
+        'minisoccer'
     ];
 
     function nextSport() {
@@ -222,6 +237,20 @@
                             ${day_string}
                         </article>`;
                 }
+            }
+
+            if (Object.keys(cur_data).length==0) {
+                html_string = `
+                    <article class="banner-article" id="banner" style="background-image: url('${sports_photos[cur_num]}')" >
+                        <button class="match-button" id="leftbutton" onclick="lastSport()"><img src="Assets/Images/Icons/ArrowL.png" alt="button-left"></button>
+                        <h1 id="banner-title">${titletext} MATCHUPS</h1>
+                        <button class="match-button" id="rightbutton" onclick="nextSport()"><img src="Assets/Images/Icons/ArrowR.png" alt="button-right"></button>
+                    </article>
+                    <article class="day-article" id="saturday" style="background-image: url(../../Assets/Backgrounds/BackgroundAlt2.jpeg);">
+                        <h2>No Matchups now, check later!</h2>
+                        <h2>#Meracharis</h2>
+                    </article>
+                `;
             }
 
             main.innerHTML = html_string;

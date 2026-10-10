@@ -53,7 +53,7 @@
     text-align: justify;
 }
 
-.infoArticle {
+/* .infoArticle {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -62,6 +62,24 @@
     gap: 5rem;
     
     background-color: var(--black);
+} */
+.infoArticle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 5rem;
+
+    background:
+        radial-gradient(
+            ellipse 200% 200% at bottom left,
+            transparent 0%,
+            rgba(0, 0, 0, 0.4) 25%,
+            rgba(0, 0, 0, 0.85) 50%,
+            black 75%
+        ),
+        url("../../Assets/Backgrounds/Background1.jpeg") center / cover no-repeat;
 }
 .infoArticle img, .infoArticle section {
     height: 85%;
@@ -192,4 +210,10 @@
 }
 .slider {
     width: 70%;
+}
+.infoArticle video {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 1rem;
 }
