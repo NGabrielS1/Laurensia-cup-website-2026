@@ -1,21 +1,22 @@
+
 .articleTop {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 1rem;
-    background: linear-gradient( to top, black 0%, transparent 70% ), url(../../Assets/Backgrounds/Background1.jpeg) bottom / cover no-repeat;
+    background: linear-gradient(to top, black 0%, transparent 70%), url(../../Assets/Backgrounds/Background1.jpeg) bottom / cover no-repeat;
     height: auto;
     min-height: 50vh;
     padding-bottom: 2rem;
 }
 
-.articleTop h2{
+.articleTop h2 {
     font-family: maragsa;
     letter-spacing: 0.1em;
     margin: 0;
     font-size: 3rem;
-    color: var(--white)
+    color: var(--white);
 }
 
 .articleTop h3 {
@@ -25,11 +26,11 @@
     color: var(--yellow);
 }
 
-.articleTop h4{
+.articleTop h4 {
     font-family: maragsa;
     letter-spacing: 0.1em;
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     color: var(--yellow);
 }
 
@@ -41,27 +42,28 @@
     margin: 2rem auto;
     padding: 2rem;
     width: 80%;
-    height: 20%;
-    background-color: rgba(18,45,150,0.85);
+    height: auto;
+    background-color: rgba(18, 45, 150, 0.85);
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
 }
 
 .box p {
     color: rgba(225, 235, 255, 0.92);
 }
 
-.box .more{
+.box .more {
     max-height: 0;
     overflow-x: hidden;
     overflow-y: auto;
     transition: max-height 0.4s ease;
 }
 
-.box.open .more{
+.box.open .more {
     max-height: 500px;
 }
 
-.more h2{
+.more h2 {
     color: rgba(144, 205, 255, 1);
     font-size: 1.5rem;
 }
@@ -76,17 +78,41 @@
     border-radius: 2rem;
     padding: 0.6rem 1.6rem;
     cursor: pointer;
+    width: 100%;
 }
 
-.seemore.hover {
+.seemore:hover {
     opacity: 0.85;
 }
 
 .image {
-    padding-right: 0.5rem;
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; 
-    object-position: center 20%; 
+    display: block;
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 2rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+}
+
+.oliverclass {
+    flex: 1;
+    min-width: 0;
+}
+
+.content .image {
+    width: 40%;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+    object-position: center;
     border-radius: 2rem;
 }
