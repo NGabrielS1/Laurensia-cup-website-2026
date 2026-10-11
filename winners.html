@@ -64,7 +64,7 @@
             <h1 id="banner-title">SOCCER MATCHUPS</h1>
             <button class="match-button" id="rightbutton" onclick="nextSport()"><img src="Assets/Images/Icons/ArrowR.png" alt="button-right"></button>
         </article>
-        <article class="day-article" id="saturday" style="background-image: url(../../Assets/Backgrounds/BackgroundAlt2.jpeg);">
+        <article class="day-article" id="saturday">
             <h2>loading...</h2>
             <section>
                 <!-- <h3 class="additional-descriptor">Putra</h3>
@@ -143,13 +143,14 @@
     let cur_num = 0;
     let cur_sport = 'soccer';
     let titletext = cur_sport.toUpperCase();
-    const banner = document.getElementById("banner");
     const title = document.getElementById("banner-title");
     function changeSport() {
         cur_sport = sports[cur_num];
         titletext = cur_sport.toUpperCase();
-        if (cur_sport == "tabletennis") {titletext = "Table Tennis"}
-        if (cur_sport == "minisoccer") {titletext = "Mini Soccer"}
+        if (cur_sport == "tabletennis") {titletext = "TABLE TENNIS"}
+        if (cur_sport == "minisoccer") {titletext = "MINI SOCCER"}
+        title.innerHTML = `${titletext} MATCHUPS`
+        document.body.style.backgroundImage = `url(../../${sports_photos[cur_num]})`;
         loadData()
     }
 
@@ -177,7 +178,7 @@
             const cur_data = matchData[cur_sport] || {};
 
             let html_string = `
-                <article class="banner-article" style="background-image: url('${sports_photos[cur_num]}')">
+                <article class="banner-article">
                     <button class="match-button" id="leftbutton" onclick="lastSport()">
                         <img src="Assets/Images/Icons/ArrowL.png" alt="Previous">
                     </button>
@@ -230,23 +231,33 @@
                 }
 
                 if (day_string) {
+                    if (cur_day == "saturday") {
+                        html_string += `
+                        <article class="day-article" id="${cur_day}">
+                            <h2>${cur_day.charAt(0).toUpperCase() + cur_day.slice(1)},
+                                October ${10 + i}</h2>
+                            ${day_string}
+                        </article>`;
+                    }
+                    else {
                     html_string += `
                         <article class="day-article" id="${cur_day}">
                             <h2>${cur_day.charAt(0).toUpperCase() + cur_day.slice(1)},
                                 October ${10 + i}</h2>
                             ${day_string}
                         </article>`;
+                    }
                 }
             }
 
             if (Object.keys(cur_data).length==0) {
                 html_string = `
-                    <article class="banner-article" id="banner" style="background-image: url('${sports_photos[cur_num]}')" >
+                    <article class="banner-article" id="banner"  >
                         <button class="match-button" id="leftbutton" onclick="lastSport()"><img src="Assets/Images/Icons/ArrowL.png" alt="button-left"></button>
                         <h1 id="banner-title">${titletext} MATCHUPS</h1>
                         <button class="match-button" id="rightbutton" onclick="nextSport()"><img src="Assets/Images/Icons/ArrowR.png" alt="button-right"></button>
                     </article>
-                    <article class="day-article" id="saturday" style="background-image: url(../../Assets/Backgrounds/BackgroundAlt2.jpeg);">
+                    <article class="day-article" id="saturday">
                         <h2>No Matchups now, check later!</h2>
                         <h2>#Meracharis</h2>
                     </article>

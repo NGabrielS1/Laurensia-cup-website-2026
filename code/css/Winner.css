@@ -6,6 +6,11 @@
 
 body, html {
     scroll-snap-type: none;
+    background-image: url(../../Assets/Images/Sports/soccer.JPG);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
 }
 
 /* The big banner boy */
@@ -15,7 +20,7 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url(../../Assets/Images/Sports/soccer.JPG);
+    background-color: transparent;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
@@ -66,7 +71,7 @@ body, html {
     justify-content: flex-start;
     gap: 3rem;
     color: white;
-    background-color: var(--black);
+    background-color: transparent;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
@@ -75,9 +80,10 @@ body, html {
 .day-article h2 {
     margin: 0;
     font-family: Avenir;
-    font-weight: bold;
+    font-weight: 900;
     font-size: 3rem;
     color: #A9D8FA;
+    text-shadow: 7px 7px 10px var(--black);
     text-align: center;
 }
 
@@ -94,6 +100,7 @@ body, html {
 }
 .additional-descriptor {
     margin: 0;
+    text-shadow: 7px 7px 10px var(--black);
     font-family: PlayfairDisplay;
     font-weight: bold;
     font-size: 2.5rem;
@@ -140,6 +147,7 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    box-shadow: 3px 5px 20px 10px var(--yellow);
 }
 .leftfield {flex-direction: row;}
 .rightfield{flex-direction: row-reverse;}
@@ -162,6 +170,14 @@ body, html {
     color: var(--gold);
     font-family: Avenir;
     font-size: 2rem;
-    
+    flex: 1;    
+}
+.leftfield .additional {
+    text-align: left;
+    padding-left: 1%;
+}
+.rightfield .additional {
+    text-align: right;
+    padding-right: 3%;
 }
 .additional.problem {color: red;}
