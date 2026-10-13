@@ -28,10 +28,12 @@ articleTop {
 }
 .articleTop:not(.articleMid) .videoHolder {
     height: auto;
+    min-height: 50vh;
     padding-bottom: 5rem;
 }
 .video-nonlive, .videoEmbed, #youtubeVideo, video {
     border-radius: 1rem;
+    flex: 1;
 }
 .divider {
     position: absolute;
@@ -97,6 +99,11 @@ articleTop {
 video {
     height: 100%;
     width: auto;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
 }
 
 .articleTop video {

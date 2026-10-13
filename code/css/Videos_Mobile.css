@@ -26,6 +26,7 @@
 }
 .video-nolive, .videoEmbed, #youtubeVideo, video {
     border-radius: 1rem;
+    flex: 1;
 }
 .divider {
     position: absolute;
@@ -94,6 +95,11 @@
 }
 video {
     height: auto;
+    width: 100%;
+}
+
+iframe {
+    height: 100%;
     width: 100%;
 }
 
