@@ -24,7 +24,7 @@
 .articleTop::before {
     display: none;
 }
-video, .videoEmbed, #youtubeVideo {
+.video-nolive, .videoEmbed, #youtubeVideo, video {
     border-radius: 1rem;
 }
 .divider {

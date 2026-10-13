@@ -30,7 +30,7 @@ articleTop {
     height: auto;
     padding-bottom: 5rem;
 }
-video, .videoEmbed, #youtubeVideo {
+.video-nonlive, .videoEmbed, #youtubeVideo, video {
     border-radius: 1rem;
 }
 .divider {

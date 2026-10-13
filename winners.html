@@ -101,19 +101,20 @@
             <ul class="socialMedia">
                 <li><a href="https://www.tiktok.com/@lorencup.26"><i class="fa-brands fa-tiktok"></i><u>TikTok</u></a></li>
                 <li><a href="https://www.instagram.com/lorencup2026/?__d=1%2F"><i class="fa-brands fa-instagram"></i><u>Instagram</u></a></li>
+                <li><a href="https://www.youtube.com/@laurensiacup_id/videos"><i class="fa-brands fa-youtube"></i><u>YouTube</u></a></li>
             </ul>
         </div>
-        <h2><a href="https://2024.laurensiacup.id">Looking for the Laurensia Cup 2024? &rarr;</a></h2>
+        <h2><a href="https://2024.laurensiacup.id/">Looking for the Laurensia Cup 2024? &rarr;</a></h2>
     </footer>
 </body>
 <script src="Code/JS/Main.js" defer></script>
 <script>
     const sports_photos = [
-        "Assets/Images/Sports/soccer.JPG", 
-        "Assets/Images/Sports/Basketball.jpeg", 
-        "Assets/Images/Sports/volley.jpg", 
-        "Assets/Images/Sports/tabletennis.PNG", 
-        "Assets/Images/Sports/badmin.JPG", 
+        "Assets/Images/Sports/footballnews.JPG", 
+        "Assets/Images/Sports/Basketballnews.JPG", 
+        "Assets/Images/Sports/Volleynews.JPG", 
+        "Assets/Images/Sports/tabletennisnews.JPG", 
+        "Assets/Images/Sports/BadmintonNews.JPG", 
         "Assets/Images/Sports/MUN.webp", 
         "Assets/Images/Sports/debate.jpg", 
         "Assets/Images/Sports/team.jpg"
@@ -189,7 +190,7 @@
                 </article>
             `;
 
-            for (let i = 0; i < days.length; i++) {
+            for (let i = days.length-1; i >= 0; i--) {
                 const cur_day = days[i];
                 const day_data = cur_data[cur_day] || {};
                 let day_string = '';
@@ -206,7 +207,7 @@
                         division_string += `
                             <li>
                                 <div class="competitor leftfield">
-                                    <p class="additional">${match_data.Desc1 ?? ''}</p>
+                                    <p class="additional ${match_data.Desc1 ?? ''}">${match_data.Desc1 ?? ''}</p>
                                     <p class="name">${match_data.Name1 ?? ''}</p>
                                     <img class="logo"
                                         src="Assets/Images/Schools/${match_data.School1}.png">
@@ -214,7 +215,7 @@
                                 </div>
                                 <div class="vs">VS</div>
                                 <div class="competitor rightfield">
-                                    <p class="additional">${match_data.Desc2 ?? ''}</p>
+                                    <p class="additional" ${match_data.Desc1 ?? ''}>${match_data.Desc2 ?? ''}</p>
                                     <p class="name">${match_data.Name2 ?? ''}</p>
                                     <img class="logo"
                                         src="Assets/Images/Schools/${match_data.School2}.png">
