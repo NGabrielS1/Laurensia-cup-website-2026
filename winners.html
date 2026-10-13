@@ -179,7 +179,7 @@
             const cur_data = matchData[cur_sport] || {};
 
             let html_string = `
-                <article class="banner-article">
+                <article class="banner-article"  id="banner" style="background-image = url(../../${sports_photos[cur_num]})">
                     <button class="match-button" id="leftbutton" onclick="lastSport()">
                         <img src="Assets/Images/Icons/ArrowL.png" alt="Previous">
                     </button>
@@ -204,10 +204,21 @@
                     for (const match_number of Object.keys(matches)) {
                         const match_data = matches[match_number];
 
+                        let classist1 = match_data.Desc1 ?? '';
+                        if (match_data.Desc1 == '1st Place') {classist1 = 'firstplace'}
+                        else if (match_data.Desc1 == '2nd Place') {classist1 = 'secondplace'}
+                        else if (match_data.Desc1 == '3rd Place') {classist1 = 'thirdplace'}
+                        else if (match_data.Desc1 == '4th Place') {classist1 = 'fourthplace'}
+                        let classist2 = match_data.Desc2 ?? '';
+                        if (match_data.Desc2 == '1st Place') {classist2 = 'firstplace'}
+                        else if (match_data.Desc2 == '2nd Place') {classist2 = 'secondplace'}
+                        else if (match_data.Desc2 == '3rd Place') {classist2 = 'thirdplace'}
+                        else if (match_data.Desc2 == '4th Place') {classist2 = 'fourthplace'}
+
                         division_string += `
                             <li>
                                 <div class="competitor leftfield">
-                                    <p class="additional ${match_data.Desc1 ?? ''}">${match_data.Desc1 ?? ''}</p>
+                                    <p class="additional ${classist1}">${match_data.Desc1 ?? ''}</p>
                                     <p class="name">${match_data.Name1 ?? ''}</p>
                                     <img class="logo"
                                         src="Assets/Images/Schools/${match_data.School1}.png">
@@ -215,7 +226,7 @@
                                 </div>
                                 <div class="vs">VS</div>
                                 <div class="competitor rightfield">
-                                    <p class="additional" ${match_data.Desc1 ?? ''}>${match_data.Desc2 ?? ''}</p>
+                                    <p class="additional ${classist2}">${match_data.Desc2 ?? ''}</p>
                                     <p class="name">${match_data.Name2 ?? ''}</p>
                                     <img class="logo"
                                         src="Assets/Images/Schools/${match_data.School2}.png">
@@ -253,7 +264,7 @@
 
             if (Object.keys(cur_data).length==0) {
                 html_string = `
-                    <article class="banner-article" id="banner"  >
+                    <article class="banner-article" id="banner" style="background-image = url(../../${sports_photos[cur_num]})">
                         <button class="match-button" id="leftbutton" onclick="lastSport()"><img src="Assets/Images/Icons/ArrowL.png" alt="button-left"></button>
                         <h1 id="banner-title">${titletext} MATCHUPS</h1>
                         <button class="match-button" id="rightbutton" onclick="nextSport()"><img src="Assets/Images/Icons/ArrowR.png" alt="button-right"></button>

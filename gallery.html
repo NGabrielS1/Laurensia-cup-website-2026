@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery &#124; Laurensia Cup 2026</title>
+    <link rel="icon" href="Assets/Logo/favicon.ico">
+
+    <!-- REFS -->
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Main.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Main_Mobile.css">
+
+    <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/gallery.css">
+    <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/gallery_mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body onload="redrawGrid()">
+    <header>
+        <section>
+            <img src="Assets/Logo/Logo.png" alt="Laurensia Cup Logo">
+            <h1>LAURENSIA CUP <span>2026</span></h1>
+        </section>
+
+        <nav>
+            <button class="navbutton disabled" id="arrowL" onclick="navBack()"><img src="Assets/Images/Icons/ArrowL.png" alt="Navigate Left"></button>
+            <ul class="nav-link" id="pageOne">
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT</a></li>
+                <li><a href="videos.html">VIDEOS</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageTwo">
+                <li><a href="merch.html">OUR MERCH</a></li>
+                <li><a href="schedules.html">OUR COMPETITIONS</a></li>
+                <li><a href="articles.html">ARTICLES</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageThree">
+                <li><a href="registration.html">TICKETS</a></li>
+                <li><a href="sponsor.html">SPONSORS</a></li>
+                <li><a href="contributors.html">CONTRIBUTORS</a></li>
+            </ul>
+            <button class="navbutton" id="arrowR" onclick="navForw()"><img src="Assets/Images/Icons/ArrowR.png" alt="Navigate Right"></button>
+        </nav>
+        <div class="hamburger" id="menu-button" onclick="showPopup()">
+            <hr class="line" id="top-line">
+            <hr class="line" id="mid-line">
+            <hr class="line" id="bottom-line">
+        </div>
+        <div id="pop-up">
+            <a href="index.html" class="active">HOME</a>
+            <a href="aboutus.html">ABOUT</a>
+            <a href="videos.html">VIDEOS</a>
+            <a href="merch.html">OUR MERCH</a>
+            <a href="schedules.html">OUR COMPETITIONS</a>
+            <a href="articles.html">ARTICLES</a>
+            <a href="registration.html">TICKETS</a>
+            <a href="sponsor.html">SPONSORS</a>
+            <a href="contributors.html">CONTRIBUTORS</a>
+        </div>
+    </header>
+
+    
+    <section id="slideshow" class="lightBox" aria-hidden="true">
+        <div id="lightBox"></div>
+
+        <button class="slideArrow slideArrowLeft" id="slidePrev"
+                aria-label="Previous image">&#10094;</button>
+
+        <div class="slideStage">
+            <img id="slideLeft" class="slideImage slideLeft" alt="Previous photo">
+
+            <img id="slideCenter" class="slideImage slideCenter" alt="Current photo">
+
+            <img id="slideRight" class="slideImage slideRight" alt="Next photo">
+        </div>
+
+        <button class="slideArrow slideArrowRight" id="slideNext"
+                aria-label="Next image">&#10095;</button>
+
+        <button class="slideClose" id="slideClose" aria-label="Close gallery">
+            &times;
+        </button>
+    </section>
+
+    <main>
+        <article id="articleGrid">
+
+        </article>
+        <div class="overlay"></div>
+        <button id="galleryToggle" onclick="toggleSlideshow()">OPEN GALLERY</button>
+        <!-- you can style this im too lazy -->
+    </main>
+
+    <footer>
+        <div class=flex-col>
+            <h2>CONTACT US</h2>
+            <ul>
+                <li class="gabrielfooter">Maira (<a href="https://wa.me/62818230809">+62 818-230-809</a>)</li>
+                <li class="gabrielfooter">Jericho (<a href="https://wa.me/6281319333302">+62 813-1933-3302</a>)</li>
+                <li class="gabrielfooter">Ms Reni (<a href="https://wa.me/6287780654548">+62 877-8065-4548</a>)</li>
+                <li class="gabrielfooter">Mr Danang (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
+                <li class="gabrielfooter">Dina (<a href="https://wa.me/6281298213188">+62 812-9821-3188</a>)</li>
+                <!-- cHJvZ3JhbW1lcjogc29tZXRoaWdu -->
+            </ul>
+        </div>        
+        <div>
+            <h2>SOCIAL MEDIA</h2>
+            <ul class="socialMedia">
+                <li><a href="https://www.tiktok.com/@lorencup.26"><i class="fa-brands fa-tiktok"></i><u>TikTok</u></a></li>
+                <li><a href="https://www.instagram.com/lorencup2026/?__d=1%2F"><i class="fa-brands fa-instagram"></i><u>Instagram</u></a></li>
+            </ul>
+        </div>
+        <h2><a href="https://2024.laurensiacup.id/">Looking for the Laurensia Cup 2024? &rarr;</a></h2>
+    </footer>
+</body>
+<script src="Code/JS/Main.js" defer></script>
+<script>
+    // VERY IMPORTANT PHOTOS LIST
+    const photoList = [];
+
+    for(let j = 0; j < 104; j++){
+        photoList.push(`assets/images/gallery/day1/day1 (${j + 1}).JPG`);
+    }
+
+    const articleGrid = document.getElementById("articleGrid");
+
+    async function redrawGrid(){
+        // CALCULATE MAX ROW AND COLUMNS
+        const remSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+        const viewportHeight = window.innerHeight;
+        const viewportWidth = window.innerWidth;
+
+        const column = Math.floor(viewportWidth / (8 * remSize));
+        const row = Math.floor((viewportHeight - 5 * remSize) / (6 * remSize));
+
+        articleGrid.style.gridTemplateColumns = `repeat(${column}, 1fr)`;
+        articleGrid.style.gridTemplateRows = `repeat(${row}, 1fr)`;
+        
+        articleGrid.classList.remove("loaded");
+        articleGrid.replaceChildren();
+
+        const images = [];
+
+        for(let i = 0; i < row * column; i++){
+            const gridImage = document.createElement("img");
+            const randomNumber = Math.floor(Math.random() * photoList.length);
+
+            gridImage.className = "gridImage";
+            gridImage.src = photoList[randomNumber];
+
+            gridImage.style.setProperty("--delay", `${0.01 * i}s`);
+
+            articleGrid.appendChild(gridImage);
+            images.push(gridImage);
+        };
+
+        await Promise.all(
+            images.map(img =>
+                img.decode().catch(() => {})
+            )
+        );
+
+        articleGrid.classList.add("loaded");
+    };
+
+    // LIGHTBOX LOGIC
+    
+const slideshow = document.getElementById("slideshow");
+const backdrop = document.getElementById("lightBox");
+
+let currentSlideIndex = 0;
+let isAnimating = false;
+
+const slideLeft = document.getElementById("slideLeft");
+const slideCenter = document.getElementById("slideCenter");
+const slideRight = document.getElementById("slideRight");
+
+const slideImages = [slideLeft, slideCenter, slideRight];
+
+function wrapIndex(index) {
+    return (index + photoList.length) % photoList.length;
+}
+function toggleSlideshow() {
+    if (slideshow.classList.contains("active")) {
+        slideshow.classList.remove("active");
+        slideshow.setAttribute("aria-hidden", "true");
+    } else {
+        updateSlides();
+        slideshow.classList.add("active");
+        slideshow.setAttribute("aria-hidden", "false");
+    }
+}
+
+
+function updateSlides() {
+    slideLeft.src = photoList[wrapIndex(currentSlideIndex - 1)];
+    slideCenter.src = photoList[wrapIndex(currentSlideIndex)];
+    slideRight.src = photoList[wrapIndex(currentSlideIndex + 1)];
+}
+
+function moveSlide(direction) {
+    if (isAnimating || photoList.length < 3) return;
+
+    isAnimating = true;
+
+    const duration = 400;
+
+    // Slide all three images in the direction of navigation.
+    const exitTransform = direction === 1
+        ? "translateX(-100px) translateZ(-150px) scale(0.7)"
+        : "translateX(100px) translateZ(-150px) scale(0.7)";
+
+    slideImages.forEach(img => {
+        img.style.transition =
+            `transform ${duration}ms ease-in-out,
+             opacity ${duration}ms ease-in-out,
+             filter ${duration}ms ease-in-out`;
+
+        img.style.opacity = "0";
+        img.style.transform = exitTransform;
+    });
+
+    setTimeout(() => {
+        // Advance the selected photo.
+        currentSlideIndex = wrapIndex(currentSlideIndex + direction);
+
+        // Update the images while invisible.
+        updateSlides();
+
+        // Reset their transforms to their proper positions.
+        slideImages.forEach(img => {
+            img.style.transition = "none";
+            img.style.opacity = "0";
+            img.style.transform = "";
+        });
+
+        // Force the browser to apply the invisible state first.
+        void slideCenter.offsetWidth;
+
+        // Animate into the new positions.
+        requestAnimationFrame(() => {
+            slideImages.forEach(img => {
+                img.style.transition =
+                    `transform ${duration}ms ease-in-out,
+                     opacity ${duration}ms ease-in-out,
+                     filter ${duration}ms ease-in-out`;
+
+                img.style.opacity = "";
+                img.style.transform = "";
+            });
+
+            setTimeout(() => {
+                slideImages.forEach(img => {
+                    img.style.transition = "";
+                    img.style.opacity = "";
+                    img.style.transform = "";
+                });
+
+                isAnimating = false;
+            }, duration + 50);
+        });
+    }, duration);
+}
+
+
+document.getElementById("slidePrev").addEventListener("click", () => {
+    moveSlide(-1);
+});
+
+document.getElementById("slideNext").addEventListener("click", () => {
+    moveSlide(1);
+});
+
+document.getElementById("slideClose").addEventListener("click", () => {
+    toggleSlideshow();
+});
+
+backdrop.addEventListener("click", () => {
+    toggleSlideshow();
+});
+
+// Clicking the gallery button opens the slideshow.
+document.getElementById("galleryToggle").addEventListener("click", () => {
+    if (!slideshow.classList.contains("active")) {
+        currentSlideIndex = 0;
+        toggleSlideshow();
+    }
+});
+
+// Clicking a gallery thumbnail opens that particular photo.
+articleGrid.addEventListener("click", (event) => {
+    const image = event.target.closest(".gridImage");
+
+    if (!image) return;
+
+    const index = photoList.findIndex(
+        path => new URL(path, document.baseURI).href === image.src
+    );
+
+    if (index !== -1) {
+        currentSlideIndex = index;
+        updateSlides();
+
+        slideshow.classList.add("active");
+        slideshow.setAttribute("aria-hidden", "false");
+    }
+});
+
+// Keyboard navigation.
+document.addEventListener("keydown", (event) => {
+    if (!slideshow.classList.contains("active")) return;
+
+    if (event.key === "ArrowLeft") {
+        moveSlide(-1);
+    } else if (event.key === "ArrowRight") {
+        moveSlide(1);
+    } else if (event.key === "Escape") {
+        toggleSlideshow();
+    }
+});
+
+</script>
+</html>

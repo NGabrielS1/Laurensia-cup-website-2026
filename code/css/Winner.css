@@ -11,6 +11,11 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
+    background-attachment: fixed;
+}
+
+main {
+    background-color: #0e079055;
 }
 
 /* The big banner boy */
@@ -23,7 +28,7 @@ body, html {
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: center;
+    background-position-y: center;    
 }
 .banner-article h1 {
     margin: 0;
@@ -182,3 +187,25 @@ body, html {
     padding-right: 3%;
 }
 .additional.WALKOUT {color: red;}
+.additional.firstplace, .additional.secondplace, .additional.thirdplace, .additional.fourthplace {
+    font-family: Caveat;
+    font-style: italic;
+    text-shadow: 3px 5px 20px 10px var(--yellow);
+    font-size: 2.5rem;
+}
+.additional.firstplace {
+    color: #D4AF37;
+    text-shadow: 2px 2px 5px;
+}
+.additional.secondplace {
+    color: #E5E4E2;
+    text-shadow: 2px 2px 5px;
+}
+.additional.thirdplace {
+    color: #CD7F32;
+    text-shadow: 2px 2px 5px;
+}
+.additional.fourthplace {
+    color: rgb(128, 74, 0);
+    text-shadow: 2px 2px 5px;
+}
