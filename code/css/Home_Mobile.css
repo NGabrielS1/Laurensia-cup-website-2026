@@ -189,7 +189,7 @@
 
     background-color: var(--lightblue);
 }
-.latestNews div img {
+.latestNews div img, .latestNews div video {
     width: 40%;
 
     object-fit: cover;

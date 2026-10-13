@@ -76,6 +76,9 @@
     text-align: center;
     width: 100%;
 }
+.qrCode h3 a {
+    color: var(--darkblueAccent);
+}
 .contact {
     grid-area: 3 / 1 / 4 / 2;
 

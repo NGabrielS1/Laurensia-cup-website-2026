@@ -126,7 +126,7 @@ body, html {
 
     filter: drop-shadow(0.2rem 0.2rem 0 var(--lightblue60));
 }
-.articleHighlight video {
+.articleHighlight video, .articleHighlight img {
     max-width: 100%;
 
     margin-top: 1em;
@@ -228,7 +228,7 @@ body, html {
     width: 100%;
     background-color: var(--lightblue);
 }
-.latestNews div img {
+.latestNews div img, .latestNews div video {
     width: 40%;
     height: 100%;
 
