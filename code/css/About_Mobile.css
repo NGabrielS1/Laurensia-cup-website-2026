@@ -224,7 +224,7 @@
 .slider {
     width: 55%;
 }
-.infoArticle video {
+.infoArticle iframe {
     width: 100%;
     height: auto;
     object-fit: contain;
