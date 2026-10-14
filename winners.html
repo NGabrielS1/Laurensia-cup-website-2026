@@ -119,7 +119,7 @@
         "Assets/Images/Sports/Basketballnews.JPG", 
         "Assets/Images/Sports/Volleynews.JPG", 
         "Assets/Images/Sports/tabletennisnews.JPG", 
-        "Assets/Images/Sports/BadmintonNews.jpg", 
+        "Assets/Images/Sports/BadmintonNews.JPG", 
         "Assets/Images/Sports/MUN.webp", 
         "Assets/Images/Sports/debate.jpg", 
         "Assets/Images/Sports/team.jpg"
@@ -146,8 +146,13 @@
         if (cur_num < 0) {cur_num = sports.length-1}
         changeSport()
     }
+
+    const params = new URLSearchParams(window.location.search);
+    const toNav = params.get("sport");
+
     let cur_num = 0;
     let cur_sport = 'soccer';
+
     let titletext = cur_sport.toUpperCase();
     const title = document.getElementById("banner-title");
     function changeSport() {
@@ -158,6 +163,14 @@
         title.innerHTML = `${titletext} MATCHUPS`
         document.body.style.backgroundImage = `url(../../${sports_photos[cur_num]})`;
         loadData()
+    }
+
+    for(let j = 0; j < sports.length; j++) {
+        if( sports[j] ==  toNav ) {
+            cur_num = j;
+
+            changeSport();
+        }
     }
 
     const days = [
