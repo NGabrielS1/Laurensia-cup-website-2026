@@ -1,8 +1,9 @@
 const firstPage = document.getElementById("pageOne");
 const secondPage = document.getElementById("pageTwo");
 const thirdPage = document.getElementById("pageThree")
+const fourthPage = document.getElementById("pageFour")
 
-const pages = [firstPage, secondPage, thirdPage];
+const pages = [firstPage, secondPage, thirdPage, fourthPage];
 
 var page = 1;
 var pageMax = pages.length;

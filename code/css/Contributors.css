@@ -2,6 +2,11 @@ body, html {
     scroll-snap-type: none !important;
 }
 
+main, .articleTop {
+    height: auto;
+    min-height: 56rem;
+}
+
 .articleTop {
     display: flex;
     flex-direction: column;
@@ -37,40 +42,35 @@ body, html {
 }
 
 .secondary {
-    display: flex;
-    flex-direction: row;
+    display: block;
+}
 
-    flex: 1;
-}
 .list {
-    width: 50%;
-}
-.list table {
-    height: 100%;
     width: 100%;
 }
-.list table td {
-    vertical-align: top;
 
-    height: 50%;
-    width: 50%;
+.list table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
 }
-.list table h3 {
-    margin: 0;
 
-    font-family: Maragsa;
-    font-size: 1.5rem;
-    letter-spacing: 0.1em;
+.list h3 {
     color: var(--yellow);
 }
-.list table li {
-    font-size: 1.1rem;
-    list-style-type: decimal;
-    line-height: 1.5;
 
-    color: var(--white);
+.list td {
+    width: 20%;
+    vertical-align: top;
+    padding: 1rem;
+    overflow-wrap: anywhere;
 }
 
-.game {
-    width: 50%;
+.list ol {
+    padding-left: 1rem;
+}
+
+.list li {
+    overflow-wrap: break-word;
+    color: white;
 }

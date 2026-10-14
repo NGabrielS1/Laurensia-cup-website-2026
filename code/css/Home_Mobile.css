@@ -267,18 +267,7 @@
     overflow: scroll;
     scroll-snap-type: x proximity;
 }
-.competitions > :last-child > :last-child {
-    display: none;
-}
-.articleBot section  {
-    display: contents;
-
-    gap: 1rem;
-    
-    height: 90%;
-    width: 100%;
-}
-.articleBot section div {
+.competitions div {
     position: relative;
     height: 100%;
     width: auto;
@@ -294,10 +283,10 @@
 
     transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-.articleBot section div:hover {
+.competitions div:hover {
     transform: scale(1.05);
 }
-.articleBot section div::after {
+.competitions div::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -306,13 +295,13 @@
 
     pointer-events: none;
 }
-.articleBot section div img {
+.competitions div img {
     height: 100%;
     width: 100%;
 
     object-fit: cover;
 }
-.articleBot section div h3 {
+.competitions div h3 {
     position: absolute;
     left: 50%;
     bottom: 1rem;

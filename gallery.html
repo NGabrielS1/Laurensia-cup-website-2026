@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery &#124; Laurensia Cup 2026</title>
+    <title>Gallery | Laurensia Cup 2026</title>
     <link rel="icon" href="Assets/Logo/favicon.ico">
 
     <!-- REFS -->
     <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/Main.css">
     <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/Main_Mobile.css">
 
+    <!-- Dedicated Gallery Styles -->
     <link media="(min-width: 769px)" rel="stylesheet" href="Code/CSS/gallery.css">
     <link media="(max-width: 768px)" rel="stylesheet" href="Code/CSS/gallery_mobile.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body onload="redrawGrid()">
@@ -24,18 +26,21 @@
         <nav>
             <button class="navbutton disabled" id="arrowL" onclick="navBack()"><img src="Assets/Images/Icons/ArrowL.png" alt="Navigate Left"></button>
             <ul class="nav-link" id="pageOne">
-                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="index.html">HOME</a></li>
                 <li><a href="aboutus.html">ABOUT</a></li>
                 <li><a href="videos.html">VIDEOS</a></li>
             </ul>
             <ul class="nav-link hidden" id="pageTwo">
-                <li><a href="merch.html">OUR MERCH</a></li>
                 <li><a href="schedules.html">OUR COMPETITIONS</a></li>
-                <li><a href="articles.html">ARTICLES</a></li>
+                <li><a href="registration.html">TICKETS</a></li>
             </ul>
             <ul class="nav-link hidden" id="pageThree">
-                <li><a href="registration.html">TICKETS</a></li>
+                <li><a href="articles.html">ARTICLES</a></li>
+                <li><a href="merch.html">OUR MERCH</a></li>
                 <li><a href="sponsor.html">SPONSORS</a></li>
+            </ul>
+            <ul class="nav-link hidden" id="pageFour">
+                <li><a href="gallery.html" class="active">GALLERY</a></li>
                 <li><a href="contributors.html">CONTRIBUTORS</a></li>
             </ul>
             <button class="navbutton" id="arrowR" onclick="navForw()"><img src="Assets/Images/Icons/ArrowR.png" alt="Navigate Right"></button>
@@ -46,52 +51,57 @@
             <hr class="line" id="bottom-line">
         </div>
         <div id="pop-up">
-            <a href="index.html" class="active">HOME</a>
+            <a href="index.html">HOME</a>
             <a href="aboutus.html">ABOUT</a>
             <a href="videos.html">VIDEOS</a>
-            <a href="merch.html">OUR MERCH</a>
             <a href="schedules.html">OUR COMPETITIONS</a>
-            <a href="articles.html">ARTICLES</a>
             <a href="registration.html">TICKETS</a>
+            <a href="articles.html">ARTICLES</a>
+            <a href="merch.html">OUR MERCH</a>
             <a href="sponsor.html">SPONSORS</a>
+            <a href="gallery.html" class="active">GALLERY</a>
             <a href="contributors.html">CONTRIBUTORS</a>
         </div>
     </header>
-
     
     <section id="slideshow" class="lightBox" aria-hidden="true">
         <div id="lightBox"></div>
 
-        <button class="slideArrow slideArrowLeft" id="slidePrev"
-                aria-label="Previous image">&#10094;</button>
-
-        <div class="slideStage">
-            <img id="slideLeft" class="slideImage slideLeft" alt="Previous photo">
-
-            <img id="slideCenter" class="slideImage slideCenter" alt="Current photo">
-
-            <img id="slideRight" class="slideImage slideRight" alt="Next photo">
-        </div>
-
-        <button class="slideArrow slideArrowRight" id="slideNext"
-                aria-label="Next image">&#10095;</button>
-
-        <button class="slideClose" id="slideClose" aria-label="Close gallery">
-            &times;
+        <button class="navButton" id="nav-left">
+            &lt;
+        </button>
+        <section class="imageScroller">
+            <div class="leftMost farImg" id="img-vleft">
+                <img src="placeholder.jpg" loading="lazy" decoding="async">
+            </div>
+            <div class="leftImage" id="img-left">
+                <img src="placeholder.jpg" loading="lazy" decoding="async">
+            </div>
+            <div class="centerImage" id="img-mid">
+                <img src="placeholder.jpg" loading="lazy" decoding="async">
+            </div>
+            <div class="rightImage" id="img-right">
+                <img src="placeholder.jpg" loading="lazy" decoding="async">
+            </div>
+            <div class="rightMost farImg" id="img-vright">
+                <img src="placeholder.jpg" loading="lazy" decoding="async">
+            </div>
+        </section>
+        <button class="navButton" id="nav-right">
+            &gt;
         </button>
     </section>
 
     <main>
         <article id="articleGrid">
-
+            <!-- Grid images generated by JS -->
         </article>
         <div class="overlay"></div>
         <button id="galleryToggle" onclick="toggleSlideshow()">OPEN GALLERY</button>
-        <!-- you can style this im too lazy -->
     </main>
 
     <footer>
-        <div class=flex-col>
+        <div class="flex-col">
             <h2>CONTACT US</h2>
             <ul>
                 <li class="gabrielfooter">Maira (<a href="https://wa.me/62818230809">+62 818-230-809</a>)</li>
@@ -99,7 +109,6 @@
                 <li class="gabrielfooter">Ms Reni (<a href="https://wa.me/6287780654548">+62 877-8065-4548</a>)</li>
                 <li class="gabrielfooter">Mr Danang (<a href="https://wa.me/6285282381823">+62 852-8238-1823</a>)</li>
                 <li class="gabrielfooter">Dina (<a href="https://wa.me/6281298213188">+62 812-9821-3188</a>)</li>
-                <!-- cHJvZ3JhbW1lcjogc29tZXRoaWdu -->
             </ul>
         </div>        
         <div>
@@ -111,212 +120,205 @@
         </div>
         <h2><a href="https://2024.laurensiacup.id/">Looking for the Laurensia Cup 2024? &rarr;</a></h2>
     </footer>
-</body>
-<script src="Code/JS/Main.js" defer></script>
-<script>
-    // VERY IMPORTANT PHOTOS LIST
-    const photoList = [];
 
-    for(let j = 0; j < 104; j++){
-        photoList.push(`assets/images/gallery/day1/day1 (${j + 1}).JPG`);
-    }
+    <!-- Scripts -->
+    <script src="Code/JS/Main.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>setPage(4));
+        // VERY IMPORTANT PHOTOS LIST
+        const photoList = [];
 
-    const articleGrid = document.getElementById("articleGrid");
+        for(let j = 0; j < 104; j++){
+            photoList.push(`assets/images/gallery/day1/day1 (${j + 1}).JPG`);
+        }
 
-    async function redrawGrid(){
-        // CALCULATE MAX ROW AND COLUMNS
-        const remSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-        const viewportHeight = window.innerHeight;
-        const viewportWidth = window.innerWidth;
+        const articleGrid = document.getElementById("articleGrid");
 
-        const column = Math.floor(viewportWidth / (8 * remSize));
-        const row = Math.floor((viewportHeight - 5 * remSize) / (6 * remSize));
+        // Add your custom colors here (Hex, RGB, or color names)
+        const colorList = ['#6CCB20', '#FFCDAC', '#99CDFF', "#FFA9CC", "#9AEEDE"];
 
-        articleGrid.style.gridTemplateColumns = `repeat(${column}, 1fr)`;
-        articleGrid.style.gridTemplateRows = `repeat(${row}, 1fr)`;
-        
-        articleGrid.classList.remove("loaded");
-        articleGrid.replaceChildren();
+        function redrawGrid(){
+            // CALCULATE MAX ROW AND COLUMNS
+            const remSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+            const viewportHeight = window.innerHeight;
+            const viewportWidth = window.innerWidth;
 
-        const images = [];
+            const column = Math.floor(viewportWidth / (8 * remSize));
+            const row = Math.floor((viewportHeight - 5 * remSize) / (6 * remSize));
 
-        for(let i = 0; i < row * column; i++){
-            const gridImage = document.createElement("img");
-            const randomNumber = Math.floor(Math.random() * photoList.length);
+            articleGrid.style.gridTemplateColumns = `repeat(${column}, 1fr)`;
+            articleGrid.style.gridTemplateRows = `repeat(${row}, 1fr)`;
+            
+            articleGrid.classList.remove("loaded");
+            articleGrid.replaceChildren();
 
-            gridImage.className = "gridImage";
-            gridImage.src = photoList[randomNumber];
+            // Using DocumentFragment for faster DOM insertion
+            const fragment = document.createDocumentFragment();
 
-            gridImage.style.setProperty("--delay", `${0.01 * i}s`);
+            for(let i = 0; i < row * column; i++){
+                // Calculate current row and column to guarantee a checkerboard pattern
+                const currentRow = Math.floor(i / column);
+                const currentCol = i % column;
 
-            articleGrid.appendChild(gridImage);
-            images.push(gridImage);
-        };
+                // Check if it's an alternating frame (checkerboard)
+                if ((currentRow + currentCol) % 2 === 0) { 
+                    // Generate a colored DIV
+                    const colorBlock = document.createElement("div");
+                    const randomColor = colorList[Math.floor(Math.random() * colorList.length)];
+                    
+                    colorBlock.className = "gridImage"; 
+                    colorBlock.style.backgroundColor = randomColor;
+                    colorBlock.style.setProperty("--delay", `${0.01 * i}s`);
+                    
+                    fragment.appendChild(colorBlock);
+                } else {
+                    // Generate an IMG
+                    const gridImage = document.createElement("img");
+                    const randomNumber = Math.floor(Math.random() * photoList.length);
 
-        await Promise.all(
-            images.map(img =>
-                img.decode().catch(() => {})
-            )
-        );
+                    gridImage.className = "gridImage";
+                    gridImage.src = photoList[randomNumber];
+                    
+                    // Lazy loading for optimization
+                    gridImage.loading = "lazy";
+                    gridImage.decoding = "async";
 
-        articleGrid.classList.add("loaded");
-    };
+                    gridImage.style.setProperty("--delay", `${0.01 * i}s`);
 
-    // LIGHTBOX LOGIC
-    
-const slideshow = document.getElementById("slideshow");
-const backdrop = document.getElementById("lightBox");
+                    fragment.appendChild(gridImage);
+                }
+            };
 
-let currentSlideIndex = 0;
-let isAnimating = false;
-
-const slideLeft = document.getElementById("slideLeft");
-const slideCenter = document.getElementById("slideCenter");
-const slideRight = document.getElementById("slideRight");
-
-const slideImages = [slideLeft, slideCenter, slideRight];
-
-function wrapIndex(index) {
-    return (index + photoList.length) % photoList.length;
-}
-function toggleSlideshow() {
-    if (slideshow.classList.contains("active")) {
-        slideshow.classList.remove("active");
-        slideshow.setAttribute("aria-hidden", "true");
-    } else {
-        updateSlides();
-        slideshow.classList.add("active");
-        slideshow.setAttribute("aria-hidden", "false");
-    }
-}
-
-
-function updateSlides() {
-    slideLeft.src = photoList[wrapIndex(currentSlideIndex - 1)];
-    slideCenter.src = photoList[wrapIndex(currentSlideIndex)];
-    slideRight.src = photoList[wrapIndex(currentSlideIndex + 1)];
-}
-
-function moveSlide(direction) {
-    if (isAnimating || photoList.length < 3) return;
-
-    isAnimating = true;
-
-    const duration = 400;
-
-    // Slide all three images in the direction of navigation.
-    const exitTransform = direction === 1
-        ? "translateX(-100px) translateZ(-150px) scale(0.7)"
-        : "translateX(100px) translateZ(-150px) scale(0.7)";
-
-    slideImages.forEach(img => {
-        img.style.transition =
-            `transform ${duration}ms ease-in-out,
-             opacity ${duration}ms ease-in-out,
-             filter ${duration}ms ease-in-out`;
-
-        img.style.opacity = "0";
-        img.style.transform = exitTransform;
-    });
-
-    setTimeout(() => {
-        // Advance the selected photo.
-        currentSlideIndex = wrapIndex(currentSlideIndex + direction);
-
-        // Update the images while invisible.
-        updateSlides();
-
-        // Reset their transforms to their proper positions.
-        slideImages.forEach(img => {
-            img.style.transition = "none";
-            img.style.opacity = "0";
-            img.style.transform = "";
-        });
-
-        // Force the browser to apply the invisible state first.
-        void slideCenter.offsetWidth;
-
-        // Animate into the new positions.
-        requestAnimationFrame(() => {
-            slideImages.forEach(img => {
-                img.style.transition =
-                    `transform ${duration}ms ease-in-out,
-                     opacity ${duration}ms ease-in-out,
-                     filter ${duration}ms ease-in-out`;
-
-                img.style.opacity = "";
-                img.style.transform = "";
+            articleGrid.appendChild(fragment);
+            
+            // Add the loaded class to trigger animations on next frame
+            requestAnimationFrame(() => {
+                articleGrid.classList.add("loaded");
             });
+        };
+    
+        const navLeft = document.getElementById("nav-left");
+        const navRight = document.getElementById("nav-right");
 
-            setTimeout(() => {
-                slideImages.forEach(img => {
-                    img.style.transition = "";
-                    img.style.opacity = "";
-                    img.style.transform = "";
-                });
+        const vleftImage = document.getElementById("img-vleft");
+        const leftImage = document.getElementById("img-left");
+        const midImage = document.getElementById("img-mid");
+        const rightImage = document.getElementById("img-right");
+        const vrightImage = document.getElementById("img-vright");
 
+        const allDivs = [vleftImage, leftImage, midImage, rightImage, vrightImage];
+        
+        var curImage = 2;
+        var isAnimating = false;
+
+        function setImage(){
+            const len = photoList.length;
+            vleftImage.firstElementChild.src = photoList[(curImage - 2 + len) % len];
+            leftImage.firstElementChild.src = photoList[(curImage - 1 + len) % len];
+            midImage.firstElementChild.src = photoList[curImage % len];
+            rightImage.firstElementChild.src = photoList[(curImage + 1) % len];
+            vrightImage.firstElementChild.src = photoList[(curImage + 2) % len];
+        }
+
+        // RIGHT ARROW LOGIC
+        navRight.addEventListener("click", () => {
+            if (isAnimating) return; 
+            isAnimating = true;
+
+            leftImage.className = "leftMost farImg";
+            midImage.className = "leftImage";
+            rightImage.className = "centerImage";
+            vrightImage.className = "rightImage";
+
+            midImage.addEventListener("transitionend", function resetPositions() {
+                midImage.removeEventListener("transitionend", resetPositions);
+
+                allDivs.forEach(div => div.classList.add("no-transition"));
+
+                vleftImage.className = "leftMost farImg no-transition";
+                leftImage.className = "leftImage no-transition";
+                midImage.className = "centerImage no-transition";
+                rightImage.className = "rightImage no-transition";
+                vrightImage.className = "rightMost farImg no-transition";
+
+                curImage = (curImage + 1) % photoList.length;
+                setImage();
+
+                void midImage.offsetWidth; 
+
+                allDivs.forEach(div => div.classList.remove("no-transition"));
                 isAnimating = false;
-            }, duration + 50);
+            });
         });
-    }, duration);
-}
 
+        // LEFT ARROW LOGIC
+        navLeft.addEventListener("click", () => {
+            if (isAnimating) return; 
+            isAnimating = true;
 
-document.getElementById("slidePrev").addEventListener("click", () => {
-    moveSlide(-1);
-});
+            vleftImage.className = "leftImage";
+            leftImage.className = "centerImage";
+            midImage.className = "rightImage";
+            rightImage.className = "rightMost farImg";
 
-document.getElementById("slideNext").addEventListener("click", () => {
-    moveSlide(1);
-});
+            midImage.addEventListener("transitionend", function resetPositions() {
+                midImage.removeEventListener("transitionend", resetPositions);
 
-document.getElementById("slideClose").addEventListener("click", () => {
-    toggleSlideshow();
-});
+                allDivs.forEach(div => div.classList.add("no-transition"));
 
-backdrop.addEventListener("click", () => {
-    toggleSlideshow();
-});
+                vleftImage.className = "leftMost farImg no-transition";
+                leftImage.className = "leftImage no-transition";
+                midImage.className = "centerImage no-transition";
+                rightImage.className = "rightImage no-transition";
+                vrightImage.className = "rightMost farImg no-transition";
 
-// Clicking the gallery button opens the slideshow.
-document.getElementById("galleryToggle").addEventListener("click", () => {
-    if (!slideshow.classList.contains("active")) {
-        currentSlideIndex = 0;
-        toggleSlideshow();
-    }
-});
+                curImage = (curImage - 1 + photoList.length) % photoList.length;
+                setImage();
 
-// Clicking a gallery thumbnail opens that particular photo.
-articleGrid.addEventListener("click", (event) => {
-    const image = event.target.closest(".gridImage");
+                void midImage.offsetWidth; 
 
-    if (!image) return;
+                allDivs.forEach(div => div.classList.remove("no-transition"));
+                isAnimating = false;
+            });
+        });
 
-    const index = photoList.findIndex(
-        path => new URL(path, document.baseURI).href === image.src
-    );
+        // Initialize on load
+        setImage();
 
-    if (index !== -1) {
-        currentSlideIndex = index;
-        updateSlides();
+        // (Optional but recommended) Add an event listener to redraw the grid on window resize
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(redrawGrid, 200); // Debounced to prevent lag while dragging window
+        });// Grab the slideshow element
 
-        slideshow.classList.add("active");
-        slideshow.setAttribute("aria-hidden", "false");
-    }
-});
+        const slideshow = document.getElementById("slideshow");
 
-// Keyboard navigation.
-document.addEventListener("keydown", (event) => {
-    if (!slideshow.classList.contains("active")) return;
+        // Function to open/close the gallery and toggle scrolling
+        function toggleSlideshow() {
+            const slideshow = document.getElementById("slideshow");
+            if (slideshow) {
+                const isActive = slideshow.classList.toggle("active");
+                
+                if (isActive) {
+                    document.body.style.overflow = "hidden";
+                } else {
+                    document.body.style.overflow = "";
+                }
+            }
+        }
 
-    if (event.key === "ArrowLeft") {
-        moveSlide(-1);
-    } else if (event.key === "ArrowRight") {
-        moveSlide(1);
-    } else if (event.key === "Escape") {
-        toggleSlideshow();
-    }
-});
-
-</script>
+        // Close the slideshow if the user clicks anywhere besides an image or a button
+        const slideshowContainer = document.getElementById("slideshow");
+        if (slideshowContainer) {
+            slideshowContainer.addEventListener("click", (e) => {
+                // Check if the click target is NOT an image AND NOT a navigation button
+                if (!e.target.closest("img") && !e.target.closest(".navButton")) {
+                    slideshowContainer.classList.remove("active");
+                    document.body.style.overflow = ""; // Re-enable scrolling
+                }
+            });
+        }
+    </script>
+</body>
 </html>

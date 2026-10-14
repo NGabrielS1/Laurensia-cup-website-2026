@@ -3,13 +3,34 @@ main {
     background-color: var(--white);
 }
 
+button#galleryToggle {
+    height: 3em;
+    width: 12em;
+
+    font-family: Maragsa;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    color: var(--yellow);
+
+    border: 0;
+    border-radius: 1rem;
+
+    background: var(--lightblue);
+
+    z-index: 1;
+    transform-origin: center !important;
+    transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+button#galleryToggle:hover {
+    transform: translate(-50%, 50%) scale(1.2);
+}
+
 article {
     padding: 0 !important;
 }
 
 article#articleGrid {
     display: grid;
-
     padding: 0;
     overflow: hidden;
 }
@@ -17,15 +38,12 @@ article#articleGrid {
 .gridImage {
     width: 100%;
     height: 100%;
-
     min-width: 0;
     min-height: 0;
-
     object-fit: cover;
-
     outline: 0.5rem solid var(--white);
     outline-offset: -0.5rem;
-
+    
     /* INITIAL */
     opacity: 0;
     transform: scale(0.8);
@@ -50,216 +68,164 @@ article#articleGrid {
 .overlay {
     position: absolute;
     bottom: 0;
-
     height: calc(100vh - 5rem);
     width: 100%;
-
     background-color: rgba(256, 256, 256, 0.4);
-
     pointer-events: none;
 }
 
 button#galleryToggle {
     position: absolute;
-
     bottom: 50%;
     left: 50%;
-
     transform: translate(-50%, 50%);
 }
 
+/* The dark background overlay */
 div#lightBox {
     position: absolute;
+    top: 0;
     left: 0;
-    bottom: 0;
-
-    height: calc(100vh - 5rem);
+    height: 100%;
     width: 100%;
-
-    background-color: rgba(0, 0, 0, 0.6);
-
-    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1; /* Keeps it behind the images and arrows */
 }
 
-section#slideshow {
-    pointer-events: none;
-
-    transition: opacity 200ms ease-in-out;
+/* Ensure arrows and scroller are clickable above the background */
+.navButton, .imageScroller {
+    z-index: 1; 
 }
 
-
-/* FULLSCREEN LIGHTBOX */
+/* Position the slideshow over the whole screen */
 section#slideshow {
     position: fixed;
-    inset: 0;
-    z-index: 2000;
-
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1rem; /* Adds a bit of space between arrows and the images */
+    
+    /* Adds the requested padding */
+    padding: 3rem;
+    box-sizing: border-box;
 
+    /* Hidden by default */
     opacity: 0;
-    visibility: hidden;
+    visibility: hidden; 
     pointer-events: none;
-
-    background: rgba(0, 0, 0, 0.88);
-
-    transition:
-        opacity 300ms ease-in-out,
-        visibility 0s linear 300ms;
+    transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
 }
 
+/* Class to toggle the slideshow on */
 section#slideshow.active {
     opacity: 1;
     visibility: visible;
-    pointer-events: auto;
-
-    transition:
-        opacity 300ms ease-in-out,
-        visibility 0s linear 0s;
+    pointer-events: all;
 }
 
-/* BACKDROP */
-div#lightBox {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    background: transparent;
+.navButton {
+    height: 4rem;
+    width: 2.5rem;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0.5rem;
+    transition: background-color 200ms ease-in-out;
+    cursor: pointer;
+
+    transform: rotate(90deg);
 }
 
-/* THREE-IMAGE CAROUSEL */
-.slideStage {
+.navButton:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.imageScroller {
     position: relative;
-    z-index: 1;
+    perspective: 175vh;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    /* Border removed */
+}
 
-    width: min(1000px, 75vw);
-    height: min(600px, 75vh);
-
+.imageScroller div {
+    position: absolute;
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    perspective: 1200px;
-    transform-style: preserve-3d;
+    height: auto;
+    width: 100%;
+    perspective: 175vh;
+    overflow: hidden;
+    transition: all 500ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.slideImage {
-    position: absolute;
-
-    width: 60%;
-    height: 80%;
-
-    object-fit: cover;
-    border-radius: 12px;
-
-    outline: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
-
-    user-select: none;
-    -webkit-user-drag: none;
-
-    transition:
-        transform 400ms ease,
-        opacity 400ms ease,
-        filter 400ms ease;
+div.leftMost {
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, -50%) rotateX(45deg);
 }
 
-.slideCenter {
-    z-index: 3;
-    opacity: 1;
-
-    transform: translateX(0) translateZ(100px) scale(1);
-    filter: none;
+div.leftImage {
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%) rotateX(30deg);
 }
 
-.slideLeft {
-    z-index: 2;
-    opacity: 0.65;
-
-    transform:
-        translateX(-65%)
-        translateZ(-120px)
-        rotateY(25deg)
-        scale(0.78);
-
-    filter: brightness(0.65);
-}
-
-.slideRight {
-    z-index: 2;
-    opacity: 0.65;
-
-    transform:
-        translateX(65%)
-        translateZ(-120px)
-        rotateY(-25deg)
-        scale(0.78);
-
-    filter: brightness(0.65);
-}
-
-/* NAVIGATION ARROWS */
-.slideArrow {
-    position: absolute;
+div.centerImage {
+    left: 50%;
     top: 50%;
-    z-index: 5;
-
-    transform: translateY(-50%);
-
-    display: grid;
-    place-items: center;
-
-    width: 56px;
-    height: 72px;
-
-    border: none;
-    border-radius: 10px;
-
-    color: white;
-    background: rgba(255, 255, 255, 0.1);
-
-    font-size: 32px;
-    cursor: pointer;
-
-    transition:
-        background 200ms ease,
-        transform 200ms ease;
+    transform: translate(-50%, -50%) rotateX(0deg);
 }
 
-.slideArrow:hover {
-    background: rgba(255, 255, 255, 0.25);
+div.rightImage {
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%) rotateX(-30deg);
 }
 
-.slideArrowLeft {
-    left: 24px;
+div.rightMost {
+    left: 50%;
+    top: 95%;
+    transform: translate(-50%, -50%) rotateX(-45deg);
 }
 
-.slideArrowRight {
-    right: 24px;
+div.midImage img {
+    scale: 1;
 }
 
-/* CLOSE BUTTON */
-.slideClose {
-    position: absolute;
-    top: 20px;
-    right: 24px;
-    z-index: 5;
-
-    width: 48px;
-    height: 48px;
-
-    border: none;
-    border-radius: 50%;
-
-    color: white;
-    background: rgba(255, 255, 255, 0.12);
-
-    font-size: 36px;
-    line-height: 1;
-
-    cursor: pointer;
+div.leftImage img, div.rightImage img {
+    scale: 0.8;
 }
 
-.slideClose:hover {
-    background: rgba(255, 255, 255, 0.25);
+div.farImg img {
+    scale: 0.4;
+    opacity: 0 !important;
+    visibility: hidden;
+}
+
+.imageScroller div img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    opacity: 1;
+    object-fit: cover;
+    border-radius: 1rem;
+    transition: scale 500ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms ease-in-out;
+}
+
+.no-transition, .no-transition img {
+    transition: none !important;
 }

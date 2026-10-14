@@ -1,11 +1,16 @@
 body, html {
-    scroll-snap-type: none !important;
+    height: auto;
+    overflow-y: auto;
+}
+
+main, .articleTop {
+    height: auto;
+    overflow-y: visible;
 }
 
 .articleTop {
     display: flex;
     flex-direction: column;
-    height: auto;
 
     gap: 2rem;
 
@@ -13,8 +18,8 @@ body, html {
     background-image: none;
 }
 .titleHeader {
-    margin: -3rem;
-    padding: 3rem;
+    margin: -2rem;
+    padding: 1rem 1.5rem;
 
     height: fit-content;
 
@@ -38,40 +43,28 @@ body, html {
 }
 
 .secondary {
-    display: flex;
-    flex-direction: row;
-
-    flex: 1;
-}
-.list {
-    width: 50%;
-}
-.list table {
-    height: 100%;
+    display: block;
     width: 100%;
 }
-.list table td {
-    vertical-align: top;
 
-    height: 50%;
-    width: 50%;
+.list {
+    padding: 0 1.5rem 3rem 1.5rem;
+
 }
-.list table h3 {
-    margin: 0;
 
-    font-family: Maragsa;
-    font-size: 1.5rem;
-    letter-spacing: 0.1em;
+.list table, .list tr, .list td, .list tbody{
+    display: block;
+    
+}
+
+.list td {
+    padding: 0 0;
+}
+
+.list h3 {
     color: var(--yellow);
 }
-.list table li {
-    font-size: 1.1rem;
-    list-style-type: decimal;
-    line-height: 1.5;
 
+.list li{
     color: var(--white);
-}
-
-.game {
-    width: 50%;
 }
