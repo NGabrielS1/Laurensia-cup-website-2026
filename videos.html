@@ -129,7 +129,7 @@
                 <h2>Day 2 Recap</h2>
                 <section>
                     <div class="video-nonlive">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pyFw-RjhRls?si=LylFjkKSOiw30oeB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/pyFw-RjhRls?si=LylFjkKSOiw30oeB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
 
                     <div class="timers textphonesize" style="padding-left: 2vw;">
@@ -141,6 +141,51 @@
                             And of course, the journey doesn’t end here! Stay tuned for more action at Laurensia Cup 2026 💥‼️<br>
                             <br>
                             #santalaurensiaalamsutera #laurensiacup2026 #lomba #santalaurensia #laurensiaschool
+                        </span>
+                    </div>
+                </section>
+            </div>
+        </article>
+        <article class="articleTop">
+            <img class="divider noSelect" draggable="false" src="Assets/Backgrounds/Divider.png" alt="">
+            <div class="videoHolder">
+                <h2>Day 3 Recap</h2>
+                <section>
+                    <div class="video-nonlive">
+                        <iframe src="https://www.youtube.com/embed/OKtsY2r9To8?si=axAdk1QXg5q3f286" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="timers textphonesize" style="padding-left: 2vw;">
+                        <span>
+                            Day 3 highlights of Laurensia Cup 2026 📸✨<br>
+                            <br>
+                            The energy keeps getting stronger, the competition gets fiercer, and every moment becomes a memory worth keeping. 💙🏆<br>
+                            <br>
+                            But wait, there’s still more to come! Stay tuned for the next day of Laurensia Cup 2026🔥💥<br>
+                            <br>
+                            #santalaurensiaalamsutera #laurensiacup2026 #lorcup #lomba #santalaurensia
+                        </span>
+                    </div>
+                </section>
+            </div>
+        </article>
+        <article class="articleTop">
+            <img class="divider noSelect" draggable="false" src="Assets/Backgrounds/Divider.png" alt="">
+            <div class="videoHolder">
+                <h2>Day 4 Recap</h2>
+                <section>
+                    <div class="video-nonlive">
+                        <iframe src="https://www.youtube.com/embed/XIoRm5luK_g?si=LCCeG84hLlULPHFZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="timers textphonesize" style="padding-left: 2vw;">
+                        <span>
+                            It's Day 4 of Laurensia Cup 2026 📸✨<br>
+                            <br>
+                            The energy keeps getting stronger, the competition gets fiercer, and every moment becomes a memory worth keeping. 💙🏆<br>
+                            <br>
+                            But wait, there’s still more to come! Stay tuned for the next day of Laurensia Cup 2026🔥💥<br>
+                            <br>
+                            #santalaurensiaalamsutera #laurensiacup2026 #lorcup #lomba #santalaurensia
                         </span>
                     </div>
                 </section>
@@ -205,80 +250,79 @@
     // ADD IN EVERY PAGE
     document.addEventListener("DOMContentLoaded", () => setPage(1));
 
-    // // UPDATE THIS ARRAY
-    // // const nextStream = ["https://www.youtube.com/embed/cCZOz1RbvHs?si=23cB9Ad3mT4M9NmS", new Date("2026-09-23T21:58:00")]
-    // const nextStream = []
+    // UPDATE THIS ARRAY
+    const nextStream = ["https://www.youtube.com/embed/SkdorcZ9Omc?si=blxBCycBoXM07tBW", new Date("2026-09-23T21:58:00")]
 
-    // const streamUpdate = document.getElementById("streamStatus")
+    const streamUpdate = document.getElementById("streamStatus")
 
-    // const videoPlayer = document.getElementById("youtubeVideo");
-    // const timeText = document.getElementById("timeText");
-    // const minutes = document.getElementById("minutes");
-    // const seconds = document.getElementById("seconds");
+    const videoPlayer = document.getElementById("youtubeVideo");
+    const timeText = document.getElementById("timeText");
+    const minutes = document.getElementById("minutes");
+    const seconds = document.getElementById("seconds");
     
-    // function formatDate(date) {
-    //     const months = [
-    //         "January", "February", "March", "April",
-    //         "May", "June", "July", "August",
-    //         "September", "October", "November", "December"
-    //     ];
+    function formatDate(date) {
+        const months = [
+            "January", "February", "March", "April",
+            "May", "June", "July", "August",
+            "September", "October", "November", "December"
+        ];
 
-    //     const day = String(date.getDate()).padStart(2, "0");
-    //     const month = months[date.getMonth()];
-    //     const year = date.getFullYear();
+        const day = String(date.getDate()).padStart(2, "0");
+        const month = months[date.getMonth()];
+        const year = date.getFullYear();
 
-    //     const hours = String(date.getHours()).padStart(2, "0");
-    //     const minutes = String(date.getMinutes()).padStart(2, "0");
+        const hours = String(date.getHours()).padStart(2, "0");
+        const minutes = String(date.getMinutes()).padStart(2, "0");
 
-    //     return `${day} ${month} ${year}, ${hours}.${minutes} WIB`;
-    // }
+        return `${day} ${month} ${year}, ${hours}.${minutes} WIB`;
+    }
 
-    // function initPage(){
-    //     if (nextStream.length != 2){
-    //         timeText.textContent = "XX";
-    //         return;
-    //     }
+    function initPage(){
+        if (nextStream.length != 2){
+            timeText.textContent = "XX";
+            return;
+        }
 
-    //     streamUpdate.classList.add("hidden");
+        streamUpdate.classList.add("hidden");
 
-    //     videoPlayer.src = nextStream[0];
+        videoPlayer.src = nextStream[0];
 
-    //     if (nextStream[1]) {
-    //         timeText.textContent = formatDate(nextStream[1]);
-    //     } else {
-    //         timeText.textContent = "No Upcoming Stream!";
-    //     }
-    // }
+        if (nextStream[1]) {
+            timeText.textContent = formatDate(nextStream[1]);
+        } else {
+            timeText.textContent = "No Upcoming Stream!";
+        }
+    }
 
-    // function updateTimer(){        
-    //     if (nextStream.length != 2){
-    //         minutes.innerHTML = "X";
-    //         seconds.innerHTML = "X";
-    //         return;
-    //     }
+    function updateTimer(){        
+        if (nextStream.length != 2){
+            minutes.innerHTML = "X";
+            seconds.innerHTML = "X";
+            return;
+        }
 
-    //     const timeNow = new Date();
+        const timeNow = new Date();
 
-    //     const timeDiff = nextStream[1] - timeNow;
-    //     if(timeDiff < 0) {
-    //         minutes.innerHTML = "00";
-    //         seconds.innerHTML = "00";
-    //         return;
+        const timeDiff = nextStream[1] - timeNow;
+        if(timeDiff < 0) {
+            minutes.innerHTML = "00";
+            seconds.innerHTML = "00";
+            return;
 
-    //     } else if (timeDiff > (1000 * 99 * 60 + 1000 * 99)){
-    //         minutes.innerHTML = "99";
-    //         seconds.innerHTML = "99";
-    //         return;
+        } else if (timeDiff > (1000 * 99 * 60 + 1000 * 99)){
+            minutes.innerHTML = "99";
+            seconds.innerHTML = "99";
+            return;
 
-    //     }   
+        }   
 
-    //     const minutesLeft = Math.floor(timeDiff / (60 * 1000));
-    //     const secondsLeft = Math.floor(timeDiff % (60 * 1000) / 1000);
+        const minutesLeft = Math.floor(timeDiff / (60 * 1000));
+        const secondsLeft = Math.floor(timeDiff % (60 * 1000) / 1000);
 
-    //     minutes.innerHTML = String(minutesLeft).padStart(2, "0");
-    //     seconds.innerHTML = String(secondsLeft).padStart(2, "0");
-    // }
+        minutes.innerHTML = String(minutesLeft).padStart(2, "0");
+        seconds.innerHTML = String(secondsLeft).padStart(2, "0");
+    }
 
-    // setInterval(updateTimer, 900)
+    setInterval(updateTimer, 900)
 </script>
 </html>

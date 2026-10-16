@@ -221,36 +221,55 @@
 
                     for (const match_number of Object.keys(matches)) {
                         const match_data = matches[match_number];
-
                         let classist1 = match_data.Desc1 ?? '';
-                        if (match_data.Desc1 == '1st Place') {classist1 = 'firstplace'}
-                        else if (match_data.Desc1 == '2nd Place') {classist1 = 'secondplace'}
-                        else if (match_data.Desc1 == '3rd Place') {classist1 = 'thirdplace'}
-                        else if (match_data.Desc1 == '4th Place') {classist1 = 'fourthplace'}
-                        let classist2 = match_data.Desc2 ?? '';
-                        if (match_data.Desc2 == '1st Place') {classist2 = 'firstplace'}
-                        else if (match_data.Desc2 == '2nd Place') {classist2 = 'secondplace'}
-                        else if (match_data.Desc2 == '3rd Place') {classist2 = 'thirdplace'}
-                        else if (match_data.Desc2 == '4th Place') {classist2 = 'fourthplace'}
-
-                        division_string += `
-                            <li>
-                                <div class="competitor leftfield">
-                                    <p class="additional ${classist1}">${match_data.Desc1 ?? ''}</p>
-                                    <p class="name">${match_data.Name1 ?? ''}</p>
-                                    <img class="logo"
-                                        src="Assets/Images/Schools/${match_data.School1}.png">
-                                    <p class="points">${String(match_data.Score1 ?? 0).padStart(2, '0')}</p>
-                                </div>
-                                <div class="vs">VS</div>
-                                <div class="competitor rightfield">
-                                    <p class="additional ${classist2}">${match_data.Desc2 ?? ''}</p>
-                                    <p class="name">${match_data.Name2 ?? ''}</p>
-                                    <img class="logo"
-                                        src="Assets/Images/Schools/${match_data.School2}.png">
-                                    <p class="points">${String(match_data.Score2 ?? 0).padStart(2, '0')}</p>
-                                </div>
-                            </li>`;
+                            if (match_data.Desc1 == '1st Place') {classist1 = 'firstplace'}
+                            else if (match_data.Desc1 == '2nd Place') {classist1 = 'secondplace'}
+                            else if (match_data.Desc1 == '3rd Place') {classist1 = 'thirdplace'}
+                            else if (match_data.Desc1 == '4th Place') {classist1 = 'fourthplace'}
+                            let classist2 = match_data.Desc2 ?? '';
+                            if (match_data.Desc2 == '1st Place') {classist2 = 'firstplace'}
+                            else if (match_data.Desc2 == '2nd Place') {classist2 = 'secondplace'}
+                            else if (match_data.Desc2 == '3rd Place') {classist2 = 'thirdplace'}
+                            else if (match_data.Desc2 == '4th Place') {classist2 = 'fourthplace'}
+                        if (cur_sport == "debate" ) {
+                            division_string += `
+                                <li>
+                                    <div class="competitor leftfield">
+                                        <p class="additional ${classist1}">${match_data.Desc1 ?? ''}</p>
+                                        <p class="name">${match_data.Name1 ?? ''}</p>
+                                        <img class="logo"
+                                            src="Assets/Images/Schools/${match_data.School1}.png">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="competitor leftfield">
+                                        <p class="additional ${classist2}">${match_data.Desc2 ?? ''}</p>
+                                        <p class="name">${match_data.Name2 ?? ''}</p>
+                                        <img class="logo"
+                                            src="Assets/Images/Schools/${match_data.School2}.png">
+                                    </div>
+                                </li>`; 
+                        }
+                        else {
+                            division_string += `
+                                <li>
+                                    <div class="competitor leftfield">
+                                        <p class="additional ${classist1}">${match_data.Desc1 ?? ''}</p>
+                                        <p class="name">${match_data.Name1 ?? ''}</p>
+                                        <img class="logo"
+                                            src="Assets/Images/Schools/${match_data.School1}.png">
+                                        <p class="points">${String(match_data.Score1 ?? 0).padStart(2, '0')}</p>
+                                    </div>
+                                    <div class="vs">VS</div>
+                                    <div class="competitor rightfield">
+                                        <p class="additional ${classist2}">${match_data.Desc2 ?? ''}</p>
+                                        <p class="name">${match_data.Name2 ?? ''}</p>
+                                        <img class="logo"
+                                            src="Assets/Images/Schools/${match_data.School2}.png">
+                                        <p class="points">${String(match_data.Score2 ?? 0).padStart(2, '0')}</p>
+                                    </div>
+                                </li>`;
+                        }
                     }
 
                     day_string += `
