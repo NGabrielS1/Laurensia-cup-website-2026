@@ -130,12 +130,20 @@
         const photoList = Array.from({ length: 104 }, (_, i) =>
             `https://res.cloudinary.com/mg4ev0eo/image/upload/f_auto,q_auto,w_600/day1_${i + 1}.jpg`
         );
+        photoList.push( Array.from({ length: 232 }, (_, i) =>
+            `https://res.cloudinary.com/mg4ev0eo/image/upload/f_auto,q_auto,w_600/day2_${i + 1}.jpg`
+        ));
         photoList.push( Array.from({ length: 137 }, (_, i) =>
             `https://res.cloudinary.com/mg4ev0eo/image/upload/f_auto,q_auto,w_600/day3_${i + 1}.jpg`
         ));
         photoList.push( Array.from({ length: 148 }, (_, i) =>
             `https://res.cloudinary.com/mg4ev0eo/image/upload/f_auto,q_auto,w_600/day4_${i + 1}.jpg`
         ));
+        photoList.push( Array.from({ length: 219 }, (_, i) =>
+            `https://res.cloudinary.com/mg4ev0eo/image/upload/f_auto,q_auto,w_600/day5_${i + 1}.jpg`
+        ));
+        // day 6 images
+        // closing images
         const articleGrid = document.getElementById("articleGrid");
 
         // Add your custom colors here (Hex, RGB, or color names)
